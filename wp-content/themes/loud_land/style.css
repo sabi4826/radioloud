@@ -11,10 +11,18 @@ Author: Gruppe 23
 
 
 h1 {
+    clear: both;
+    font-weight: 600;
+    line-height: 1.13;
+    margin: 0;
+    text-rendering: optimizeLegibility;
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 3rem;
+    text-align: start;
 }
+
+
 
 h2 {
     font-family: 'Assistant', sans-serif;
@@ -43,15 +51,13 @@ p {
 
 /*styling af kanpper på hele sitet*/
 
-.gea_til_podcast_knap,
-.afspil_knap {
+button {
     background-color: #FA5E5E;
     font-family: 'Montserrat', sans-serif;
     border: none;
 
 }
 
-.gea_til_podcast_knap,
-.afspil_knap:hover {
+button:hover {
     background-color: #ffffff;
 }
