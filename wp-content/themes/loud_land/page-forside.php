@@ -69,7 +69,7 @@ get_header(); ?>
             const randomEpisode = [other1, other2, other3];
             console.log(randomEpisode);
 
-            randomEpisode.forEach(podcasts => {
+            randomEpisode.forEach(podcast => {
                 //Definerer konstanter til senere brug i kloningen af template
                 const template = document.querySelector("template");
                 const container = document.querySelector(".new_podcast");
