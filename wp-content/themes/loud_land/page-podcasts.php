@@ -14,6 +14,21 @@
 
 get_header(); ?>
 
+<style>
+    #podcast_oversigt {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 100vw;
+        grid-gap: 2rem;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        overflow: hidden;
+        position: relative;
+        margin: 40px 20px;
+    }
+
+</style>
+
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <h1 id="overskrift">Podcasts</h1>
@@ -29,6 +44,8 @@ get_header(); ?>
             <h2></h2>
             <p class="podcast_resume"></p>
             <p class="vaerter"></p>
+            <button class="afspil_knap">Afspil</button>
+            <button class="gea_til_podcast_knap">Gå til podcast</button>
         </article>
     </template>
 
@@ -94,10 +111,13 @@ get_header(); ?>
                     klon.querySelector(".vaerter").textContent = `${"Værter: "}` + podcast.vaerter;
 
                     // eventlisteners på hver enkelt artikel
-                    klon.querySelector("article").addEventListener("click", () => {
+                    klon.querySelector(".afspil_knap").addEventListener("click", () => {
                         location.href = podcast.link;
                     })
 
+                    klon.querySelector(".gea_til_podcast_knap").addEventListener("click", () => {
+                        location.href = podcast.link;
+                    })
                     dest.appendChild(klon);
                 }
             })
