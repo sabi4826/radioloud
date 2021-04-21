@@ -43,7 +43,7 @@ get_header(); ?>
         </article>
     </template>
 
-    <template_one>
+    <template>
         <article>
             <img src="" alt="" class="billede">
             <h2></h2>
@@ -51,7 +51,7 @@ get_header(); ?>
             <button class="red_knap">Afspil</button>
             <button class="red_knap">Gå til podcast</button>
         </article>
-    </template_one>
+    </template>
 
 
     <script>
@@ -122,11 +122,11 @@ get_header(); ?>
 
             randomPodcast.forEach(podcast => {
                 //Definerer konstanter til senere brug i kloningen af template
-                const template_one = document.querySelector("template_one");
+                const template = document.querySelector("template:nth-child(2)");
                 const container = document.querySelector(".det_hitter");
 
 
-                const klon = template_one.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
+                const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
                 klon.querySelector(".billede").src = podcast.billede.guid;
                 klon.querySelector("h2").textContent = podcast.title.rendered;
                 klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
