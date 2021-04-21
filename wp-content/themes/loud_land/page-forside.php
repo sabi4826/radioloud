@@ -19,16 +19,23 @@
 get_header(); ?>
 
 <style>
-    @media (min-width: 950px) {
-        .new_podcast {
-            grid-template-columns: repeat(3, 1fr);
-        }
+    .new_podcast,
+    .det_hitter {
+        max-width: 1000px;
+        margin: 40px 20px;
+    }
 
-        .det_hitter {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-
+    .new_podcast,
+    .det_hitter {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 100vw;
+        grid-gap: 2rem;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        overflow: hidden;
+        position: relative;
     }
 
 </style>
