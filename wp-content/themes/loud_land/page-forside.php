@@ -38,6 +38,10 @@ get_header(); ?>
         position: relative;
     }
 
+    .bagrund {
+        background-color: white;
+    }
+
 </style>
 
 <div id="primary" class="content-area">
@@ -45,7 +49,7 @@ get_header(); ?>
         <div class="singular-content-wrap"></div> <!-- .singular-content-wrap -->
         <section>
             <h1 id="overskrift">Nye podcast episoder fra LOUD</h1>
-            <div class="new_podcast"></div>
+            <div class="bagrund" class="new_podcast"></div>
         </section>
 
 
