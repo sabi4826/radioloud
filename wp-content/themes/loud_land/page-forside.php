@@ -76,7 +76,7 @@ get_header(); ?>
                 const container = document.querySelector(".new_podcast");
 
 
-                const klon = skabelon.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
+                const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
                 klon.querySelector(".billede").src = podcast.billede.guid;
                 klon.querySelector("h2").textContent = podcast.title.rendered;
                 klon.querySelector("h4").textContent = podcast.title.rendered;
@@ -88,7 +88,7 @@ get_header(); ?>
                 //					location.href = podcasts.link;
                 //				})
 
-                dest.appendChild(klon);
+                container.appendChild(klon);
             })
 
 
