@@ -17,13 +17,14 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
             <article>
-                <img class="pic" src="" alt="">
+                <img src="" alt="" class="billede">
                 <div>
                     <h2></h2>
-                    <p class="text"></p>
-                    <p class="pris"></p>
+                    <p class="podcast_resume"></p>
+                    <p class="vaerter"></p>
                 </div>
             </article>
+
 
         </main>
         <!-- #main -->
