@@ -12,7 +12,26 @@
  * @package Abletone
  */
 
+
+
+
+
 get_header(); ?>
+
+<style>
+    @media (min-width: 950px) {
+        .new_podcast {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .det_hitter {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+
+    }
+
+</style>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
@@ -21,6 +40,13 @@ get_header(); ?>
             <h1 id="overskrift">Nye podcast episoder fra LOUD</h1>
             <div class="new_podcast"></div>
         </section>
+
+
+        <section>
+            <h1 id="overskrift">#LOUDLand</h1>
+            <div class="loud_land"></div>
+        </section>
+
 
 
         <section>
@@ -42,6 +68,11 @@ get_header(); ?>
             <button class="red_knap">Gå til podcast</button>
         </article>
     </template>
+
+
+
+
+
 
     <template id="forside_det_hitter">
         <article>
