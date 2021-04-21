@@ -169,7 +169,7 @@ get_header(); ?>
 
 
                 // eventlisteners på hver enkelt artikel
-                klon.querySelector("template").addEventListener("click", () => {
+                klon.querySelector("#forside_det_hitter").addEventListener("click", () => {
                     location.href = podcast.link;
                 })
 
