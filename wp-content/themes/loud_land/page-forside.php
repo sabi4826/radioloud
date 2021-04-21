@@ -136,7 +136,7 @@ get_header(); ?>
                 klon.querySelector("h4").textContent = podcast.date_gmt;
                 klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
                 // eventlisteners på hver enkelt artikel
-                klon.querySelector(".gea_til_podcast_knap").addEventListener("click", () => {
+                klon.querySelector("template").addEventListener("click", () => {
                     location.href = podcast.link;
                 })
 
@@ -169,7 +169,7 @@ get_header(); ?>
 
 
                 // eventlisteners på hver enkelt artikel
-                klon.querySelector(".afspil_knap").addEventListener("click", () => {
+                klon.querySelector("template").addEventListener("click", () => {
                     location.href = podcast.link;
                 })
 
