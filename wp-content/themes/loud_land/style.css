@@ -63,9 +63,11 @@ button {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     border: none;
+    color: black;
 
 }
 
 button:hover {
     background-color: #ffffff;
+    color: black;
 }
