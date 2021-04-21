@@ -23,6 +23,14 @@ get_header(); ?>
         </section>
 
 
+        <section>
+            <h1 id="overskrift">DET HITTER</h1>
+            <h2>Se de mest populære podcasts</h2>
+            <div class="det_hitter"></div>
+        </section>
+
+
+
     </main><!-- #main -->
 
     <template>
@@ -35,7 +43,15 @@ get_header(); ?>
         </article>
     </template>
 
-
+    <template_one>
+        <article>
+            <img src="" alt="" class="billede">
+            <h2></h2>
+            <p class="podcast_resume"></p>
+            <button class="red_knap">Afspil</button>
+            <button class="red_knap">Gå til podcast</button>
+        </article>
+    </template_one>
 
 
     <script>
@@ -50,16 +66,16 @@ get_header(); ?>
         async function loadJson() {
             const JsonData = await fetch(url);
             newEoisoder = await JsonData.json();
-
             console.log("loadJson", newEoisoder);
             visNewPodcast();
+            visDetHitter();
 
 
         }
         loadJson();
 
 
-        //Her i funktioen genereres tre tilfeldeig podcast og sættes ind i HTML
+        //Her i funktioen genereres tre tilfeldeig podcast og sættes ind i HTML under sektionen, nye podcasts episoder
         function visNewPodcast() {
             console.log("visNewPodcast");
 
@@ -79,7 +95,7 @@ get_header(); ?>
                 const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
                 klon.querySelector(".billede").src = podcast.billede.guid;
                 klon.querySelector("h2").textContent = podcast.title.rendered;
-                klon.querySelector("h4").textContent = podcast.title.rendered;
+                klon.querySelector("h4").textContent = podcast.date_gmt;
                 klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
 
 
@@ -91,7 +107,38 @@ get_header(); ?>
                 container.appendChild(klon);
             })
 
+        }
 
+
+        function visDetHitter() {
+            console.log("visDetHitter");
+
+            //Genererer et nyt array af tilfældige objekter fra det komplette array
+            const other1 = newEoisoder[Math.floor(Math.random() * newEoisoder.length)];
+            const other2 = newEoisoder[Math.floor(Math.random() * newEoisoder.length)];
+            const other3 = newEoisoder[Math.floor(Math.random() * newEoisoder.length)];
+            const randomPodcast = [other1, other2, other3];
+            console.log(randomPodcast);
+
+            randomPodcast.forEach(podcast => {
+                //Definerer konstanter til senere brug i kloningen af template
+                const template = document.querySelector("template");
+                const container = document.querySelector(".det_hitter");
+
+
+                const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
+                klon.querySelector(".billede").src = podcast.billede.guid;
+                klon.querySelector("h2").textContent = podcast.title.rendered;
+                klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
+
+
+                //				// eventlisteners på hver enkelt artikel
+                //				klon.querySelector(".red_knap").addEventListener("click", () => {
+                //					location.href = podcasts.link;
+                //				})
+
+                container.appendChild(klon);
+            })
 
         }
 
