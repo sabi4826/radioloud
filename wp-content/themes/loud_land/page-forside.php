@@ -135,10 +135,10 @@ get_header(); ?>
                 klon.querySelector("h2").textContent = podcast.title.rendered;
                 klon.querySelector("h4").textContent = podcast.date_gmt;
                 klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
-//                // eventlisteners på hver enkelt artikel
-//                klon.querySelector("template").addEventListener("click", () => {
-//                    location.href = podcast.link;
-//                })
+                //                // eventlisteners på hver enkelt artikel
+                //                klon.querySelector("template").addEventListener("click", () => {
+                //                    location.href = podcast.link;
+                //                })
 
                 container.appendChild(klon);
             })
@@ -167,12 +167,10 @@ get_header(); ?>
                 klon.querySelector("h2").textContent = podcast.title.rendered;
                 klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
 
-
-//                // eventlisteners på hver enkelt artikel
-// klon.querySelector("#forside_det_hitter").addEventListener("click", () => {
-// location.href = podcast.link;
-// })
-
+                // eventlisteners på hver enkelt artikel
+                klon.querySelector(".afspil_knap").addEventListener("click", () => {
+                    location.href = podcast.link;
+                })
                 container.appendChild(klon);
             })
 
