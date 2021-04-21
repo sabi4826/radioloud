@@ -72,7 +72,7 @@ get_header(); ?>
             <h2></h2>
             <h4></h4>
             <p class="podcast_resume"></p>
-            <button class="red_knap">Gå til podcast</button>
+            <button class="gea_til_podcast_knap">Gå til podcast</button>
         </article>
     </template>
 
@@ -135,10 +135,10 @@ get_header(); ?>
                 klon.querySelector("h2").textContent = podcast.title.rendered;
                 klon.querySelector("h4").textContent = podcast.date_gmt;
                 klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
-                //                // eventlisteners på hver enkelt artikel
-                //                klon.querySelector("template").addEventListener("click", () => {
-                //                    location.href = podcast.link;
-                //                })
+                // eventlisteners på hver enkelt artikel
+                klon.querySelector(".gea_til_podcast_knap").addEventListener("click", () => {
+                    location.href = podcast.link;
+                })
 
                 container.appendChild(klon);
             })
@@ -169,6 +169,10 @@ get_header(); ?>
 
                 // eventlisteners på hver enkelt artikel
                 klon.querySelector(".afspil_knap").addEventListener("click", () => {
+                    location.href = podcast.link;
+                })
+
+                klon.querySelector(".gea_til_podcast_knap").addEventListener("click", () => {
                     location.href = podcast.link;
                 })
                 container.appendChild(klon);
