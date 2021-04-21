@@ -43,7 +43,7 @@ get_header(); ?>
         </article>
     </template>
 
-    <template>
+    <template id="forside_det_hitter">
         <article>
             <img src="" alt="" class="billede">
             <h2></h2>
@@ -122,7 +122,7 @@ get_header(); ?>
 
             randomPodcast.forEach(podcast => {
                 //Definerer konstanter til senere brug i kloningen af template
-                const template = document.querySelector("template:nth-child(2)");
+                const template = document.querySelector("#forside_det_hitter");
                 const container = document.querySelector(".det_hitter");
 
 
