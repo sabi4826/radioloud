@@ -122,7 +122,7 @@ get_header(); ?>
 
             randomPodcast.forEach(podcast => {
                 //Definerer konstanter til senere brug i kloningen af template
-                const template = document.querySelector("template");
+                const template = document.querySelector("template_one");
                 const container = document.querySelector(".det_hitter");
 
 
