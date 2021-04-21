@@ -44,6 +44,7 @@ get_header(); ?>
 
         <script>
             let podcast;
+            let episode;
 
             //Konstanten sættes til at lede efter "podcast" - herefter laves et echo-kald, hvor der beder om den pågældende podcasts' ID, alt efter hvilken der klikkes på
             const dbUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/podcast/" + <?php echo get_the_ID() ?>;
