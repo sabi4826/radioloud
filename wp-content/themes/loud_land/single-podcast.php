@@ -56,8 +56,10 @@ get_header(); ?>
                 const data = await fetch(dbUrl);
                 podcast = await data.json();
                 visPodcasts();
+                loadJson();
+            }
 
-
+            async function loadJson() {
                 //EPISODE
                 const epiData = await fetch(epiUrl);
                 episode = await epiData.json();
