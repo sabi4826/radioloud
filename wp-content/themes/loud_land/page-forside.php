@@ -122,11 +122,11 @@ get_header(); ?>
 
             randomPodcast.forEach(podcast => {
                 //Definerer konstanter til senere brug i kloningen af template
-                const template = document.querySelector("template_one");
+                const template_one = document.querySelector("template_one");
                 const container = document.querySelector(".det_hitter");
 
 
-                const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
+                const klon = template_one.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
                 klon.querySelector(".billede").src = podcast.billede.guid;
                 klon.querySelector("h2").textContent = podcast.title.rendered;
                 klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
