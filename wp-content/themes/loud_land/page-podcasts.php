@@ -95,7 +95,7 @@ get_header(); ?>
 
                     // eventlisteners på hver enkelt artikel
                     klon.querySelector("article").addEventListener("click", () => {
-                        location.href = podcasts.link;
+                        location.href = podcast.link;
                     })
 
                     dest.appendChild(klon);

@@ -82,7 +82,7 @@ get_header(); ?>
 
                 // eventlisteners på hver enkelt artikel
                 klon.querySelector(".red_knap").addEventListener("click", () => {
-                    location.href = podcast.link;
+                    location.href = podcasts.link;
                 })
 
                 dest.appendChild(klon);
