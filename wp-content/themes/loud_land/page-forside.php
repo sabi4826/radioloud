@@ -51,11 +51,12 @@ get_header(); ?>
             const JsonData = await fetch(url);
             newEoisoder = await JsonData.json();
 
-            console.log("loadJson");
+            console.log("loadJson", newEoisoder);
             visNewPodcast();
 
-        }
 
+        }
+        loadJson();
 
 
         //Her i funktioen genereres tre tilfeldeig podcast og sættes ind i HTML
