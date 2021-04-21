@@ -14,6 +14,21 @@
 
 get_header(); ?>
 
+<style>
+    #podcast_oversigt {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 100vw;
+        grid-gap: 2rem;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        overflow: hidden;
+        position: relative;
+        margin: 40px 20px;
+    }
+
+</style>
+
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <h1 id="overskrift">Podcasts</h1>
