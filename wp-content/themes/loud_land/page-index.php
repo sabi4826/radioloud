@@ -81,7 +81,7 @@ get_header(); ?>
 
 
                 // eventlisteners på hver enkelt artikel
-                klon.querySelector("article").addEventListener("click", () => {
+                klon.querySelector(".red_knap").addEventListener("click", () => {
                     location.href = podcast.link;
                 })
 
