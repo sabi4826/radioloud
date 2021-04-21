@@ -56,7 +56,7 @@ get_header(); ?>
 
 
 
-        //Her i funktioen genereres tre til fire tilfeldeig andre kunstværker og sættes ind i HTML
+        //Her i funktioen genereres tre tilfeldeig podcast og sættes ind i HTML
         function visNewPodcast() {
             console.log("visNewPodcast");
 
@@ -64,7 +64,7 @@ get_header(); ?>
             const other1 = newEoisoder[Math.floor(Math.random() * newEoisoder.length)];
             const other2 = newEoisoder[Math.floor(Math.random() * newEoisoder.length)];
             const other3 = newEoisoder[Math.floor(Math.random() * newEoisoder.length)];
-            const randomArt = [other1, other2, other3];
+            const randomEpisode = [other1, other2, other3];
             console.log(randomEpisode);
 
             randomEpisode.forEach(podcasts => {
