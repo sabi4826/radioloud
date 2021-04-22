@@ -81,7 +81,7 @@ get_header(); ?>
 
             //Henter information fra json, og sætter dem ind i podcast-sektion
             function visPodcasts() {
-                console.log("visPodcasts bliver kaldt")
+                console.log("visPodcasts bliver kaldt", podcast);
 
                 document.querySelector(".billede").src = podcast.billede.guid;
                 document.querySelector(".overskrift").textContent = podcast.title.rendered;
@@ -98,7 +98,7 @@ get_header(); ?>
 
                     console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast);
 
-                    if (episode.horer_til_podcast[0].ID == aktuelPodcast);
+                    if (episoder.horer_til_podcast[0].ID == aktuelPodcast);
                     console.log("Loop kører ID:", aktuelPodcast);
 
                     let klon = episodeTemplate.cloneNode(true).content;
