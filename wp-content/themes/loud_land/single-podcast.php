@@ -21,7 +21,7 @@ get_header(); ?>
             <article>
                 <img src="" alt="" class="billede">
                 <div>
-                    <h2></h2>
+                    <h2 class="overskrift"></h2>
                     <p class="podcast_resume"></p>
                     <p class="vaerter"></p>
                 </div>
@@ -56,11 +56,14 @@ get_header(); ?>
             const episodeUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episoder?per_page=100/";
 
             //container der indeholder sektionen hvor episoderne skal placeres
-            const container = document.querySelector("#episoder")
+            const container = document.querySelector("#episoder");
 
+            console.log("Alle variabler er kaldt");
 
 
             async function getJson() {
+                console.log("async function bliver kaldt")
+
                 const data = await fetch(dbUrl);
                 podcast = await data.json();
 
@@ -71,16 +74,19 @@ get_header(); ?>
                 visEpisoder();
             }
 
+
             //Henter information fra json, og sætter dem ind i podcast-sektion
             function visPodcasts() {
+                console.log("visPodcasts bliver kaldt")
+
                 document.querySelector(".billede").src = podcast.billede.guid;
-                document.querySelector("h2").textContent = podcast.title.rendered;
+                document.querySelector(".overskrift").textContent = podcast.title.rendered;
                 document.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
                 document.querySelector(".vaerter").textContent = `${"Værter: "}` + podcast.vaerter;
             }
 
             function visEpisoder() {
-                console.log("visEpisoder");
+                console.log("visEpisoder bliver kaldt");
 
                 let episodeTemplate = document.querySelector("template");
                 episoder.forEach(episode => {
