@@ -69,6 +69,7 @@ get_header(); ?>
 
                 const dataEpisode = await fetch(episodeUrl);
                 episoder = await dataEpisode.json();
+                console.log(episoder);
 
                 visPodcasts();
                 visEpisoder();
