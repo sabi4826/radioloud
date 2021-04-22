@@ -105,7 +105,7 @@ get_header(); ?>
                     klon.querySelector(".epi_dato").innerHTML = episode.dato;
                     klon.querySelector(".epi_resume").textContent = episode.episode_resume;
 
-                    klon.querySelector("#episoder_section").addEventListener("click", () => {
+                    klon.querySelector("article").addEventListener("click", () => {
                         location.href = episode.link;
                     })
 
