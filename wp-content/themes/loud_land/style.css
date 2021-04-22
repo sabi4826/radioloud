@@ -79,6 +79,7 @@ button {
 button:hover {
     background-color: #ffffff;
     color: black;
+    margin: 2px 0px;
 }
 
 .doble_knap {
