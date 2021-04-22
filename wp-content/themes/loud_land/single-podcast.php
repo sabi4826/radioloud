@@ -96,7 +96,7 @@ get_header(); ?>
                 episoder.forEach(episode => {
                     console.log("Loop ID:", aktuelPodcast);
 
-                    console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast);
+                    console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast[0].ID);
 
                     if (episode.horer_til_podcast == aktuelPodcast) {
                         console.log("Loop kører ID:", aktuelPodcast);
