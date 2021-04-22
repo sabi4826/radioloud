@@ -96,9 +96,9 @@ get_header(); ?>
                 episoder.forEach(episode => {
                     console.log("Loop ID:", aktuelPodcast);
 
-                    console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast[0].ID);
+                    console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast);
 
-                    let podcastId = parseInt(episode.horer_til_podcast[0].ID)
+                    let podcastId = episode.horer_til_podcast;
 
                     console.log("podcastId", podcastId);
 
