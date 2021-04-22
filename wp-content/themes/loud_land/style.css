@@ -80,3 +80,7 @@ button:hover {
     background-color: #ffffff;
     color: black;
 }
+
+.doble_knap {
+    width: 50%;
+}

@@ -90,9 +90,11 @@ get_header(); ?>
                 <h2></h2>
                 <p class="podcast_resume"></p>
             </div>
+            <div>
+                <button class="afspil_knap">Afspil</button>
+                <button class="gea_til_podcast_knap">Gå til podcast</button>
+            </div>
 
-            <button class="afspil_knap">Afspil</button>
-            <button class="gea_til_podcast_knap">Gå til podcast</button>
         </article>
     </template>
 
