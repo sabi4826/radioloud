@@ -38,10 +38,27 @@ get_header(); ?>
         position: relative;
     }
 
+
+    /*    styling af loud live sektionen*/
     .loud_live_forside {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.4fr 1fr;
         background-color: #53A27D;
+    }
+
+    .loud_live_forside .left {
+        padding: 30px;
+    }
+
+    .loud_live_forside h1,
+    h2 {
+        text-transform: uppercase;
+        color: white
+    }
+
+    .loud_live_forside h1 {
+        text-align: center;
+        text-decoration: underline;
     }
 
 </style>
@@ -55,13 +72,13 @@ get_header(); ?>
         </section>
 
 
-        <section id="loud_land">
-            <h1 id="overskrift">#LOUDLand</h1>
+        <section>
+            <h1 id="overskrift">VIL DU LYTTE MED?</h1>
             <div class="loud_live_forside">
                 <div>
                     <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Image-95.jpg" alt="live billede">
                 </div>
-                <div>
+                <div class="left">
                     <h1>lige nu:</h1>
                     <h2>Nu: Bare sex</h2>
                     <h2>Næste: Flodhesten oprindelse </h2>
