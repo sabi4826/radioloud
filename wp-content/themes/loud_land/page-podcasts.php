@@ -33,7 +33,7 @@ get_header(); ?>
     <main id="main" class="site-main">
         <h1 id="overskrift">Podcasts</h1>
         <nav id="filtrering">
-            <button data-podcast="alle">Alle</button>
+            <button class="filter_knapper" data-podcast="alle">Alle</button>
         </nav>
         <section id="podcast_oversigt"></section>
     </main><!-- #main -->

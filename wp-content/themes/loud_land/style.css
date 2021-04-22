@@ -83,6 +83,14 @@ button:hover {
 
 }
 
+.filter_knapper {
+    width: auto;
+    text-align: center;
+}
+
 .doble_knap {
-    width: 50%;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2px;
 }
