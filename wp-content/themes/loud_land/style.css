@@ -54,6 +54,14 @@ p {
 }
 
 
+/*styling af podcast article på hele sitet*/
+
+.podcast_baggrund {
+    background-color: white;
+    padding: 10px;
+}
+
+
 
 
 /*styling af kanpper på hele sitet*/
@@ -64,6 +72,7 @@ button {
     font-weight: bold;
     border: none;
     color: black;
+    width: 100%;
 
 }
 
