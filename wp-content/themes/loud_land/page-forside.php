@@ -50,7 +50,7 @@ get_header(); ?>
         padding: 10px;
     }
 
-    .loud_live_forside h1,
+    .loud_live_forside .left h1,
     h2 {
         text-transform: uppercase;
         color: white
