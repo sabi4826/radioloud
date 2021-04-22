@@ -43,6 +43,31 @@ get_header(); ?>
         color: black;
     }
 
+
+    /*    styling af måske du også ville kunne lide */
+
+    .maske_kan_du_lide {
+        max-width: 1000px;
+        margin: 40px 20px;
+    }
+
+
+    .maske_kan_du_lide {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 100vw;
+        grid-gap: 2rem;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .podcast_resume {
+        color: black;
+    }
+
 </style>
 
 
@@ -92,7 +117,6 @@ get_header(); ?>
         <article>
             <img src="" alt="" class="billede">
             <div class="podcast_baggrund">
-
                 <h2></h2>
                 <p class="podcast_resume"></p>
             </div>
@@ -201,7 +225,10 @@ get_header(); ?>
             const other1 = lideMoske[Math.floor(Math.random() * lideMoske.length)];
             const other2 = lideMoske[Math.floor(Math.random() * lideMoske.length)];
             const other3 = lideMoske[Math.floor(Math.random() * lideMoske.length)];
-            const randomPodcast = [other1, other2, other3];
+            const other4 = lideMoske[Math.floor(Math.random() * lideMoske.length)];
+            const other5 = lideMoske[Math.floor(Math.random() * lideMoske.length)];
+            const other6 = lideMoske[Math.floor(Math.random() * lideMoske.length)];
+            const randomPodcast = [other1, other2, other3, other4, other5, other6];
             console.log(randomPodcast);
 
             randomPodcast.forEach(podcast => {
