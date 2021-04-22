@@ -29,17 +29,20 @@ get_header(); ?>
 
             <!-- episode-liste -->
             <section id="episoder_section">
-                <template id="temEpi">
-                    <article>
-                        <img src="" alt="" class="epi_billede">
-                        <h2 class="epi_overskrift"></h2>
-                        <h4 class="epi_dato"></h4>
-                        <p class="epi_resume"></p>
-                    </article>
-                </template>
+
             </section>
 
+
         </main>
+
+        <template id="temEpi">
+            <article>
+                <img src="" alt="" class="epi_billede">
+                <h2 class="epi_overskrift"></h2>
+                <h4 class="epi_dato"></h4>
+                <p class="epi_resume"></p>
+            </article>
+        </template>
 
         <script>
             let podcast;
