@@ -94,31 +94,31 @@ get_header(); ?>
 
                 let episodeTemplate = document.querySelector("#temEpi");
                 episoder.forEach(episode => {
-                        console.log("Loop ID:", aktuelPodcast);
+                    console.log("Loop ID:", aktuelPodcast);
 
-                        console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast[0].ID);
+                    console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast[0].ID);
 
-                        if ((parseInt(episode.horer_til_podcast[0].ID) == aktuelPodcast) {
-                                console.log("Loop kører ID:", aktuelPodcast);
+                    if (parseInt(episode.horer_til_podcast[0].ID) == aktuelPodcast) {
+                        console.log("Loop kører ID:", aktuelPodcast);
 
-                                let klon = episodeTemplate.cloneNode(true).content;
-                                klon.querySelector(".epi_billede").src = episode.billede.guid;
-                                klon.querySelector(".epi_overskrift").textContent = episode.title.rendered;
-                                klon.querySelector(".epi_dato").innerHTML = episode.dato;
-                                klon.querySelector(".epi_resume").textContent = episode.episode_resume;
+                        let klon = episodeTemplate.cloneNode(true).content;
+                        klon.querySelector(".epi_billede").src = episode.billede.guid;
+                        klon.querySelector(".epi_overskrift").textContent = episode.title.rendered;
+                        klon.querySelector(".epi_dato").innerHTML = episode.dato;
+                        klon.querySelector(".epi_resume").textContent = episode.episode_resume;
 
-                                klon.querySelector("article").addEventListener("click", () => {
-                                    location.href = episode.link;
-                                })
-
-                                container.appendChild(klon);
-                            }
-
+                        klon.querySelector("article").addEventListener("click", () => {
+                            location.href = episode.link;
                         })
 
-                }
+                        container.appendChild(klon);
+                    }
 
-                getJson();
+                })
+
+            }
+
+            getJson();
 
         </script>
 
