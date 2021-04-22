@@ -28,7 +28,7 @@ get_header(); ?>
             </article>
 
             <!-- episode-liste -->
-            <section id="episoder">
+            <section id="episoder_section">
                 <template>
                     <article>
                         <img src="" alt="" class="epi_billede">
@@ -101,7 +101,7 @@ get_header(); ?>
                     klon.querySelector("epi_dato").innerHTML = episode.dato;
                     klon.querySelector(".epi_resume").textContent = episode.episode_resume;
 
-                    klon.querySelector("#episoder").addEventListener("click", () => {
+                    klon.querySelector("#episoder_section").addEventListener("click", () => {
                         location.href = episode.link;
                     })
 
