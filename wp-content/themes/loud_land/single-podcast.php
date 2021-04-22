@@ -96,7 +96,7 @@ get_header(); ?>
                 episoder.forEach(episode => {
                     console.log("Loop ID:", aktuelPodcast);
 
-                    if (episode.horer_til_podcast[0].id == aktuelPodcast);
+                    if (episode.horer_til_podcast[0].ID == aktuelPodcast);
                     console.log("Loop kører ID:", aktuelPodcast);
 
                     let klon = episodeTemplate.cloneNode(true).content;
