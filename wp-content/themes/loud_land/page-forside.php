@@ -56,15 +56,18 @@ get_header(); ?>
         color: white
     }
 
-    .loud_live_forside .left h1,
-        {
-        text-decoration: underline color;
+    .loud_live_forside .left h1 {
+        text-decoration: underline;
     }
 
 
     #overskrift {
         text-align: center;
         text-decoration: uppercase;
+    }
+
+    .podcast_baggrund h2 {
+        color: black;
     }
 
 </style>
