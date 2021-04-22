@@ -116,7 +116,9 @@ get_header(); ?>
 
                 })
 
-                getJson();
+            }
+
+            getJson();
 
         </script>
 
