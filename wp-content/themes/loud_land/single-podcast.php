@@ -14,16 +14,46 @@
 
 get_header(); ?>
 
+
+<style>
+    .stor_visning_podcast {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .text_signle h2,
+    p {
+        color: white;
+    }
+
+
+    #episoder_section {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        max-width: 100vw;
+        grid-gap: 2rem;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        overflow: hidden;
+        position: relative;
+    }
+
+</style>
+
+
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
         <!-- single-view podcast -->
         <article>
-            <img src="" alt="" class="billede">
-            <div>
-                <h2 class="overskrift"></h2>
-                <p class="podcast_resume"></p>
-                <p class="vaerter"></p>
+            <div class="stor_visning_podcast">
+                <div class="text_signle">
+                    <h2 class="overskrift"></h2>
+                    <p class="podcast_resume"></p>
+                    <p class="vaerter"></p>
+                </div>
+                <div><img src="" alt="" class="billede"></div>
             </div>
         </article>
 
