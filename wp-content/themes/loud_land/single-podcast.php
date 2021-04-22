@@ -16,6 +16,7 @@ get_header(); ?>
 
 
 <style>
+    /*    styling til første sektion af siden, hvor den pågældende podcast er vist med uddybend text*/
     .stor_visning_podcast {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -26,17 +27,14 @@ get_header(); ?>
         color: white;
     }
 
-
+    /*styling af grid til episoderne og deres opsætning*/
     #episoder_section {
         text-align: center;
+    }
+
+    .episode_grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        max-width: 100vw;
-        grid-gap: 2rem;
-        padding-left: 10vw;
-        padding-right: 10vw;
-        overflow: hidden;
-        position: relative;
+        grid-template-columns: 0.5fr 1fr;
     }
 
 </style>
@@ -67,13 +65,14 @@ get_header(); ?>
 
     <template id="temEpi">
         <article>
-            <img src="" alt="" class="epi_billede">
-            <div class="podcast_baggrund">
-                <h2 class="epi_overskrift"></h2>
-                <h4 class="epi_dato"></h4>
-                <p class="epi_resume"></p>
+            <div class="episode_grid">
+                <div><img src="" alt="" class="epi_billede"></div>
+                <div class="podcast_baggrund">
+                    <h2 class="epi_overskrift"></h2>
+                    <h4 class="epi_dato"></h4>
+                    <p class="epi_resume"></p>
+                </div>
             </div>
-
         </article>
     </template>
 
