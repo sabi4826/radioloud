@@ -38,6 +38,10 @@ get_header(); ?>
         position: relative;
     }
 
+    .podcast_baggrund {
+        background-color: white;
+    }
+
 </style>
 
 <div id="primary" class="content-area">
@@ -69,9 +73,12 @@ get_header(); ?>
     <template>
         <article>
             <img src="" alt="" class="billede">
-            <h2></h2>
-            <h4></h4>
-            <p class="podcast_resume"></p>
+            <div class="podcast_baggrund">
+                <h2></h2>
+                <h4></h4>
+                <p class="podcast_resume"></p>
+            </div>
+
             <button class="gea_til_podcast_knap">Gå til podcast</button>
         </article>
     </template>
@@ -97,8 +104,6 @@ get_header(); ?>
 
         // url til wp rest api/database
         const url = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/podcast?per_page=100";
-
-
 
 
         async function loadJson() {

@@ -31,35 +31,51 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
-        <h1 id="overskrift">Podcasts</h1>
-        <nav id="filtrering">
-            <button data-podcast="alle">Alle</button>
-        </nav>
-        <section id="podcast_oversigt"></section>
+        <section>
+            <h1 id="overskrift">Loud live</h1>
+            <div>
+                <h1>Overskift</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt aspernatur ipsum aliquam ratione consectetur non, fuga blanditiis nihil debitis nam, corporis neque quibusdam. Quasi magni quia nobis aliquam quod, dolorem!</p>
+            </div>
+            <div>
+                <img src="" alt="Live podcasten">
+            </div>
+
+        </section>
+
+        <nav id="filtrering"></nav>
+
+        <section id="sende_oversigt"></section>
     </main><!-- #main -->
 
     <template>
         <article>
-            <img src="" alt="" class="billede">
-            <h2></h2>
-            <p class="podcast_resume"></p>
-            <p class="vaerter"></p>
-            <button class="afspil_knap">Afspil</button>
-            <button class="gea_til_podcast_knap">Gå til podcast</button>
+            <div><img src="" alt="" class="billede"></div>
+            <div>
+                <h2></h2>
+                <h4></h4>
+                <p class="podcast_resume"></p>
+            </div>
         </article>
     </template>
 
+
+
     <script>
-        let podcasts;
+        let episoder;
         let categories;
         let filterPodcast = "alle";
+
+
         // container/destination til articles med en podcast
-        const dest = document.querySelector("#podcast_oversigt");
+        const dest = document.querySelector("#sende_oversigt");
+
         // select indhold af html skabelon (article)
         const skabelon = document.querySelector("template");
+
         // url til wp rest api/database
-        const url = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/podcast?per_page=100";
-        const cat_url = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/categories";
+        const url = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode?per_page=100";
+        const cat_url = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/ugedage";
 
         async function loadJson() {
             const JsonData = await fetch(url);
@@ -110,14 +126,7 @@ get_header(); ?>
                     klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
                     klon.querySelector(".vaerter").textContent = `${"Værter: "}` + podcast.vaerter;
 
-                    // eventlisteners på hver enkelt artikel
-                    klon.querySelector(".afspil_knap").addEventListener("click", () => {
-                        location.href = podcast.link;
-                    })
 
-                    klon.querySelector(".gea_til_podcast_knap").addEventListener("click", () => {
-                        location.href = podcast.link;
-                    })
                     dest.appendChild(klon);
                 }
             })
