@@ -53,7 +53,7 @@ get_header(); ?>
             const dbUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/podcasts/" + aktuelPodcast;
 
             //Henter ud fra slug, det tal som podcasten har + det id, som episoden har - der henvises dermed til podcastens underliggende episoder
-            const episodeUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episoder?per_page=100/";
+            const episodeUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode?per_page=100/";
 
             //container der indeholder sektionen hvor episoderne skal placeres
             const container = document.querySelector("#episoder");
