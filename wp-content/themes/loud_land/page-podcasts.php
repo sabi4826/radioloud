@@ -36,6 +36,7 @@ get_header(); ?>
             <button class="filter_knapper" data-podcast="alle">Alle</button>
         </nav>
         <section id="podcast_oversigt"></section>
+
     </main><!-- #main -->
 
     <template>
@@ -50,7 +51,6 @@ get_header(); ?>
                 <button class="afspil_knap">Afspil</button>
                 <button class="gea_til_podcast_knap">Gå til podcast</button>
             </div>
-
         </article>
     </template>
 

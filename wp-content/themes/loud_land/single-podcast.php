@@ -65,6 +65,12 @@ get_header(); ?>
         <h1>Episoder</h1>
         <section id="episoder_section"></section>
 
+        <section>
+            <h1>Måske du også ville kunne lide</h1>
+            <div class="maske_kan_du_lide"></div>
+        </section>
+
+
 
     </main>
 
@@ -81,6 +87,25 @@ get_header(); ?>
         </article>
     </template>
 
+
+    <template id="single_podcast_kan_lide">
+        <article>
+            <img src="" alt="" class="billede">
+            <div class="podcast_baggrund">
+
+                <h2></h2>
+                <p class="podcast_resume"></p>
+            </div>
+            <div class="doble_knap">
+                <button class="afspil_knap">Afspil</button>
+                <button class="gea_til_podcast_knap">Gå til podcast</button>
+            </div>
+
+        </article>
+    </template>
+
+
+
     <script>
         let podcast;
         let episoder;
@@ -94,6 +119,11 @@ get_header(); ?>
 
         //Henter ud fra slug, det tal som podcasten har + det id, som episoden har - der henvises dermed til podcastens underliggende episoder
         const episodeUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode?per_page=100";
+
+        // url til wp rest api/database for alle podcast
+        const lideUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/podcast?per_page=100";
+
+
 
         //container der indeholder sektionen hvor episoderne skal placeres
         const container = document.querySelector("#episoder_section");
@@ -111,8 +141,13 @@ get_header(); ?>
             episoder = await dataEpisode.json();
             console.log(episoder);
 
+            const dataLide = await fetch(lideUrl);
+            lideMoske = await dataLide.json();
+            console.log(lideMoske);
+
             visPodcasts();
             visEpisoder();
+            visMoskeLide();
         }
 
 
@@ -158,6 +193,41 @@ get_header(); ?>
             })
 
         }
+
+        function visMoskeLide() {
+            console.log("visMoskeLide");
+
+            //Genererer et nyt array af tilfældige objekter fra det komplette array
+            const other1 = lideMoske[Math.floor(Math.random() * lideMoske.length)];
+            const other2 = lideMoske[Math.floor(Math.random() * lideMoske.length)];
+            const other3 = lideMoske[Math.floor(Math.random() * lideMoske.length)];
+            const randomPodcast = [other1, other2, other3];
+            console.log(randomPodcast);
+
+            randomPodcast.forEach(podcast => {
+                //Definerer konstanter til senere brug i kloningen af template
+                const template = document.querySelector("#single_podcast_kan_lide");
+                const container = document.querySelector(".maske_kan_du_lide");
+
+
+                const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
+                klon.querySelector(".billede").src = podcast.billede.guid;
+                klon.querySelector("h2").textContent = podcast.title.rendered;
+                klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
+
+                // eventlisteners på hver enkelt artikel
+                klon.querySelector(".afspil_knap").addEventListener("click", () => {
+                    location.href = podcast.link;
+                })
+
+                klon.querySelector(".gea_til_podcast_knap").addEventListener("click", () => {
+                    location.href = podcast.link;
+                })
+                container.appendChild(klon);
+            })
+
+        }
+
 
         getJson();
 
