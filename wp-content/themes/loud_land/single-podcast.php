@@ -59,7 +59,7 @@ get_header(); ?>
             const episodeUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode?per_page=100";
 
             //container der indeholder sektionen hvor episoderne skal placeres
-            const container = document.querySelector("#episoder");
+            const container = document.querySelector("#episoder_section");
 
             console.log("Alle variabler er kaldt");
 
