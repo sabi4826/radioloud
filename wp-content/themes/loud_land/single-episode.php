@@ -12,11 +12,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 		<h1 id="overskrift">Episode??? HVAD SKAL DER STÅ HER?</h1>
-		<!--
-		<nav id="filtrering">
-			<button data-podcast="alle">Alle</button>
-		</nav>
--->
+
 		<section id="enkelt_episode"></section>
 	</main><!-- #main -->
 
@@ -47,8 +43,9 @@ get_header(); ?>
 			episode = await JsonData.json();
 			console.log("loadJson");
 			visEpisode();
-			opretKnapper();
 		}
+
+		loadJson();
 
 		//funktion, der viser episoden
 		function visEpisode() {
@@ -62,19 +59,13 @@ get_header(); ?>
 			klon.querySelector("h4").textContent = episode.episode_resume;
 			klon.querySelector("p").textContent = episode.dato;
 
-			// eventlisteners på hver enkelt artikel
-			klon.querySelector(".afspil_knap").addEventListener("click", () => {
+			klon.querySelector(".episode-billede").addEventListener("click", () => {
 				location.href = episode.link;
 			})
 
-			klon.querySelector(".gea_til_podcast_knap").addEventListener("click", () => {
-				location.href = episode.link;
-			})
 			dest.appendChild(klon);
 
 		}
-
-		loadJson();
 
 	</script>
 </div><!-- #primary -->
