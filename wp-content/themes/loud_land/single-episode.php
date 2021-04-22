@@ -11,64 +11,113 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
-		<h1 id="overskrift">Episode??? HVAD SKAL DER STÅ HER?</h1>
 
-		<section id="enkelt_episode"></section>
-	</main><!-- #main -->
-
-	<template>
+		<!-- single-view episode -->
 		<article>
-			<img src="" alt="" class="episode-billede">
-			<h2></h2>
-			<h4></h4>
-			<p></p>
+			<img src="" alt="" class="billede">
+			<div>
+				<h2 class="overskrift"></h2>
+				<p class="episode_resume"></p>
+				<p class="dato"></p>
+			</div>
+		</article>
+
+		<!-- episode-liste -->
+		<section id="episoder_section"></section>
+
+	</main>
+
+	<template id="temEpi">
+		<article>
+			<img src="" alt="" class="epi_billede">
+			<div class="podcast_baggrund">
+				<h2 class="epi_overskrift"></h2>
+				<h4 class="epi_dato"></h4>
+				<p class="epi_resume"></p>
+			</div>
 		</article>
 	</template>
 
 	<script>
 		let episode;
+		let episoder;
+		//Henter den episode, der er blevet klikket på
 		let aktuelEpisode = <?php echo get_the_ID() ?>;
 
-		console.log("id på episode", aktuelEpisode);
-		// url til wp rest api/database
+		//Konstanten sættes til at lede efter podcasten der klikkes på
 		const dbUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode/" + aktuelEpisode;
 
-		// container/destination til articles med en episode
-		const dest = document.querySelector("#enkelt_episode");
-		// select indhold af html skabelon (article)
-		const skabelon = document.querySelector("template");
+		//Henter ud fra slug, det tal som podcasten har + det id, som episoden har - der henvises dermed til podcastens underliggende episoder
+		const episodeUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode?per_page=100";
 
-		async function loadJson() {
-			const JsonData = await fetch(dbUrl);
-			episode = await JsonData.json();
-			console.log("loadJson");
-			visEpisode();
+		//container der indeholder sektionen hvor episoderne skal placeres
+		const container = document.querySelector("#episoder_section");
+
+		console.log("Alle variabler er kaldt");
+
+		async function getJson() {
+			console.log("async function bliver kaldt")
+
+			const data = await fetch(dbUrl);
+			episode = await data.json();
+
+			const dataEpisode = await fetch(episodeUrl);
+			episoder = await dataEpisode.json();
+			console.log("flere episoder hentet", episoder);
+
+			visEpi();
+			visEpisoder();
 		}
 
-		loadJson();
 
-		//funktion, der viser episoden
-		function visEpisode() {
-			console.log("visEpisode-funktion");
-			// ryd ekst. indhold - ER DEN NØDVENDIG?:
-			//dest.innerHTML = "";
+		//Henter information fra json, og sætter dem ind i episode-sektion
+		function visEpi() {
+			console.log("visEpi bliver kaldt", episode);
 
-			const klon = skabelon.cloneNode(true).content;
-			klon.querySelector(".episode-billede").src = episode.billede.guid;
-			klon.querySelector("h2").textContent = episode.title.rendered;
-			klon.querySelector("h4").textContent = episode.episode_resume;
-			klon.querySelector("p").textContent = episode.dato;
+			document.querySelector(".billede").src = episode.billede.guid;
+			document.querySelector(".overskrift").textContent = episode.title.rendered;
+			document.querySelector(".episode_resume").textContent = episode.episode_resume;
+			document.querySelector(".dato").textContent = episode.dato;
+		}
 
-			klon.querySelector(".episode-billede").addEventListener("click", () => {
-				location.href = episode.link;
+		function visEpisoder() {
+			console.log("visEpisoder bliver kaldt", episoder);
+
+			let episodeTemplate = document.querySelector("#temEpi");
+			episoder.forEach(episode => {
+				console.log("Loop ID:", aktuelPodcast);
+
+				console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast);
+
+				let podcastId = episode.horer_til_podcast;
+
+				console.log("podcastId", podcastId);
+
+				if (podcastId == aktuelPodcast) {
+					console.log("Loop kører ID:", aktuelPodcast);
+
+					let klon = episodeTemplate.cloneNode(true).content;
+					klon.querySelector(".epi_billede").src = episode.billede.guid;
+					klon.querySelector(".epi_overskrift").textContent = episode.title.rendered;
+					klon.querySelector(".epi_dato").innerHTML = episode.dato;
+					klon.querySelector(".epi_resume").textContent = episode.episode_resume;
+
+					klon.querySelector("article").addEventListener("click", () => {
+						location.href = episode.link;
+					})
+
+					container.appendChild(klon);
+				}
+
 			})
 
-			dest.appendChild(klon);
-
 		}
 
-	</script>
-</div><!-- #primary -->
+		getJson();
 
+	</script>
+
+</div>
+<!-- #primary -->
 
 get_footer();
