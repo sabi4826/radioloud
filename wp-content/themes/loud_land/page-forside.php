@@ -68,8 +68,9 @@ get_header(); ?>
 
     <template>
         <article>
+            <img src="" alt="" class="billede">
             <div class="podcast_baggrund">
-                <img src="" alt="" class="billede">
+
                 <h2></h2>
                 <h4></h4>
                 <p class="podcast_resume"></p>
@@ -85,8 +86,9 @@ get_header(); ?>
 
     <template id="forside_det_hitter">
         <article>
+            <img src="" alt="" class="billede">
             <div class="podcast_baggrund">
-                <img src="" alt="" class="billede">
+
                 <h2></h2>
                 <p class="podcast_resume"></p>
             </div>
