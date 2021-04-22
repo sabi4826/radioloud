@@ -9,24 +9,43 @@
 
 get_header(); ?>
 
+<style>
+    p {
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+</style>
+
+
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <h1 id="overskrift">Enkelt vært</h1>
-
+        <a href="http://sabineovesen.dk/radioloud/index.php/vaerter-siden/"><button class="tilbage">tilbage</button></a>
         <section id="enkelt_vært"></section>
     </main><!-- #main -->
 
     <template>
         <article>
+            <div class="tekst">
+                <h2></h2>
+                <p></p>
+            </div>
             <img src="" alt="" class="vært-billede">
-            <h2></h2>
-            <p></p>
         </article>
     </template>
 
     <script>
         let vært;
-        let aktuelVært = "sofie-linde" /*< ? php echo get_the_ID() ? > */ ;
+        let aktuelVært = <?php echo get_the_ID() ?>;
 
         console.log("id på vært", aktuelVært);
         // url til wp rest api/database
@@ -63,5 +82,6 @@ get_header(); ?>
     </script>
 </div><!-- #primary -->
 
-
+<?php
 get_footer();
+?>
