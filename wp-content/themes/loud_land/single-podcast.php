@@ -20,6 +20,7 @@ get_header(); ?>
     .stor_visning_podcast {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-bottom: 250px;
     }
 
     .text_signle h2,
@@ -35,6 +36,11 @@ get_header(); ?>
     .episode_grid {
         display: grid;
         grid-template-columns: 0.5fr 1fr;
+        margin: 20px 100px;
+    }
+
+    .episode_grid .podcast_baggrund p {
+        color: black;
     }
 
 </style>
@@ -56,9 +62,8 @@ get_header(); ?>
         </article>
 
         <!-- episode-liste -->
-        <section id="episoder_section">
-
-        </section>
+        <h1>Episoder</h1>
+        <section id="episoder_section"></section>
 
 
     </main>
