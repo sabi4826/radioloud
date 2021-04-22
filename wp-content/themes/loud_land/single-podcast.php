@@ -16,6 +16,8 @@ get_header(); ?>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
+
+            <!-- single-view podcast -->
             <article>
                 <img src="" alt="" class="billede">
                 <div>
@@ -25,78 +27,80 @@ get_header(); ?>
                 </div>
             </article>
 
-            <section>
-                <h1>Episoder</h1>
-                <div class="episode-section"></div>
+            <!-- episode-liste -->
+            <section id="episoder">
+                <template>
+                    <article>
+                        <img src="" alt="" class="epi_billede">
+                        <h2 class="epi_overskrift"></h2>
+                        <h4 class="epi_dato"></h4>
+                        <p class="epi_resume"></p>
+                    </article>
+                </template>
             </section>
 
         </main>
-        <!-- #main -->
-
-        <template id="episode-afsnit">
-            <article>
-                <img src="" alt="" class="episode-billede">
-                <h2></h2>
-                <h4></h4>
-                <p></p>
-            </article>
-        </template>
 
         <script>
             let podcast;
-            let episode;
+            let episoder;
 
-            //Konstanten sættes til at lede efter "podcast" - herefter laves et echo-kald, hvor der beder om den pågældende podcasts' ID, alt efter hvilken der klikkes på
-            const dbUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/podcast/" + <?php echo get_the_ID() ?>;
+            //Henter den podcasts der klikeks på
+            let aktuelPodcast = <?php echo get_the_ID() ?>;
 
-            //EPISODE
-            const epiUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode?per_page=100";
+
+            //Konstanten sættes til at lede efter podcasten der klikkes på
+            const dbUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/podcasts/" + aktuelPodcast;
+
+            //Henter ud fra slug, det tal som podcasten har + det id, som episoden har - der henvises dermed til podcastens underliggende episoder
+            const episodeUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episoder?per_page=100/";
+
+            //container der indeholder sektionen hvor episoderne skal placeres
+            const container = document.querySelector("#episoder")
+
 
 
             async function getJson() {
                 const data = await fetch(dbUrl);
                 podcast = await data.json();
-                visPodcasts();
-                loadJson();
-            }
 
-            async function loadJson() {
-                //EPISODE
-                const epiData = await fetch(epiUrl);
-                episode = await epiData.json();
+                const dataEpisode = await fetch(episodeUrl);
+                episoder = await dataEpisode.json();
+
+                visPodcasts();
                 visEpisoder();
             }
 
-
+            //Henter information fra json, og sætter dem ind i podcast-sektion
             function visPodcasts() {
                 document.querySelector(".billede").src = podcast.billede.guid;
                 document.querySelector("h2").textContent = podcast.title.rendered;
                 document.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
                 document.querySelector(".vaerter").textContent = `${"Værter: "}` + podcast.vaerter;
-
             }
 
             function visEpisoder() {
-                console.log("visEpisoder-funktion");
+                console.log("visEpisoder");
 
-                // loop igennem json (epsidoer)
+                let episodeTemplate = document.querySelector("template");
                 episoder.forEach(episode => {
+                    console.log("Loop ID:", aktuelPodcast);
 
-                    const skabelon = document.querySelector("template");
-                    const dest = document.querySelector("#episode-afsnit");
+                    if (episode.horer_til_pocast == aktuelPodcast);
+                    console.log("Loop kører ID:", aktuelPodcast);
 
-                    const klon = skabelon.cloneNode(true).content;
-                    klon.querySelector(".billede").src = episode.billede.guid;
-                    klon.querySelector("h2").textContent = episode.title.rendered;
-                    klon.querySelector("h4").textContent = episode.dato;
-                    klon.querySelector("p").textContent = episode.episode_resume;
+                    let klon = episodeTemplate.cloneNode(true).content;
+                    klon.querySelector(".epi_billede").src = episode.billede.guid;
+                    klon.querySelector("epi_overskrift").textContent = episode.title.rendered;
+                    klon.querySelector("epi_dato").innerHTML = episode.dato;
+                    klon.querySelector(".epi_resume").textContent = episode.episode_resume;
 
+                    klon.querySelector("#episoder").addEventListener("click", () => {
+                        location.href = episode.link;
+                    })
 
-                    dest.appendChild(klon);
-
+                    container.appendChild(klon);
                 })
-
-
 
             }
 
