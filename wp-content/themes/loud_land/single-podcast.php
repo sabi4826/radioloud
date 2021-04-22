@@ -29,7 +29,7 @@ get_header(); ?>
 
             <!-- episode-liste -->
             <section id="episoder_section">
-                <template>
+                <template id="temEpi">
                     <article>
                         <img src="" alt="" class="epi_billede">
                         <h2 class="epi_overskrift"></h2>
@@ -88,7 +88,7 @@ get_header(); ?>
             function visEpisoder() {
                 console.log("visEpisoder bliver kaldt");
 
-                let episodeTemplate = document.querySelector("template");
+                let episodeTemplate = document.querySelector("#temEpi");
                 episoder.forEach(episode => {
                     console.log("Loop ID:", aktuelPodcast);
 
