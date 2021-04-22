@@ -63,7 +63,7 @@ get_header(); ?>
 
 			const dataEpisode = await fetch(episodeUrl);
 			episoder = await dataEpisode.json();
-			console.log("flere episoder hentet", episoder);
+			console.log("async flere episoder hentet", episoder);
 
 			visEpi();
 			visEpisoder();
@@ -85,7 +85,7 @@ get_header(); ?>
 
 			let episodeTemplate = document.querySelector("#temEpi");
 			episoder.forEach(episode => {
-				console.log("Loop ID:", aktuelPodcast);
+				console.log("Loop ID:", aktuelEpisode);
 
 				console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast);
 
@@ -93,8 +93,8 @@ get_header(); ?>
 
 				console.log("podcastId", podcastId);
 
-				if (podcastId == aktuelPodcast) {
-					console.log("Loop kører ID:", aktuelPodcast);
+				if (podcastId == aktuelEpisode) {
+					console.log("Loop kører ID:", aktuelEpisode);
 
 					let klon = episodeTemplate.cloneNode(true).content;
 					klon.querySelector(".epi_billede").src = episode.billede.guid;
@@ -120,4 +120,4 @@ get_header(); ?>
 </div>
 <!-- #primary -->
 
-get_footer();
+<?php get_footer();?>
