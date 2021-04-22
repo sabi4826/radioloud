@@ -47,7 +47,7 @@ get_header(); ?>
     }
 
     .loud_live_forside .left {
-        padding: 30px;
+        padding: 10px;
     }
 
     .loud_live_forside h1,
@@ -56,7 +56,7 @@ get_header(); ?>
         color: white
     }
 
-    .loud_live_forside h1 {
+    #overskrift {
         text-align: center;
         text-decoration: underline;
     }
