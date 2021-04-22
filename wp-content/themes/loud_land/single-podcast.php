@@ -98,7 +98,7 @@ get_header(); ?>
 
                     console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast);
 
-                    if (episoder.horer_til_podcast == aktuelPodcast);
+                    if (episode.horer_til_podcast == aktuelPodcast);
                     console.log("Loop kører ID:", aktuelPodcast);
 
                     let klon = episodeTemplate.cloneNode(true).content;
