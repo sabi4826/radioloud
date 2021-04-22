@@ -86,7 +86,7 @@ get_header(); ?>
             }
 
             function visEpisoder() {
-                console.log("visEpisoder bliver kaldt");
+                console.log("visEpisoder bliver kaldt", episoder);
 
                 let episodeTemplate = document.querySelector("#temEpi");
                 episoder.forEach(episode => {
