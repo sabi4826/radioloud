@@ -87,22 +87,10 @@ get_header(); ?>
                     console.log("Episode ID:", aktuelEpisode);
 
 
-                    let podcastId1 = episode.horer_til_episode1[0].id;
-                    console.log("horer_til_episode1", episode.horer_til_episode1[0].id);
-
-                    let podcastId2 = episode.horer_til_episode2[0].id;
-                    console.log("horer_til_episode2", episode.horer_til_episode2[0].id);
-
-                    let podcastId3 = episode.horer_til_episode3[0].id;
-                    console.log("horer_til_episode3", episode.horer_til_episode3[0].id);
-
-                    let podcastId4 = episode.horer_til_episode4[0].id;
-                    console.log("horer_til_episode4", episode.horer_til_episode4[0].id);
+                    let podcastId = episode.horer_til_podcast;
 
 
-                    console.log("Alle horer_til_podcast variabler er indlæst");
-
-                    if (podcastId1 == aktuelEpisode && podcastId2 == aktuelEpisode && podcastId3 == aktuelEpisode && podcastId4 == aktuelEpisode && podcastId5 == aktuelEpisode) {
+                    if (podcastId == aktuelEpisode) {
                         console.log("If-sætning kører");
 
                         let klon = episodeTemplate.cloneNode(true).content;
