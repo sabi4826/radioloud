@@ -95,7 +95,7 @@ get_header(); ?>
                     let podcastId5 = episode.horer_til_episode5;
 
 
-                    if (podcastId1 == aktuelEpisode || podcastId2 == aktuelEpisode || podcastId3 == aktuelEpisode || podcastId4 == aktuelEpisode || podcastId5 == aktuelEpisode) {
+                    if (podcastId1 == aktuelEpisode && podcastId2 == aktuelEpisode && podcastId3 == aktuelEpisode && podcastId4 == aktuelEpisode && podcastId5 == aktuelEpisode) {
                         console.log("If-sætning kører");
 
                         let klon = episodeTemplate.cloneNode(true).content;
@@ -109,7 +109,7 @@ get_header(); ?>
                         })
 
                         container.appendChild(klon);
-                    }
+                    } else
 
                 })
 
