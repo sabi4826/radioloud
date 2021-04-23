@@ -12,7 +12,7 @@ Author: Gruppe 23
 
 h1 {
     clear: both;
-    font-weight: 600;
+    font-weight: 800;
     line-height: 1.13;
     margin: 0;
     text-rendering: optimizeLegibility;
@@ -21,6 +21,7 @@ h1 {
     font-size: 3rem;
     text-align: start;
     text-shadow: 3px 3px #000000;
+    text-transform: uppercase;
 }
 
 
@@ -29,7 +30,6 @@ h2 {
     font-family: 'Assistant', sans-serif;
     color: black;
     font-size: 2rem;
-    text-align: start;
     font-weight: bold;
 }
 
@@ -37,6 +37,8 @@ h3 {
     font-family: 'Assistant', sans-serif;
     color: black;
     font-size: 1.5rem;
+    text-align: start;
+    font-weight: bold;
 }
 
 h4 {
