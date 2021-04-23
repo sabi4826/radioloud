@@ -9,114 +9,118 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main">
-		<!-- single-view episode -->
-		<article>
-			<img src="" alt="" class="billede">
-			<div>
-				<h2 class="overskrift"></h2>
-				<p class="episode_resume"></p>
-				<p class="dato"></p>
-			</div>
-		</article>
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+            <!-- single-view episode -->
+            <article>
+                <img src="" alt="" class="billede">
+                <div>
+                    <h2 class="overskrift"></h2>
+                    <p class="episode_resume"></p>
+                    <p class="dato"></p>
+                </div>
+            </article>
 
-		<!-- episode-liste -->
-		<section id="episoder_section"></section>
+            <!-- episode-liste -->
+            <section id="episoder_section"></section>
 
-	</main>
+        </main>
 
-	<template id="temEpi">
-		<article>
-			<img src="" alt="" class="epi_billede">
-			<div class="podcast_baggrund">
-				<h2 class="epi_overskrift"></h2>
-				<h4 class="epi_dato"></h4>
-				<p class="epi_resume"></p>
-			</div>
-		</article>
-	</template>
+        <template id="temEpi">
+            <article>
+                <img src="" alt="" class="epi_billede">
+                <div class="podcast_baggrund">
+                    <h2 class="epi_overskrift"></h2>
+                    <h4 class="epi_dato"></h4>
+                    <p class="epi_resume"></p>
+                </div>
+            </article>
+        </template>
 
-	<script>
-		let episode;
-		let episoder;
-		//Henter den episode, der er blevet klikket på
-		let aktuelEpisode = <?php echo get_the_ID() ?>;
+        <script>
+            let episode;
+            let episoder;
+            //Henter den episode, der er blevet klikket på
+            let aktuelEpisode = <?php echo get_the_ID() ?>;
 
-		//Konstanten sættes til at lede efter podcasten der klikkes på
-		const dbUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode/" + aktuelEpisode;
+            //Konstanten sættes til at lede efter podcasten der klikkes på
+            const dbUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode/" + aktuelEpisode;
 
-		//Henter ud fra slug, det tal som podcasten har + det id, som episoden har - der henvises dermed til podcastens underliggende episoder
-		const episodeUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode?per_page=100";
+            //Henter ud fra slug, det tal som podcasten har + det id, som episoden har - der henvises dermed til podcastens underliggende episoder
+            const episodeUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode?per_page=100";
 
-		//container der indeholder sektionen hvor episoderne skal placeres
-		const container = document.querySelector("#episoder_section");
+            //container der indeholder sektionen hvor episoderne skal placeres
+            const container = document.querySelector("#episoder_section");
 
-		console.log("Alle variabler er kaldt");
+            console.log("Alle variabler er kaldt");
 
-		async function getJson() {
-			console.log("async function bliver kaldt")
+            async function getJson() {
+                console.log("async function bliver kaldt")
 
-			const data = await fetch(dbUrl);
-			episode = await data.json();
+                const data = await fetch(dbUrl);
+                episode = await data.json();
 
-			const dataEpisode = await fetch(episodeUrl);
-			episoder = await dataEpisode.json();
-			console.log("async flere episoder hentet", episoder);
+                const dataEpisode = await fetch(episodeUrl);
+                episoder = await dataEpisode.json();
+                console.log("async flere episoder hentet", episoder);
 
-			visEpi();
-			visEpisoder();
-		}
+                visEpi();
+                visEpisoder();
+            }
 
 
-		//Henter information fra json, og sætter dem ind i episode-sektion
-		function visEpi() {
-			console.log("visEpi bliver kaldt", episode);
+            //Henter information fra json, og sætter dem ind i episode-sektion
+            function visEpi() {
+                console.log("visEpi bliver kaldt", episode);
 
-			document.querySelector(".billede").src = episode.billede.guid;
-			document.querySelector(".overskrift").textContent = episode.title.rendered;
-			document.querySelector(".episode_resume").textContent = episode.episode_resume;
-			document.querySelector(".dato").textContent = episode.dato;
-		}
+                document.querySelector(".billede").src = episode.billede.guid;
+                document.querySelector(".overskrift").textContent = episode.title.rendered;
+                document.querySelector(".episode_resume").textContent = episode.episode_resume;
+                document.querySelector(".dato").textContent = episode.dato;
+            }
 
-		function visEpisoder() {
-			console.log("visEpisoder bliver kaldt", episoder);
+            function visEpisoder() {
+                console.log("visEpisoder bliver kaldt", episoder);
 
-			let episodeTemplate = document.querySelector("#temEpi");
-			episoder.forEach(episode => {
-				console.log("Loop ID:", aktuelEpisode);
+                let episodeTemplate = document.querySelector("#temEpi");
+                episoder.forEach(episode => {
+                    console.log("Loop ID:", aktuelEpisode);
 
-				console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast);
+                    console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast);
 
-				let podcastId = episode.horer_til_podcast;
+                    let podcastId1 = episode.horer_til_episode1;
+                    let podcastId2 = episode.horer_til_episode2;
+                    let podcastId3 = episode.horer_til_episode3;
+                    let podcastId4 = episode.horer_til_episode4;
+                    let podcastId5 = episode.horer_til_episode5;
 
-				console.log("podcastId", podcastId);
+                    console.log("podcastId", podcastId);
 
-				if (podcastId == aktuelEpisode) {
-					console.log("Loop kører ID:", aktuelEpisode);
+                    if (podcastId1 || podcastId2 || podcastId3 || podcastId4 || podcastId5 || == aktuelEpisode) {
+                        console.log("Loop kører ID:", aktuelEpisode);
 
-					let klon = episodeTemplate.cloneNode(true).content;
-					klon.querySelector(".epi_billede").src = episode.billede.guid;
-					klon.querySelector(".epi_overskrift").textContent = episode.title.rendered;
-					klon.querySelector(".epi_dato").innerHTML = episode.dato;
-					klon.querySelector(".epi_resume").textContent = episode.episode_resume;
+                        let klon = episodeTemplate.cloneNode(true).content;
+                        klon.querySelector(".epi_billede").src = episode.billede.guid;
+                        klon.querySelector(".epi_overskrift").textContent = episode.title.rendered;
+                        klon.querySelector(".epi_dato").innerHTML = episode.dato;
+                        klon.querySelector(".epi_resume").textContent = episode.episode_resume;
 
-					klon.querySelector("article").addEventListener("click", () => {
-						location.href = episode.link;
-					})
+                        klon.querySelector("article").addEventListener("click", () => {
+                            location.href = episode.link;
+                        })
 
-					container.appendChild(klon);
-				}
+                        container.appendChild(klon);
+                    }
 
-			})
+                })
 
-		}
+            }
 
-		getJson();
+            getJson();
 
-	</script>
+        </script>
 
-</div>
-<!-- #primary -->
+    </div>
+    <!-- #primary -->
 
-<?php get_footer();?>
+    <?php get_footer();?>
