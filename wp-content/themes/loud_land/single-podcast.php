@@ -16,14 +16,9 @@ get_header(); ?>
 
 
 <style>
-    /*    styling til første sektion af siden, hvor den pågældende podcast er vist med uddybend text*/
+    /* margen er tilføjet til første sektions bund*/
     .stor_visning_podcast {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         margin-bottom: 220px;
-        margin-left: 5%;
-        margin-right: 5%;
-        grid-gap: 30px;
 
     }
 
@@ -69,9 +64,8 @@ get_header(); ?>
         margin-bottom: 200px;
     }
 
+    /*    grid til opsætningen af de eneklte empisoder*/
     .episode_grid {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr;
         margin: 20px 100px;
     }
 
@@ -80,13 +74,12 @@ get_header(); ?>
     }
 
 
-    /*    styling af måske du også ville kunne lide */
+    /*  mobil Grid opsætningen og styling af; måske du også ville kunne lide */
 
     .maske_kan_du_lide {
         max-width: 1000px;
         margin: 40px 20px;
     }
-
 
     .maske_kan_du_lide {
         text-align: center;
@@ -94,14 +87,44 @@ get_header(); ?>
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         max-width: 100vw;
         grid-gap: 2rem;
-        padding-left: 10vw;
-        padding-right: 10vw;
-        overflow: hidden;
-        position: relative;
+
     }
 
     .single_podcast_kan_lide .podcast_baggrund p {
         color: black;
+    }
+
+
+
+    @media (min-width: 950px) {
+
+        /* Grid og styling til første sektion af siden, hvor den pågældende podcast er vist med uddybend text*/
+        .stor_visning_podcast {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            margin-left: 5%;
+            margin-right: 5%;
+            grid-gap: 30px;
+        }
+
+
+        /*styling af grid til episoderne og deres opsætning*/
+        .episode_grid {
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+
+        }
+
+        /*  destop Grid opsætningen og styling af; måske du også ville kunne lide */
+        .maske_kan_du_lide {
+            overflow: hidden;
+            position: relative;
+            margin: 40px 20px;
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
     }
 
 </style>
