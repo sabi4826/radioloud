@@ -128,7 +128,7 @@ get_header(); ?>
         <article>
             <img src="" alt="" class="billede">
             <div class="podcast_baggrund">
-                <h2></h2>
+                <h3></h3>
                 <p class="podcast_resume"></p>
             </div>
             <div class="doble_knap">
