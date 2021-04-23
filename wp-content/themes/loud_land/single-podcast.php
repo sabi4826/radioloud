@@ -64,12 +64,13 @@ get_header(); ?>
         position: relative;
     }
 
-    .podcast_resume {
-        color: black;
-    }
-
     .text_signle .podcast_resume .overskrift {
         color: white;
+    }
+
+
+    .text_signle .tilbage_knap {
+        padding-top: 50px;
     }
 
 </style>
