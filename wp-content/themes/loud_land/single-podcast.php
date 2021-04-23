@@ -23,7 +23,7 @@ get_header(); ?>
         margin-bottom: 220px;
         margin-left: 5%;
         margin-right: 5%;
-        grid-gap: 40px;
+        grid-gap: 30px;
 
     }
 
