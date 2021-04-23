@@ -96,7 +96,7 @@ get_header(); ?>
 
                     console.log("podcastId", podcastId);
 
-                    if (podcastId1 || podcastId2 || podcastId3 || podcastId4 || podcastId5 || == aktuelEpisode) {
+                    if (podcastId1 == aktuelEpisode || podcastId2 == aktuelEpisode || podcastId3 == aktuelEpisode || podcastId4 == aktuelEpisode || podcastId5 == aktuelEpisode) {
                         console.log("Loop kører ID:", aktuelEpisode);
 
                         let klon = episodeTemplate.cloneNode(true).content;
