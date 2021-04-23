@@ -55,18 +55,18 @@ p {
 
 /*---------------HEADER STYLE--------------*/
 
+
 .admin-bar #feature-slider-section,
 .home.admin-bar .custom-header {
-    min-height: 10px;
+    min-height: 120px;
+    background-color: #04161F;
 }
 
 header .home.admin-bar .custom-header {
-    min-height: 10px;
+    min-height: 120px;
+    background-color: #04161F;
 }
 
-header .home.admin-bar .custom-header {
-    min-height: 10px;
-}
 
 /*styling af podcast article på hele sitet*/
 
