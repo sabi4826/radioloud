@@ -68,7 +68,7 @@ get_header(); ?>
         color: black;
     }
 
-    .text_signle ..podcast_resume {
+    .text_signle .podcast_resume .overskrift {
         color: white;
     }
 
@@ -86,6 +86,8 @@ get_header(); ?>
                     <h2 class="overskrift"></h2>
                     <p class="podcast_resume"></p>
                     <h3 class="vaerter"></h3>
+
+                    <a href="javascript:history.back()" class="tilbage_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Tilbage-knap.png" alt="tilbage knap"></a>
                 </div>
                 <div><img src="" alt="" class="billede"></div>
             </div>
@@ -189,6 +191,8 @@ get_header(); ?>
             document.querySelector(".overskrift").textContent = podcast.title.rendered;
             document.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
             document.querySelector(".vaerter").textContent = `${"Værter: "}` + podcast.vaerter;
+
+
         }
 
         function visEpisoder() {
@@ -213,6 +217,8 @@ get_header(); ?>
                     klon.querySelector(".epi_dato").innerHTML = episode.dato;
                     klon.querySelector(".epi_resume").textContent = episode.episode_resume;
 
+                    klon.querySelector("article").addEventListener("click", () => showDetails(rngArt));
+
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = episode.link;
                     })
@@ -223,6 +229,17 @@ get_header(); ?>
             })
 
         }
+
+
+
+        // Når der klikkes på et enkelt kunstværk, føres du ind i et single-view
+        function showDetails(rngArt) {
+            console.log("showingDetails");
+            location.href = `single-podcast.php?id=${rngArt._id}`;
+        }
+
+
+
 
         function visMoskeLide() {
             console.log("visMoskeLide");
