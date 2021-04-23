@@ -11,7 +11,6 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
-
 		<!-- single-view episode -->
 		<article>
 			<img src="" alt="" class="billede">
