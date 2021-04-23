@@ -22,12 +22,14 @@ h1 {
     text-shadow: 3px 3px #000000;
     text-transform: uppercase;
 }
+
 h2 {
     font-family: 'Assistant', sans-serif;
     color: black;
     font-size: 2rem;
     font-weight: bold;
 }
+
 h3 {
     font-family: 'Assistant', sans-serif;
     color: black;
@@ -36,17 +38,34 @@ h3 {
     font-weight: bold;
     padding-bottom: 10px;
 }
+
 h4 {
     font-family: 'Wire One', sans-serif;
     color: #DB083A;
     font-size: 1.4rem;
     text-align: start;
 }
+
 p {
     font-family: 'Assistant', sans-serif;
     color: black;
     font-size: 1rem;
     text-align: start;
+}
+
+/*---------------HEADER STYLE--------------*/
+
+.admin-bar #feature-slider-section,
+.home.admin-bar .custom-header {
+    min-height: 10px;
+}
+
+header .home.admin-bar .custom-header {
+    min-height: 10px;
+}
+
+header .home.admin-bar .custom-header {
+    min-height: 10px;
 }
 
 /*styling af podcast article på hele sitet*/
@@ -67,20 +86,24 @@ button {
     width: 100%;
     margin: 2px 0px;
 }
+
 button:hover {
     background-color: #ffffff;
     color: black;
 }
+
 nav #filtrering {
     width: auto;
     text-align: center;
 }
+
 .doble_knap {
     width: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2px;
 }
+
 .page .entry-title {
     display: none;
 }
