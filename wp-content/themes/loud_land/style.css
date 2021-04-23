@@ -59,7 +59,6 @@ p {
 .admin-bar #feature-slider-section,
 .home.admin-bar .custom-header {
     min-height: 120px;
-    background-color: #04161F;
 }
 
 header .home.admin-bar .custom-header {
@@ -114,4 +113,11 @@ nav #filtrering {
 
 .page .entry-title {
     display: none;
+}
+
+/* Hvid skrift på undersider som job, presse osv.*/
+.entry-content p,
+a,
+h4 {
+    color: white;
 }
