@@ -20,13 +20,18 @@ get_header(); ?>
     .stor_visning_podcast {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin-bottom: 250px;
+        margin-bottom: 220px;
+        margin-left: 5%;
+        margin-right: 5%;
+        grid-gap: 40px;
+
     }
 
     /*grid til venstre side af top sektionen */
     .text_signle {
         display: grid;
-        grid-auto-rows: 1fr 0.5fr;
+        grid-auto-rows: 1fr 0.1fr;
+        background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/splach_single.png);
     }
 
     /*    top sektionens overskrifter og knapper*/
@@ -38,22 +43,23 @@ get_header(); ?>
 
     .bund p {
         color: white;
+        margin: 0;
+        padding-bottom: 10px;
     }
 
     .aboner_knapper {
         display: block;
         padding-right: 30px;
+        margin-bottom: 10%;
 
     }
 
-    .bund .tilbage_knap {
-        padding-top: 50px;
-    }
 
 
     /*styling af grid til episoderne og deres opsætning*/
     #episoder_section {
         text-align: center;
+        margin-bottom: 200px;
     }
 
     .episode_grid {
@@ -85,6 +91,10 @@ get_header(); ?>
         padding-right: 10vw;
         overflow: hidden;
         position: relative;
+    }
+
+    .single_podcast_kan_lide .podcast_baggrund p {
+        color: black;
     }
 
 </style>
@@ -152,7 +162,7 @@ get_header(); ?>
             <img src="" alt="" class="billede">
             <div class="podcast_baggrund">
                 <h3></h3>
-                <p class="podcast_resume"></p>
+                <p></p>
             </div>
             <div class="doble_knap">
                 <button class="afspil_knap">Afspil</button>
@@ -283,7 +293,7 @@ get_header(); ?>
                 const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
                 klon.querySelector(".billede").src = podcast.billede.guid;
                 klon.querySelector("h3").textContent = podcast.title.rendered;
-                klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
+                klon.querySelector("p").textContent = podcast.podcast_resume;
 
                 // eventlisteners på hver enkelt artikel
                 klon.querySelector(".afspil_knap").addEventListener("click", () => {
