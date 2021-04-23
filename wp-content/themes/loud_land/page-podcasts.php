@@ -43,7 +43,7 @@ get_header(); ?>
         <article>
             <img src="" alt="" class="billede">
             <div class="podcast_baggrund">
-                <h2></h2>
+                <h3></h3>
                 <p class="podcast_resume"></p>
                 <p class="vaerter"></p>
             </div>
@@ -111,7 +111,7 @@ get_header(); ?>
 
                     const klon = skabelon.cloneNode(true).content;
                     klon.querySelector(".billede").src = podcast.billede.guid;
-                    klon.querySelector("h2").textContent = podcast.title.rendered;
+                    klon.querySelector("h3").textContent = podcast.title.rendered;
                     klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
                     klon.querySelector(".vaerter").textContent = `${"Værter: "}` + podcast.vaerter;
 

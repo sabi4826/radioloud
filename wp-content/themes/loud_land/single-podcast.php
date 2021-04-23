@@ -23,7 +23,7 @@ get_header(); ?>
         margin-bottom: 250px;
     }
 
-    .text_signle h2,
+    .text_signle h3,
     p {
         color: white;
     }
@@ -68,6 +68,10 @@ get_header(); ?>
         color: black;
     }
 
+    .text_signle .podcast_resume .overskrift {
+        color: white;
+    }
+
 </style>
 
 
@@ -78,9 +82,12 @@ get_header(); ?>
         <article>
             <div class="stor_visning_podcast">
                 <div class="text_signle">
+                    <h3></h3>
                     <h2 class="overskrift"></h2>
                     <p class="podcast_resume"></p>
-                    <p class="vaerter"></p>
+                    <h3 class="vaerter"></h3>
+
+                    <a href="javascript:history.back()" class="tilbage_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Tilbage-knap.png" alt="tilbage knap"></a>
                 </div>
                 <div><img src="" alt="" class="billede"></div>
             </div>
@@ -104,7 +111,7 @@ get_header(); ?>
             <div class="episode_grid">
                 <div><img src="" alt="" class="epi_billede"></div>
                 <div class="podcast_baggrund">
-                    <h2 class="epi_overskrift"></h2>
+                    <h3 class="epi_overskrift"></h3>
                     <h4 class="epi_dato"></h4>
                     <p class="epi_resume"></p>
                 </div>
@@ -117,7 +124,7 @@ get_header(); ?>
         <article>
             <img src="" alt="" class="billede">
             <div class="podcast_baggrund">
-                <h2></h2>
+                <h3></h3>
                 <p class="podcast_resume"></p>
             </div>
             <div class="doble_knap">
@@ -179,11 +186,19 @@ get_header(); ?>
         function visPodcasts() {
             console.log("visPodcasts bliver kaldt", podcast);
 
+            document.querySelector("h3").textContent = podcast.categories;
             document.querySelector(".billede").src = podcast.billede.guid;
             document.querySelector(".overskrift").textContent = podcast.title.rendered;
             document.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
             document.querySelector(".vaerter").textContent = `${"Værter: "}` + podcast.vaerter;
+
+            document.querySelector("a").addEventListener("click", tilbageKnap);
         }
+
+        function tilbageKnap() {
+            history.back();
+        }
+
 
         function visEpisoder() {
             console.log("visEpisoder bliver kaldt", episoder);
@@ -206,7 +221,6 @@ get_header(); ?>
                     klon.querySelector(".epi_overskrift").textContent = episode.title.rendered;
                     klon.querySelector(".epi_dato").innerHTML = episode.dato;
                     klon.querySelector(".epi_resume").textContent = episode.episode_resume;
-
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = episode.link;
                     })
@@ -217,6 +231,8 @@ get_header(); ?>
             })
 
         }
+
+
 
         function visMoskeLide() {
             console.log("visMoskeLide");
@@ -239,7 +255,7 @@ get_header(); ?>
 
                 const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
                 klon.querySelector(".billede").src = podcast.billede.guid;
-                klon.querySelector("h2").textContent = podcast.title.rendered;
+                klon.querySelector("h3").textContent = podcast.title.rendered;
                 klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
 
                 // eventlisteners på hver enkelt artikel

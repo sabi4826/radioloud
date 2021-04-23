@@ -39,12 +39,13 @@ h3 {
     font-size: 1.5rem;
     text-align: start;
     font-weight: bold;
+    padding-bottom: 10px;
 }
 
 h4 {
     font-family: 'Wire One', sans-serif;
     color: #DB083A;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     text-align: start;
 }
 
