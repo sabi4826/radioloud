@@ -9,6 +9,11 @@
 
 get_header(); ?>
 
+    <style>
+
+
+    </style>
+
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
             <!-- single-view episode -->
@@ -41,7 +46,8 @@ get_header(); ?>
             let episode;
             let episoder;
             //Henter den episode, der er blevet klikket på
-            let aktuelEpisode = <?php echo get_the_ID() ?>;
+            let aktuelEpisode = <?php echo get_object_vars($this) ?>;
+            console.log("aktuelEpisode", aktuelEpisode);
 
             //Konstanten sættes til at lede efter podcasten der klikkes på
             const dbUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode/" + aktuelEpisode;
