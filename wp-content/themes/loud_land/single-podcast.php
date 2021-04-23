@@ -23,11 +23,22 @@ get_header(); ?>
         margin-bottom: 250px;
     }
 
-    .text_signle h3,
-    p {
+    /*grid til venstre side af top sektionen */
+    .text_signle {
+        display: grid;
+        grid-auto-rows: 1fr 0.5fr;
+    }
+
+    /*    top sektionens overskrifter og knapper*/
+    .top h3,
+    p,
+    h2 {
         color: white;
     }
 
+    .bund p {
+        color: white;
+    }
 
     .aboner_knapper {
         display: block;
@@ -35,14 +46,7 @@ get_header(); ?>
 
     }
 
-    .text_signle,
-    .podcast_resume,
-    overskrift {
-        color: white;
-    }
-
-
-    .text_signle .tilbage_knap {
+    .bund .tilbage_knap {
         padding-top: 50px;
     }
 
@@ -93,22 +97,24 @@ get_header(); ?>
         <article>
             <div class="stor_visning_podcast">
                 <div class="text_signle">
-                    <h3></h3>
-                    <h2 class="overskrift"></h2>
-                    <p class="podcast_resume"></p>
-                    <h3 class="vaerter"></h3>
-
-                    <p>Abonnér på:</p>
-                    <div class="aboner_knapper">
-                        <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-4.png" alt="google tjeneste">
-                        <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-5.png" alt="streming tjeneste">
-                        <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-6.png" alt="streming tjeneste">
-                        <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-1.png" alt="streming tjeneste">
-                        <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-2.png" alt="streming tjeneste">
-                        <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-3.png" alt="streming tjeneste">
+                    <div class="top">
+                        <h3></h3>
+                        <h2 class="overskrift"></h2>
+                        <p class="podcast_resume"></p>
+                        <h3 class="vaerter"></h3>
                     </div>
-
-                    <a href="javascript:history.back()" class="tilbage_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Tilbage-knap.png" alt="tilbage knap"></a>
+                    <div class="bund">
+                        <p>Abonnér på:</p>
+                        <div class="aboner_knapper">
+                            <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-4.png" alt="google tjeneste">
+                            <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-5.png" alt="streming tjeneste">
+                            <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-6.png" alt="streming tjeneste">
+                            <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-1.png" alt="streming tjeneste">
+                            <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-2.png" alt="streming tjeneste">
+                            <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-3.png" alt="streming tjeneste">
+                        </div>
+                        <a href="javascript:history.back()" class="tilbage_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Tilbage-knap.png" alt="tilbage knap"></a>
+                    </div>
                 </div>
                 <div><img src="" alt="" class="billede"></div>
             </div>
