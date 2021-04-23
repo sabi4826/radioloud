@@ -14,7 +14,7 @@ get_header(); ?>
         color: white;
     }
 
-    h2 {
+    h1 {
         color: white;
     }
 
@@ -23,20 +23,23 @@ get_header(); ?>
         grid-template-columns: 1fr 1fr;
     }
 
+    element.style {
+        padding: 0;
+    }
+
 </style>
 
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
-        <h1 id="overskrift">Enkelt vært</h1>
-        <a href="http://sabineovesen.dk/radioloud/index.php/vaerter-siden/"><button class="tilbage">tilbage</button></a>
+        <a href="javascript:history.back()" class="tilbage_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Tilbage-knap.png" alt="tilbage knap"></a>
         <section id="enkelt_vært"></section>
     </main><!-- #main -->
 
     <template>
         <article>
             <div class="tekst">
-                <h2></h2>
+                <h1></h1>
                 <p></p>
             </div>
             <img src="" alt="" class="vært-billede">
@@ -72,11 +75,15 @@ get_header(); ?>
 
             const klon = skabelon.cloneNode(true).content;
             klon.querySelector("img").src = vært.billede.guid;
-            klon.querySelector("h2").textContent = vært.title.rendered;
+            klon.querySelector("h1").textContent = vært.title.rendered;
             klon.querySelector("p").textContent = vært.vaert_resume;
 
             destination.appendChild(klon);
 
+        }
+
+        function tilbageKnap() {
+            history.back();
         }
 
     </script>
