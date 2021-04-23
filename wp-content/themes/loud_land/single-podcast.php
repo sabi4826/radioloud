@@ -32,11 +32,18 @@ get_header(); ?>
         display: grid;
         grid-auto-rows: 1fr 0.1fr;
         background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/splach_single.png);
+        background-size: cover;
+    }
+
+    /*    texten på venstre siden af top sektionen bliver rykket ind */
+    .top,
+    .bund {
+        margin: 10px;
     }
 
     /*    top sektionens overskrifter og knapper*/
     .top h3,
-    p,
+    .podcast_resume,
     h2 {
         color: white;
     }
