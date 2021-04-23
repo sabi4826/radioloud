@@ -21,12 +21,13 @@ get_header(); ?>
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-bottom: 250px;
+        grid-gap: 40px;
     }
 
     /*grid til venstre side af top sektionen */
     .text_signle {
         display: grid;
-        grid-auto-rows: 1fr 0.5fr;
+        grid-auto-rows: 1fr 0.1fr;
     }
 
     /*    top sektionens overskrifter og knapper*/
@@ -38,22 +39,23 @@ get_header(); ?>
 
     .bund p {
         color: white;
+        margin: 0;
+        padding-bottom: 10px;
     }
 
     .aboner_knapper {
         display: block;
         padding-right: 30px;
+        margin-bottom: 10%;
 
     }
 
-    .bund .tilbage_knap {
-        padding-top: 50px;
-    }
 
 
     /*styling af grid til episoderne og deres opsætning*/
     #episoder_section {
         text-align: center;
+        margin-bottom: 250px;
     }
 
     .episode_grid {
@@ -85,6 +87,10 @@ get_header(); ?>
         padding-right: 10vw;
         overflow: hidden;
         position: relative;
+    }
+
+    .single_podcast_kan_lide .podcast_baggrund p {
+        color: black;
     }
 
 </style>
