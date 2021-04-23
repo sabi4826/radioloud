@@ -94,10 +94,9 @@ get_header(); ?>
                     let podcastId4 = episode.horer_til_episode4;
                     let podcastId5 = episode.horer_til_episode5;
 
-                    console.log("podcastId", podcastId);
 
                     if (podcastId1 == aktuelEpisode || podcastId2 == aktuelEpisode || podcastId3 == aktuelEpisode || podcastId4 == aktuelEpisode || podcastId5 == aktuelEpisode) {
-                        console.log("Loop kører ID:", aktuelEpisode);
+                        console.log("If-sætning kører");
 
                         let klon = episodeTemplate.cloneNode(true).content;
                         klon.querySelector(".epi_billede").src = episode.billede.guid;
