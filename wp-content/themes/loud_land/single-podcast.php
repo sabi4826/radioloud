@@ -192,8 +192,13 @@ get_header(); ?>
             document.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
             document.querySelector(".vaerter").textContent = `${"Værter: "}` + podcast.vaerter;
 
-
+            document.querySelector("a").addEventListener("click", tilbageKnap);
         }
+
+        function tilbageKnap() {
+            history.back();
+        }
+
 
         function visEpisoder() {
             console.log("visEpisoder bliver kaldt", episoder);
@@ -216,9 +221,6 @@ get_header(); ?>
                     klon.querySelector(".epi_overskrift").textContent = episode.title.rendered;
                     klon.querySelector(".epi_dato").innerHTML = episode.dato;
                     klon.querySelector(".epi_resume").textContent = episode.episode_resume;
-
-                    klon.querySelector("article").addEventListener("click", () => showDetails(rngArt));
-
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = episode.link;
                     })
@@ -229,15 +231,6 @@ get_header(); ?>
             })
 
         }
-
-
-
-        // Når der klikkes på et enkelt kunstværk, føres du ind i et single-view
-        function showDetails(rngArt) {
-            console.log("showingDetails");
-            location.href = `single-podcast.php?id=${rngArt._id}`;
-        }
-
 
 
 
