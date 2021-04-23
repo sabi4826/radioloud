@@ -64,10 +64,7 @@ get_header(); ?>
         margin-bottom: 200px;
     }
 
-    /*    grid til opsætningen af de eneklte empisoder*/
-    .episode_grid {
-        margin: 20px 100px;
-    }
+
 
     .episode_grid .podcast_baggrund p {
         color: black;
@@ -113,6 +110,7 @@ get_header(); ?>
         .episode_grid {
             display: grid;
             grid-template-columns: 0.5fr 1fr;
+            margin: 20px 100px;
 
         }
 
