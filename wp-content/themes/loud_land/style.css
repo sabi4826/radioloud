@@ -67,6 +67,14 @@ header .home.admin-bar .custom-header {
     background-color: #04161F;
 }
 
+header .custom-header {
+    background-color: #04161F;
+}
+
+#site-header-menu .site-header-menu {
+    color: white;
+}
+
 
 /*styling af podcast article på hele sitet*/
 
