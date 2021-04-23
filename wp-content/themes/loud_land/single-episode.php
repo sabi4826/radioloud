@@ -89,19 +89,19 @@ get_header(); ?>
                     console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast);
 
                     let podcastId1 = episode.horer_til_episode1;
-                    console.log("horer_til_episode1", episode.horer_til_episode1);
+                    console.log("horer_til_episode1", episoder.horer_til_episode1);
 
                     let podcastId2 = episode.horer_til_episode2;
-                    console.log("horer_til_episode2", episode.horer_til_episode2);
+                    console.log("horer_til_episode2", episoder.horer_til_episode2);
 
                     let podcastId3 = episode.horer_til_episode3;
-                    console.log("horer_til_episode3", episode.horer_til_episode3);
+                    console.log("horer_til_episode3", episoder.horer_til_episode3);
 
                     let podcastId4 = episode.horer_til_episode4;
-                    console.log("horer_til_episode4", episode.horer_til_episode4);
+                    console.log("horer_til_episode4", episoder.horer_til_episode4);
 
                     let podcastId5 = episode.horer_til_episode5;
-                    console.log("horer_til_episode5", episode.horer_til_episode5);
+                    console.log("horer_til_episode5", episoder.horer_til_episode5);
 
                     console.log("Alle horer_til_podcast variabler er indlæst");
 
