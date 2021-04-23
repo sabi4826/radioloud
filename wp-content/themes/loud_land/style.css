@@ -1,7 +1,7 @@
 /*
 Theme Name: LOUD Land
 Template: abletone
-Version: 1.0.3
+Version: 1.0.5
 Description: Gruppe 23 på KEA laver Radio LOUD
 Author: Gruppe 23
 */
@@ -55,28 +55,42 @@ p {
 
 /*---------------HEADER STYLE--------------*/
 
-
+/*Forside header*/
 .admin-bar #feature-slider-section,
 .home.admin-bar .custom-header {
     min-height: 120px;
+    background-color: #04161F;
+    color: white;
 }
 
-header .home.admin-bar .custom-header {
-    min-height: 120px;
+/*Farve på forside header*/
+.custom-header header-media {
     background-color: #04161F;
 }
 
-header .custom-header {
+/*Header farve på undersider*/
+.custom-header .wrapper {
     background-color: #04161F;
 }
 
+/*Header emnu tekst farve*/
 #site-header-menu .site-header-menu {
     color: white;
 }
 
+/*Header burger farver*/
 #menu-toggle .menu-label {
     color: white;
+}
 
+/* Om os drop down*/
+#primary-menu-wrapper .menu-inside-wrapper {
+    background-color: #FA5E5E;
+    border: none;
+}
+
+.menu-toggle {
+    color: white;
 }
 
 /*styling af podcast article på hele sitet*/
