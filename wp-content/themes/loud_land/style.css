@@ -10,100 +10,107 @@ Author: Gruppe 23
 /*Font til hele sitet*/
 
 h1 {
-    clear: both;
-    font-weight: 800;
-    line-height: 1.13;
-    margin: 0;
-    text-rendering: optimizeLegibility;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-size: 3rem;
-    text-align: start;
-    text-shadow: 3px 3px #000000;
-    text-transform: uppercase;
+	clear: both;
+	font-weight: 800;
+	line-height: 1.13;
+	margin: 0;
+	text-rendering: optimizeLegibility;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-size: 3rem;
+	text-align: start;
+	text-shadow: 3px 3px #000000;
+	text-transform: uppercase;
 }
 
 h2 {
-    font-family: 'Assistant', sans-serif;
-    color: black;
-    font-size: 2rem;
-    font-weight: bold;
+	font-family: 'Assistant', sans-serif;
+	color: black;
+	font-size: 2rem;
+	font-weight: bold;
 }
 
 h3 {
-    font-family: 'Assistant', sans-serif;
-    color: black;
-    font-size: 1.5rem;
-    text-align: start;
-    font-weight: bold;
-    padding-bottom: 10px;
+	font-family: 'Assistant', sans-serif;
+	color: black;
+	font-size: 1.5rem;
+	text-align: start;
+	font-weight: bold;
+	padding-bottom: 10px;
 }
 
 h4 {
-    font-family: 'Wire One', sans-serif;
-    color: #DB083A;
-    font-size: 1.4rem;
-    text-align: start;
+	font-family: 'Wire One', sans-serif;
+	color: #DB083A;
+	font-size: 1.4rem;
+	text-align: start;
 }
 
 p {
-    font-family: 'Assistant', sans-serif;
-    color: black;
-    font-size: 1rem;
-    text-align: start;
+	font-family: 'Assistant', sans-serif;
+	color: black;
+	font-size: 1rem;
+	text-align: start;
 }
 
 /*---------------HEADER STYLE--------------*/
 
 .admin-bar #feature-slider-section,
 .home.admin-bar .custom-header {
-    min-height: 10px;
+	min-height: 10px;
 }
 
 header .home.admin-bar .custom-header {
-    min-height: 10px;
+	min-height: 10px;
 }
 
 header .home.admin-bar .custom-header {
-    min-height: 10px;
+	min-height: 10px;
 }
 
 /*styling af podcast article på hele sitet*/
 
 .podcast_baggrund {
-    background-color: white;
-    padding: 10px;
+	background-color: white;
+	padding: 10px;
 }
 
 /*styling af kanpper på hele sitet*/
 
 button {
-    background-color: #FA5E5E;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    border: none;
-    color: black;
-    width: 100%;
-    margin: 2px 0px;
+	background-color: #FA5E5E;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	border: none;
+	color: black;
+	width: 100%;
+	margin: 2px 0px;
 }
 
 button:hover {
-    background-color: #ffffff;
-    color: black;
+	background-color: #ffffff;
+	color: black;
 }
 
 nav #filtrering {
-    width: auto;
-    text-align: center;
+	width: auto;
+	text-align: center;
 }
 
 .doble_knap {
-    width: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2px;
+	width: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2px;
 }
 
 .page .entry-title {
-    display: none;
+	display: none;
+}
+
+/* Hvid skrift på undersider som job, presse osv.*/
+.entry-content p,
+a,
+h4 {
+	color: white;
 }
