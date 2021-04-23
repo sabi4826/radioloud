@@ -55,6 +55,7 @@ p {
 
 /*---------------HEADER STYLE--------------*/
 
+
 .admin-bar #feature-slider-section,
 .home.admin-bar .custom-header {
 	min-height: 10px;
@@ -66,6 +67,16 @@ header .home.admin-bar .custom-header {
 
 header .home.admin-bar .custom-header {
 	min-height: 10px;
+}
+
+/* DER ER EN FEJL HER, HVAD SKAL DER SKE HER?*/
+min-height: 120px;
+background-color: #04161F;
+}
+
+header .home.admin-bar .custom-header {
+	min-height: 120px;
+	background-color: #04161F;
 }
 
 /*styling af podcast article på hele sitet*/
