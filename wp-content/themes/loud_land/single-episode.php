@@ -47,7 +47,7 @@ get_header(); ?>
             const dbUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode/" + aktuelEpisode;
 
             //Henter ud fra slug, det tal som podcasten har + det id, som episoden har - der henvises dermed til podcastens underliggende episoder
-            const episodeUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode?per_page=100";
+            const episodeUrl = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode?per_page=100" + aktuelEpisode;
 
             //container der indeholder sektionen hvor episoderne skal placeres
             const container = document.querySelector("#episoder_section");
@@ -84,24 +84,21 @@ get_header(); ?>
 
                 let episodeTemplate = document.querySelector("#temEpi");
                 episoder.forEach(episode => {
-                    console.log("Loop ID:", aktuelEpisode);
+                    console.log("Episode ID:", aktuelEpisode);
 
-                    console.log("horer_til_podcast bliver kaldt", episode.horer_til_podcast);
 
-                    let podcastId1 = episode.horer_til_episode1;
-                    console.log("horer_til_episode1", episoder.horer_til_episode1);
+                    let podcastId1 = episode.horer_til_episode_1;
+                    console.log("horer_til_episode1", episode.horer_til_episode_1);
 
-                    let podcastId2 = episode.horer_til_episode2;
-                    console.log("horer_til_episode2", episoder.horer_til_episode2);
+                    let podcastId2 = episode.horer_til_episode_2;
+                    console.log("horer_til_episode2", episode.horer_til_episode_2);
 
-                    let podcastId3 = episode.horer_til_episode3;
-                    console.log("horer_til_episode3", episoder.horer_til_episode3);
+                    let podcastId3 = episode.horer_til_episode_3;
+                    console.log("horer_til_episode3", episode.horer_til_episode_3);
 
-                    let podcastId4 = episode.horer_til_episode4;
-                    console.log("horer_til_episode4", episoder.horer_til_episode4);
+                    let podcastId4 = episode.horer_til_episode_4;
+                    console.log("horer_til_episode4", episode.horer_til_episode_4);
 
-                    let podcastId5 = episode.horer_til_episode5;
-                    console.log("horer_til_episode5", episoder.horer_til_episode5);
 
                     console.log("Alle horer_til_podcast variabler er indlæst");
 
