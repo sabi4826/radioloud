@@ -100,7 +100,7 @@ p {
 	padding: 10px;
 }
 
-/*styling af kanpper på hele sitet*/
+/*styling af knapper på hele sitet*/
 
 button {
 	background-color: #FA5E5E;
@@ -135,7 +135,8 @@ nav #filtrering {
 
 /* Hvid skrift på undersider som job, presse osv.*/
 .entry-content p,
-a,
-h3 {
+a {
 	color: white;
 }
+
+/* Menu m sort tekst på undersider
