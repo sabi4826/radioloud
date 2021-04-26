@@ -52,7 +52,7 @@ get_header(); ?>
         }
 
         .filter,
-        filter_knapper {
+        .filter_knapper {
             width: auto;
             margin: 2px;
         }
