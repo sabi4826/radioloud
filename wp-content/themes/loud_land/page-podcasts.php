@@ -15,6 +15,17 @@
 get_header(); ?>
 
 <style>
+    /* baggrunds bilelde */
+    .podcast_splashbillede {
+        background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Podcasts_splash.png);
+        background-size: cover;
+        max-width: none;
+        height: 30vh;
+        width: auto;
+    }
+
+
+
     /*    mobil grid udgaven på alle podcast oversigten*/
     #podcast_oversigt {
         display: grid;
@@ -23,10 +34,11 @@ get_header(); ?>
         grid-gap: 2rem;
     }
 
-    nav #filtrering {
-        width: auto;
+    #filtrering {
         text-align: center;
+        margin-top: 30px;
     }
+
 
 
     /*    destop grid udgaven på alle podcast oversigten*/
@@ -39,12 +51,20 @@ get_header(); ?>
             padding-right: 5vw;
         }
 
+        .filter,
+        .filter_knapper {
+            width: auto;
+            margin: 2px;
+        }
+
+
     }
 
 </style>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
+        <div class="podcast_splashbillede"></div>
         <h1 id="overskrift">Podcasts</h1>
         <nav id="filtrering">
             <button class="filter_knapper" data-podcast="alle">Alle</button>

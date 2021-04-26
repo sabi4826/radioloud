@@ -19,6 +19,17 @@
 get_header(); ?>
 
 <style>
+    /* splachbilelde */
+    .spalch_billede {
+        background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Forside_splash.png);
+        max-width: none;
+        width: auto;
+        height: 57vh;
+        background-size: cover;
+        background-position: 50%;
+        margin-bottom: 90px;
+    }
+
     .new_podcast,
     .det_hitter {
         display: grid;
@@ -34,23 +45,42 @@ get_header(); ?>
     }
 
     .loud_live_forside .left {
-        padding: 10px;
+        margin: 9% 10%;
+        padding-bottom: 10%;
     }
 
-    .loud_live_forside .left h1,
-    h2 {
+    .loud_live_forside .left h2 {
         text-transform: uppercase;
-        color: white
+        color: white;
+        margin-top: 4%;
     }
+
+
 
     .loud_live_forside .left h1 {
         text-decoration: underline;
+        text-transform: uppercase;
+        color: white;
     }
 
 
     #overskrift {
         text-align: center;
         text-decoration: uppercase;
+        margin-top: 30%;
+        margin-bottom: 5%;
+    }
+
+    #det_hitter_overskrift {
+        text-align: center;
+        text-decoration: uppercase;
+        margin-top: 30%;
+    }
+
+    #uder_overskrift {
+        text-align: center;
+        margin: 0px;
+        color: white;
     }
 
     .podcast_baggrund h2 {
@@ -63,6 +93,15 @@ get_header(); ?>
 
     /*    destop grid udgaven på alle podcast oversigten*/
     @media (min-width: 950px) {
+
+
+        /* splachbilelde */
+        .spalch_billede {
+            max-width: none;
+            height: 100vh;
+            background-position: none;
+
+        }
 
         /*tilføjelser til grid på destop */
         .new_podcast,
@@ -77,9 +116,13 @@ get_header(); ?>
         /*    styling af loud live sektionen*/
         .loud_live_forside {
             display: grid;
-            grid-template-columns: 1.4fr 1fr;
+            grid-template-columns: 1fr 1fr;
         }
 
+        /*        h1 overskrifter og deres margen*/
+        #overskrift {
+            margin-top: 15%;
+        }
 
     }
 
@@ -88,6 +131,11 @@ get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <div class="singular-content-wrap"></div> <!-- .singular-content-wrap -->
+
+        <section>
+            <div class="spalch_billede"></div>
+        </section>
+
         <section>
             <h1 id="overskrift">Nye podcast episoder fra LOUD</h1>
             <div class="new_podcast"></div>
@@ -111,8 +159,8 @@ get_header(); ?>
 
 
         <section>
-            <h1 id="overskrift">DET HITTER</h1>
-            <h2>Se de mest populære podcasts</h2>
+            <h1 id="det_hitter_overskrift">DET HITTER</h1>
+            <h2 id="uder_overskrift">Se de mest populære podcasts</h2>
             <div class="det_hitter"></div>
         </section>
 

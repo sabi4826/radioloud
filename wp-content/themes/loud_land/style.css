@@ -1,7 +1,7 @@
 /*
 Theme Name: LOUD Land
 Template: abletone
-Version: 1.0.5
+Version: 1.0.6
 Description: Gruppe 23 på KEA laver Radio LOUD
 Author: Gruppe 23
 */
@@ -143,9 +143,3 @@ a {
 .textwidget p {
     color: white;
 }
-
-button {
-    z-index: 200;
-}
-
-/* Menu m sort tekst på undersider
