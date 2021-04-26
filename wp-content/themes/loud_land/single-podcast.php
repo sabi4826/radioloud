@@ -28,14 +28,6 @@ get_header(); ?>
         }
         /*Fjerner WP-autogenerede overskrifter*/
 
-        .podcast_baggrund {
-            background-color: white;
-            padding: 2.2rem;
-            box-shadow: inset 0 -40px 20px -10px white;
-            max-height: 70vh;
-            overflow: hidden;
-        }
-
         .custom-header-content-wrapper {
             display: none;
         }
@@ -136,6 +128,13 @@ get_header(); ?>
             }
         }
 
+        @media (max-width: 950px) {
+            /*Fjerner store podcastbillede fra mobil*/
+            .billede {
+                display: none;
+            }
+        }
+
     </style>
 
 
@@ -148,6 +147,7 @@ get_header(); ?>
                     <div class="text_signle">
                         <div class="top">
                             <h2 class="overskrift"></h2>
+                            <div><img src="" alt="" class="billede-mobil"></div>
                             <p class="podcast_resume"></p>
                             <h3 class="vaerter"></h3>
                         </div>
@@ -262,6 +262,7 @@ get_header(); ?>
                 console.log("visPodcasts bliver kaldt", podcast);
 
                 document.querySelector(".billede").src = podcast.billede.guid;
+                document.querySelector(".billede-mobil").src = podcast.billede.guid;
                 document.querySelector(".overskrift").textContent = podcast.title.rendered;
                 document.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
                 document.querySelector(".vaerter").textContent = `${"Værter: "}` + podcast.vaerter;
