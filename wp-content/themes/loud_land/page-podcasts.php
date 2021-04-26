@@ -162,20 +162,13 @@ get_header(); ?>
 
             randomPodcast.forEach(podcast => {
                 //Definerer konstanter til senere brug i kloningen af template
-                const dest = document.querySelector("template");
-                const skabelon = document.querySelector("#lyt_vidre");
+                const skabelon = document.querySelector("template");
+                const dest = document.querySelector("#lyt_vidre");
 
 
-                const klon = dest.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
-                klon.querySelector(".billede").src = podcast.billede.guid;
-                klon.querySelector("h3").textContent = podcast.title.rendered;
-                klon.querySelector("h4").textContent = podcast.date_gmt;
-                klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
-                // eventlisteners på hver enkelt artikel
-                klon.querySelector(".gea_til_podcast_knap").addEventListener("click", () => {
-                    location.href = podcast.link;
-                })
-
+                const klon = skabelon.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
+                klon.querySelector("img").src = podcast.billede.guid;
+                klon.querySelector("figcaption").textContent = podcast.title.rendered;
                 container.appendChild(klon);
             })
 
