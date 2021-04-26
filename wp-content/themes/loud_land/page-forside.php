@@ -186,11 +186,11 @@ get_header(); ?>
             <img src="" alt="" class="billede">
 
             <div class="podcast_baggrund">
-                <div class="podcast_baggrund_wrapper">
-                </div>
                 <h3></h3>
                 <h4></h4>
                 <p class="podcast_resume"></p>
+            </div>
+            <div class="podcast_baggrund_wrapper">
             </div>
             <button class="gea_til_podcast_knap">Gå til podcast</button>
         </article>
