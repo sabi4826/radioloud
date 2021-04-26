@@ -20,15 +20,24 @@ get_header(); ?>
         grid-template-columns: repeat(auto-fill, minmax(300px, 10fr));
         max-width: 100vw;
         grid-gap: 2rem;
-        padding-left: 10vw;
-        padding-right: 10vw;
         overflow: hidden;
         position: relative;
-        margin: 40px 20px;
     }
 
     img {
         width: 100%;
+    }
+
+    article {
+        margin-bottom: 5vw;
+    }
+
+    #overskrift {
+        padding: 5vw;
+    }
+
+    h2 {
+        color: white;
     }
 
     #jobAnnonce {}
@@ -37,9 +46,16 @@ get_header(); ?>
         display: grid;
         background-color: #FA5E5E;
         grid-template-columns: 1fr 1fr;
+        margin-top: 10vw;
     }
 
     .col_tekst {
+        text-align: center;
+        display: inline-grid;
+        padding: 2vh 0 2vh 0;
+    }
+
+    .col_tekst h1 {
         text-align: center;
     }
 

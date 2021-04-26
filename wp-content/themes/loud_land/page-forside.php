@@ -21,28 +21,15 @@ get_header(); ?>
 <style>
     .new_podcast,
     .det_hitter {
-        max-width: 1000px;
-        margin: 40px 20px;
-    }
-
-    .new_podcast,
-    .det_hitter {
-        text-align: center;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         max-width: 100vw;
         grid-gap: 2rem;
-        padding-left: 10vw;
-        padding-right: 10vw;
-        overflow: hidden;
-        position: relative;
     }
 
 
-    /*    styling af loud live sektionen*/
+    /* styling af loud live sektionen*/
     .loud_live_forside {
-        display: grid;
-        grid-template-columns: 1.4fr 1fr;
         background-color: #53A27D;
     }
 
@@ -68,6 +55,32 @@ get_header(); ?>
 
     .podcast_baggrund h2 {
         color: black;
+    }
+
+
+
+
+
+    /*    destop grid udgaven på alle podcast oversigten*/
+    @media (min-width: 950px) {
+
+        /*tilføjelser til grid på destop */
+        .new_podcast,
+        .det_hitter {
+            overflow: hidden;
+            position: relative;
+            margin: 40px 20px;
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
+        /*    styling af loud live sektionen*/
+        .loud_live_forside {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+        }
+
+
     }
 
 </style>

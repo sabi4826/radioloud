@@ -15,16 +15,30 @@
 get_header(); ?>
 
 <style>
+    /*    mobil grid udgaven på alle podcast oversigten*/
     #podcast_oversigt {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         max-width: 100vw;
         grid-gap: 2rem;
-        padding-left: 10vw;
-        padding-right: 10vw;
-        overflow: hidden;
-        position: relative;
-        margin: 40px 20px;
+    }
+
+    nav #filtrering {
+        width: auto;
+        text-align: center;
+    }
+
+
+    /*    destop grid udgaven på alle podcast oversigten*/
+    @media (min-width: 950px) {
+        #podcast_oversigt {
+            overflow: hidden;
+            position: relative;
+            margin: 40px 20px;
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
     }
 
 </style>
