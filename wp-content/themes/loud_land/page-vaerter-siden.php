@@ -19,7 +19,7 @@ get_header(); ?>
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 10fr));
         max-width: 100vw;
-        grid-gap: 2rem;
+        grid-gap: 3rem;
         overflow: hidden;
         position: relative;
     }
@@ -30,14 +30,21 @@ get_header(); ?>
 
     article {
         margin-bottom: 5vw;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    article:hover {
+        transform: scale(1.1);
     }
 
     #overskrift {
-        padding: 5vw;
+        padding: 5vw 0 5vw 0;
     }
 
     h2 {
         color: white;
+        margin: 1vw 0 0 0;
     }
 
     #jobAnnonce {}
@@ -52,11 +59,23 @@ get_header(); ?>
     .col_tekst {
         text-align: center;
         display: inline-grid;
-        padding: 2vh 0 2vh 0;
+        padding: 5vh 0 5vh 0;
+        grid-gap: 10px;
+    }
+
+    .col_tekst button {
+        background-color: #53A27D;
+        margin: 1vw auto;
+        width: auto;
     }
 
     .col_tekst h1 {
         text-align: center;
+    }
+
+    .col_img {
+        background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Rectangle-31.jpg);
+        background-size: cover;
     }
 
 </style>
@@ -74,12 +93,10 @@ get_header(); ?>
             <div class="job_container">
                 <div class="col_tekst">
                     <h1>Job på LOUD</h1>
-                    <h2>Vil du være en del af LOUD</h2>
-                    <h2>Send en ansøgning</h2>
+                    <h2>Vil du være en del af LOUD <br>send en ansøgning</h2>
                     <button>Ansøg nu</button>
                 </div>
                 <div class="col_img">
-                    <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Rectangle-31.jpg" alt="job_billed">
                 </div>
             </div>
         </section>
@@ -90,7 +107,6 @@ get_header(); ?>
         <article>
             <img src="" alt="" class="billede">
             <h2 class="vært_navn"></h2>
-            <button class="gea_til_vært_knap">Gå til vært</button>
         </article>
     </template>
 
@@ -135,7 +151,7 @@ get_header(); ?>
                 klon.querySelector("h2").textContent = vært.title.rendered;
 
                 // eventlisteners på hver enkelt artikel
-                klon.querySelector(".gea_til_vært_knap").addEventListener("click", () => {
+                klon.querySelector("article").addEventListener("click", () => {
                     location.href = vært.link;
                 })
                 destination.appendChild(klon);
@@ -148,5 +164,7 @@ get_header(); ?>
     </script>
 
 </div><!-- #primary -->
+
+<?php get_sidebar();
 
 get_footer();
