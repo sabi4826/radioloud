@@ -120,7 +120,8 @@ get_header(); ?>
         }
 
         /*        h1 overskrifter og deres margen*/
-        #overskrift {
+        #overskrift,
+        #det_hitter_overskrift {
             margin-top: 15%;
         }
 
