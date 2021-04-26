@@ -71,9 +71,16 @@ get_header(); ?>
         margin-bottom: 5%;
     }
 
+    #det_hitter_overskrift {
+        text-align: center;
+        text-decoration: uppercase;
+        margin-top: 30%;
+    }
+
     #uder_overskrift {
         text-align: center;
         margin: 0px;
+        color: white;
     }
 
     .podcast_baggrund h2 {
@@ -152,7 +159,7 @@ get_header(); ?>
 
 
         <section>
-            <h1 id="overskrift">DET HITTER</h1>
+            <h1 id="det_hitter_overskrift">DET HITTER</h1>
             <h2 id="uder_overskrift">Se de mest populære podcasts</h2>
             <div class="det_hitter"></div>
         </section>
