@@ -50,11 +50,6 @@ get_header(); ?>
     }
 
 
-    .play_knap,
-    .billede {
-        grid-area: 1/1;
-    }
-
 
     /* styling af loud live sektionen*/
     .loud_live_forside {
