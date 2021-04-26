@@ -13,6 +13,7 @@
  */
 
 get_header(); ?>
+test
 
 <style>
     /* baggrunds bilelde */
