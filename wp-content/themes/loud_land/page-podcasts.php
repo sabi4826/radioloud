@@ -71,7 +71,6 @@ get_header(); ?>
             <button class="filter_knapper" data-podcast="alle">Alle</button>
         </nav>
 
-
         <section id="podcast_oversigt"></section>
 
     </main><!-- #main -->
