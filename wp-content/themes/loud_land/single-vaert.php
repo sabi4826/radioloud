@@ -76,7 +76,7 @@ get_header(); ?>
             const klon = skabelon.cloneNode(true).content;
             klon.querySelector("img").src = vært.billede.guid;
             klon.querySelector("h1").textContent = vært.title.rendered;
-            klon.querySelector("p").textContent = vært.vaert_resume;
+            klon.querySelector("p").innerHTML = vært.vaert_resume;
 
             destination.appendChild(klon);
 
