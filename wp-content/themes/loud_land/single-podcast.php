@@ -28,6 +28,14 @@ get_header(); ?>
         }
         /*Fjerner WP-autogenerede overskrifter*/
 
+        .podcast_baggrund {
+            background-color: white;
+            padding: 2.2rem;
+            box-shadow: inset 0 -40px 20px -10px white;
+            max-height: 70vh;
+            overflow: hidden;
+        }
+
         .custom-header-content-wrapper {
             display: none;
         }
