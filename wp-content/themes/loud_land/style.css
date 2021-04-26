@@ -81,6 +81,7 @@ p {
 /*Header burger farver*/
 #menu-toggle .menu-label {
     color: white;
+    z-index: 200;
 }
 
 /* Om os drop down*/
@@ -91,6 +92,7 @@ p {
 
 .menu-toggle {
     color: white;
+    z-index: 200;
 }
 
 /*styling af podcast article på hele sitet*/
@@ -142,8 +144,4 @@ a {
 /* Footer */
 .textwidget p {
     color: white;
-}
-
-button {
-    z-index: 200;
 }
