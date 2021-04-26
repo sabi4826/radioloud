@@ -24,9 +24,9 @@ get_header(); ?>
         background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Forside_splash.png);
         max-width: none;
         width: auto;
-        height: 57vh;
+        height: 46vh;
         background-size: cover;
-        background-position: 50%;
+        background-position: 200%;
         margin: 0px -100px 90px -100px;
     }
 
