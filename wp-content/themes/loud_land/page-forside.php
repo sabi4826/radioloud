@@ -27,7 +27,7 @@ get_header(); ?>
         height: 57vh;
         background-size: cover;
         background-position: 50%;
-        margin-bottom: 90px;
+        margin: 0px -100px 90px -100px;
     }
 
     .new_podcast,
