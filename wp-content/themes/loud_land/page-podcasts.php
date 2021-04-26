@@ -80,7 +80,6 @@ get_header(); ?>
 
     <template id="templat_lyt_vidre">
         <article>
-
             <img src="" alt="billede af episode">
             <figcaption></figcaption>
 
@@ -151,7 +150,6 @@ get_header(); ?>
 
 
         //funktion der viser lyt vidre listen view
-
         function visLytVidre() {
             console.log("visLytVidre");
 
@@ -159,29 +157,32 @@ get_header(); ?>
             const other1 = podcasts[Math.floor(Math.random() * podcasts.length)];
             const other2 = podcasts[Math.floor(Math.random() * podcasts.length)];
             const other3 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const other4 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const other5 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const other6 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const other7 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const other8 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const other9 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const randomPodcast = [other1, other2, other3, other4, other5, other6, other7, other8, other9];
+            const randomPodcast = [other1, other2, other3];
             console.log(randomPodcast);
 
             randomPodcast.forEach(podcast => {
                 //Definerer konstanter til senere brug i kloningen af template
-                const template = document.querySelector("#templat_lyt_vidre");
-                const container = document.querySelector("#lyt_vidre");
+                const dest = document.querySelector("template");
+                const skabelon = document.querySelector("#lyt_vidre");
 
 
-                const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
-                klon.querySelector("img").src = podcast.billede.guid;
-                klon.querySelector("figcaption").textContent = podcast.title.rendered;
+                const klon = dest.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
+                klon.querySelector(".billede").src = podcast.billede.guid;
+                klon.querySelector("h3").textContent = podcast.title.rendered;
+                klon.querySelector("h4").textContent = podcast.date_gmt;
+                klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
+                // eventlisteners på hver enkelt artikel
+                klon.querySelector(".gea_til_podcast_knap").addEventListener("click", () => {
+                    location.href = podcast.link;
+                })
+
                 container.appendChild(klon);
             })
 
-
         }
+
+
+
 
         //funktion, der viser podcasts i liste view
         function visPodcasts() {
