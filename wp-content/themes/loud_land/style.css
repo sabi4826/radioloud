@@ -144,4 +144,8 @@ a {
     color: white;
 }
 
+button {
+    z-index: 200;
+}
+
 /* Menu m sort tekst på undersider
