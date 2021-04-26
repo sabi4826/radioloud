@@ -119,6 +119,7 @@ get_header(); ?>
             /*styling af grid til episoderne og deres opsætning*/
             .episode_grid {
                 display: grid;
+                grid-gap: 1.2rem;
                 grid-template-columns: 0.5fr 1fr;
                 margin: 20px 100px;
             }
@@ -129,6 +130,9 @@ get_header(); ?>
                 margin: 40px 20px;
                 padding-left: 5vw;
                 padding-right: 5vw;
+            }
+            .max_hojde {
+                max-height: 25vh;
             }
         }
 
@@ -192,7 +196,7 @@ get_header(); ?>
 
 
         <template id="single_podcast_kan_lide">
-            <article>
+            <article class="max_hojde">
                 <img src="" alt="" class="billede">
                 <div class="podcast_baggrund">
                     <h3></h3>
