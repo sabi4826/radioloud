@@ -10,7 +10,7 @@
 get_header(); ?>
 
     <style>
-        p {
+    p {
             color: white;
             text-align: justify;
         }
@@ -25,6 +25,10 @@ get_header(); ?>
 
         .overskrift {
             padding-bottom: 1.2rem;
+        }
+
+        .afspil_knap {
+            width: 30%;
         }
 
         .stor_visning_podcast {
@@ -67,22 +71,7 @@ get_header(); ?>
             cursor: pointer;
             width: 35%;
         }
-
-        .billede:hover {
-            animation-name: pulse_kf;
-            animation-duration: 0.8s;
-            animation-iteration-count: 1;
-            animation-direction: alternate;
-        }
-
-        @keyframes pulse_kf {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.1);
-            }
-        }
+    }
 
     </style>
 
