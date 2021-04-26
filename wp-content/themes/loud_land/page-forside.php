@@ -188,6 +188,10 @@ get_header(); ?>
 
     <template id="forside_det_hitter">
         <article>
+            <div>
+                <button class="play_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Group-340.png" alt="play knap"></button>
+            </div>
+
             <img src="" alt="" class="billede">
             <div class="podcast_baggrund">
                 <h3></h3>
@@ -283,6 +287,10 @@ get_header(); ?>
                 klon.querySelector(".gea_til_podcast_knap").addEventListener("click", () => {
                     location.href = podcast.link;
                 })
+                klon.querySelector(".play_knap").addEventListener("click", () => {
+                    location.href = podcast.link;
+                })
+
                 container.appendChild(klon);
             })
 
