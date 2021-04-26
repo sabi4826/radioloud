@@ -70,9 +70,14 @@ get_header(); ?>
         <nav id="filtrering">
             <button class="filter_knapper" data-podcast="alle">Alle</button>
         </nav>
+
         <section id="podcast_oversigt"></section>
 
     </main><!-- #main -->
+
+
+
+
 
     <template>
         <article>
@@ -132,6 +137,10 @@ get_header(); ?>
             visPodcasts();
         }
 
+
+
+
+
         //funktion, der viser podcasts i liste view
         function visPodcasts() {
             console.log("visPodcasts-funktion");
@@ -168,5 +177,6 @@ get_header(); ?>
     </script>
 
 </div><!-- #primary -->
+<?php get_sidebar();
 
 get_footer();
