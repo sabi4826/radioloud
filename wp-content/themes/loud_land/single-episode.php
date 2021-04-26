@@ -18,6 +18,14 @@ get_header(); ?>
             width: 70%;
         }
 
+        h1 .entry-title .section-title {
+            display: none;
+        }
+
+        time .entry-date .published {
+            display: none;
+        }
+
         .stor_visning_podcast {
             display: grid;
             grid-template-columns: 1fr 1fr;
