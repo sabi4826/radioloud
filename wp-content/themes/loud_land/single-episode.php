@@ -100,22 +100,25 @@ get_header(); ?>
                             <button class="afspil_knap">Afspil</button>
                         </div>
 
+
+
+                        <div class="bund">
+                            <p>Abonnér på:</p>
+                            <div class="aboner_knapper">
+                                <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-4.png" alt="google tjeneste">
+                                <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-5.png" alt="streming tjeneste">
+                                <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-6.png" alt="streming tjeneste">
+                                <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-1.png" alt="streming tjeneste">
+                                <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-2.png" alt="streming tjeneste">
+                                <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-3.png" alt="streming tjeneste">
+                            </div>
+                            <a href="javascript:history.back()" class="tilbage_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Tilbage-knap.png" alt="tilbage knap"></a>
+                        </div>
+
                         <div><img src="" alt="" class="billede"></div>
 
                     </div>
 
-                    <div class="bund">
-                        <p>Abonnér på:</p>
-                        <div class="aboner_knapper">
-                            <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-4.png" alt="google tjeneste">
-                            <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-5.png" alt="streming tjeneste">
-                            <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-6.png" alt="streming tjeneste">
-                            <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-1.png" alt="streming tjeneste">
-                            <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-2.png" alt="streming tjeneste">
-                            <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Intersection-3.png" alt="streming tjeneste">
-                        </div>
-                        <a href="javascript:history.back()" class="tilbage_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Tilbage-knap.png" alt="tilbage knap"></a>
-                    </div>
                 </div>
 
 
