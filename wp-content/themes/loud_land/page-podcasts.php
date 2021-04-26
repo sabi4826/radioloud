@@ -81,7 +81,7 @@ get_header(); ?>
     <template id="templat_lyt_vidre">
         <article>
             <img class="billede" src="" alt="billede af episode">
-            <figcaption></figcaption>
+            <h3></h3>
 
         </article>
     </template>
@@ -168,7 +168,7 @@ get_header(); ?>
 
                 const klon = skabelon.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
                 klon.querySelector(".billede").src = podcast.billede.guid;
-                klon.querySelector("figcaption").textContent = podcast.title.rendered;
+                klon.querySelector("h3").textContent = podcast.title.rendered;
                 container.appendChild(klon);
             })
 
