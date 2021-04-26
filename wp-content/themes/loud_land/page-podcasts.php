@@ -78,7 +78,7 @@ get_header(); ?>
 
     </main><!-- #main -->
 
-    <template>
+    <template id="templat_lyt_vidre">
         <article>
 
             <img src="" alt="billede af episode">
@@ -170,7 +170,7 @@ get_header(); ?>
 
             randomPodcast.forEach(podcast => {
                 //Definerer konstanter til senere brug i kloningen af template
-                const template = document.querySelector("template");
+                const template = document.querySelector("#templat_lyt_vidre");
                 const container = document.querySelector("#lyt_vidre");
 
 
