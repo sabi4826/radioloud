@@ -72,19 +72,11 @@ get_header(); ?>
         </nav>
 
 
-        <section id="lyt_vidre"></section>
-
         <section id="podcast_oversigt"></section>
 
     </main><!-- #main -->
 
-    <template id="templat_lyt_vidre">
-        <article>
-            <img class="billede" src="" alt="billede af episode">
-            <h3></h3>
 
-        </article>
-    </template>
 
 
 
@@ -123,7 +115,6 @@ get_header(); ?>
             console.log("loadJson");
             visPodcasts();
             opretKnapper();
-            visLytVidre();
         }
 
         function opretKnapper() {
@@ -147,32 +138,6 @@ get_header(); ?>
             visPodcasts();
         }
 
-
-
-        //funktion der viser lyt vidre listen view
-        function visLytVidre() {
-            console.log("visLytVidre");
-
-            //Genererer et nyt array af tilfældige objekter fra det komplette array
-            const other1 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const other2 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const other3 = podcasts[Math.floor(Math.random() * podcasts.length)];
-            const randomPodcast = [other1, other2, other3];
-            console.log(randomPodcast);
-
-            randomPodcast.forEach(podcast => {
-                //Definerer konstanter til senere brug i kloningen af template
-                const skabelon = document.querySelector("template");
-                const dest = document.querySelector("#lyt_vidre");
-
-
-                const klon = skabelon.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
-                klon.querySelector(".billede").src = podcast.billede.guid;
-                klon.querySelector("h3").textContent = podcast.title.rendered;
-                container.appendChild(klon);
-            })
-
-        }
 
 
 
