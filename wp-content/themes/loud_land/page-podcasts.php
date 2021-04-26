@@ -20,7 +20,7 @@ get_header(); ?>
         background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Podcasts_splash.png);
         background-size: cover;
         max-width: none;
-        height: 10vh;
+        height: 30vh;
         width: auto;
     }
 
@@ -34,10 +34,11 @@ get_header(); ?>
         grid-gap: 2rem;
     }
 
-    nav #filtrering {
-        width: auto;
+    #filtrering {
         text-align: center;
+        margin-top: 30px;
     }
+
 
 
     /*    destop grid udgaven på alle podcast oversigten*/
@@ -49,6 +50,13 @@ get_header(); ?>
             padding-left: 5vw;
             padding-right: 5vw;
         }
+
+        .filter,
+        filter_knapper {
+            width: auto;
+            margin: 2px;
+        }
+
 
     }
 
