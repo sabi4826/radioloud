@@ -14,16 +14,16 @@ get_header(); ?>
             color: white;
         }
 
-        .epi_billede {
-            width: 70%;
+        .billede {
+            width: 50%;
         }
 
-        h1 .entry-title .section-title {
+        .custom-header-content-wrapper {
             display: none;
         }
 
-        time .entry-date .published {
-            display: none;
+        .overskrift {
+            padding-bottom: 1.2rem;
         }
 
         .stor_visning_podcast {
@@ -63,6 +63,30 @@ get_header(); ?>
             display: block;
             padding-right: 30px;
             margin-bottom: 10%;
+            cursor: pointer;
+        }
+
+        .afspil_knap:hover {
+            animation-name: pulse_kf;
+            animation-duration: 0.8s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+        }
+
+        .billede:hover {
+            animation-name: pulse_kf;
+            animation-duration: 0.8s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+        }
+
+        @keyframes pulse_kf {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
         }
 
     </style>
@@ -78,6 +102,7 @@ get_header(); ?>
                             <h2 class="overskrift"></h2>
                             <p class="episode_resume"></p>
                             <h3 class="dato"></h3>
+                            <button class="afspil_knap">Afspil</button>
                         </div>
                         <div class="bund">
                             <p>Abonnér på:</p>
