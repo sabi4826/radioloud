@@ -100,7 +100,7 @@ get_header(); ?>
                             <div class="aboner_knapper">
                                 <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/google_podcast.png" alt="google tjeneste">
                                 <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/podimo.png" alt="streming tjeneste">
-                                <img src="http://http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/network.png.dk/radioloud/wp-content/uploads/2021/04/Intersection-6.png" alt="streming tjeneste">
+                                <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/network-1.png" alt="streming tjeneste">
                                 <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/loud-logo.png" alt="streming tjeneste">
                                 <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/apple.png" alt="streming tjeneste">
                                 <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/spotity.png" alt="streming tjeneste">
