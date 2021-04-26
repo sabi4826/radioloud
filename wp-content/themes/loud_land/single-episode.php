@@ -169,7 +169,7 @@ get_header(); ?>
 
                         let klon = episodeTemplate.cloneNode(true).content;
                         klon.querySelector(".epi_billede").src = episode.billede.guid;
-                        klon.querySelector(".epi_overskrift").textContent = episode.title.rendered;
+                        klon.querySelector(".epi_overskrift").innerHTML = episode.title.rendered;
                         klon.querySelector(".epi_dato").innerHTML = episode.dato;
                         klon.querySelector(".epi_resume").textContent = episode.episode_resume;
 
