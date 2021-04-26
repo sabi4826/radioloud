@@ -19,6 +19,15 @@
 get_header(); ?>
 
 <style>
+    /* splachbilelde */
+    .spalch_billede {
+        max-width: none;
+        width: auto;
+        height: 100vh;
+        background-size: cover;
+        background-position: 40% 25%;
+    }
+
     .new_podcast,
     .det_hitter {
         display: grid;
@@ -67,10 +76,8 @@ get_header(); ?>
 
         /* splachbilelde */
         .spalch_billede {
-            max-width: none;
-            width: auto;
-            height: 100vh;
-            background-size: cover;
+            background-position: none;
+
         }
 
         /*tilføjelser til grid på destop */
