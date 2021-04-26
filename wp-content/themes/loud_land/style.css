@@ -143,3 +143,7 @@ a {
 .textwidget p {
     color: white;
 }
+
+button {
+    z-index: 200;
+}
