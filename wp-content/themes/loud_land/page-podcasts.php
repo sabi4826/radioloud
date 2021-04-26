@@ -22,6 +22,7 @@ get_header(); ?>
         max-width: none;
         height: 30vh;
         width: auto;
+        margin: 0px -100px 0px -100px;
     }
 
 
