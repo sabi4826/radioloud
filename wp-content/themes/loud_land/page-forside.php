@@ -21,6 +21,7 @@ get_header(); ?>
 <style>
     /* splachbilelde */
     .spalch_billede {
+        background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Forside_splash.png);
         max-width: none;
         width: auto;
         height: 100vh;
@@ -76,6 +77,7 @@ get_header(); ?>
 
         /* splachbilelde */
         .spalch_billede {
+
             background-position: none;
 
         }
@@ -106,7 +108,7 @@ get_header(); ?>
         <div class="singular-content-wrap"></div> <!-- .singular-content-wrap -->
 
         <section>
-            <div class="spalch_billede"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Forside_splash.png" alt="splachbillede"></div>
+            <div class="spalch_billede"></div>
         </section>
 
         <section>
