@@ -80,10 +80,10 @@ get_header(); ?>
 
     <template>
         <article>
-            <figure>
-                <img src="" alt="billede af episode">
-                <figcaption></figcaption>
-            </figure>
+
+            <img src="" alt="billede af episode">
+            <figcaption></figcaption>
+
         </article>
     </template>
 
