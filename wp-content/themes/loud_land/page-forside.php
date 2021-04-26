@@ -36,6 +36,23 @@ get_header(); ?>
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         max-width: 100vw;
         grid-gap: 2rem;
+        grid-auto-flow: dense;
+    }
+
+
+
+    /* styling af play kanppen */
+
+    .play_knap {
+        position: absolute;
+        place-self: center center;
+
+    }
+
+
+    .play_knap,
+    .billede {
+        grid-area: 1/1;
     }
 
 
@@ -188,6 +205,10 @@ get_header(); ?>
 
     <template id="forside_det_hitter">
         <article>
+            <div>
+                <img class="play_knap" src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Group-340.png" alt="play knap">
+            </div>
+
             <img src="" alt="" class="billede">
             <div class="podcast_baggrund">
                 <h3></h3>
@@ -283,6 +304,10 @@ get_header(); ?>
                 klon.querySelector(".gea_til_podcast_knap").addEventListener("click", () => {
                     location.href = podcast.link;
                 })
+                klon.querySelector(".play_knap").addEventListener("click", () => {
+                    location.href = podcast.link;
+                })
+
                 container.appendChild(klon);
             })
 
