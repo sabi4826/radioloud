@@ -106,7 +106,7 @@ get_header(); ?>
             let episode;
             let episoder;
             //Henter den episode, der er blevet klikket på
-            let aktuelEpisode = <?php echo get_object_vars($this) ?>;
+            let aktuelEpisode = <?php echo get_the_ID() ?>;
             console.log("aktuelEpisode", aktuelEpisode);
 
             //Konstanten sættes til at lede efter podcasten der klikkes på
