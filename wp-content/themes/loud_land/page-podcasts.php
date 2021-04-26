@@ -13,7 +13,6 @@
  */
 
 get_header(); ?>
-test
 
 <style>
     /* baggrunds bilelde */
@@ -176,8 +175,8 @@ test
 
 
                 const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
-                klon.querySelector("img").src = podcast.billede.guid;
-                klon.querySelector("figcaption").textContent = podcast.title.rendered;
+                klon.querySelector("img").src = podcasts.billede.guid;
+                klon.querySelector("figcaption").textContent = podcasts.title.rendered;
                 container.appendChild(klon);
             })
 
@@ -220,7 +219,6 @@ test
     </script>
 
 </div><!-- #primary -->
-
 <?php get_sidebar();
 
 get_footer();
