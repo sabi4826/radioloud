@@ -22,14 +22,12 @@ h1 {
     text-shadow: 3px 3px #000000;
     text-transform: uppercase;
 }
-
 h2 {
     font-family: 'Assistant', sans-serif;
     color: black;
     font-size: 2rem;
     font-weight: bold;
 }
-
 h3 {
     font-family: 'Assistant', sans-serif;
     color: black;
@@ -38,14 +36,12 @@ h3 {
     font-weight: bold;
     padding-bottom: 10px;
 }
-
 h4 {
     font-family: 'Wire One', sans-serif;
     color: #DB083A;
     font-size: 1.4rem;
     text-align: start;
 }
-
 p {
     font-family: 'Assistant', sans-serif;
     color: black;
@@ -55,7 +51,9 @@ p {
 
 /*---------------HEADER STYLE--------------*/
 
+
 /*Forside header*/
+
 .admin-bar #feature-slider-section,
 .home.admin-bar .custom-header {
     min-height: 120px;
@@ -64,31 +62,35 @@ p {
 }
 
 /*Farve på forside header*/
+
 .custom-header header-media {
     background-color: #04161F;
 }
 
 /*Header farve på undersider*/
+
 .custom-header .wrapper {
     background-color: #04161F;
 }
 
 /*Header emnu tekst farve*/
+
 #site-header-menu .site-header-menu {
     color: white;
 }
 
 /*Header burger farver*/
+
 #menu-toggle .menu-label {
     color: white;
 }
 
 /* Om os drop down*/
+
 #primary-menu-wrapper .menu-inside-wrapper {
     background-color: #FA5E5E;
     border: none;
 }
-
 .menu-toggle {
     color: white;
 }
@@ -97,7 +99,8 @@ p {
 
 .podcast_baggrund {
     background-color: white;
-    padding: 10px;
+    padding: 2.2rem;
+    box-shadow: inset 0 -40px 20px -10px white;
 }
 
 /*styling af knapper på hele sitet*/
@@ -111,39 +114,36 @@ button {
     width: 100%;
     margin: 2px 0px;
 }
-
 button:hover {
     background-color: #ffffff;
     color: black;
 }
-
 nav #filtrering {
     width: auto;
     text-align: center;
 }
-
 .doble_knap {
     width: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2px;
 }
-
 .page .entry-title {
     display: none;
 }
 
 /* Hvid skrift på undersider som job, presse osv.*/
+
 .entry-content p,
 a {
     color: white;
 }
 
 /* Footer */
+
 .textwidget p {
     color: white;
 }
-
 button {
     z-index: 200;
 }

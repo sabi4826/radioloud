@@ -19,11 +19,21 @@ get_header(); ?>
         /* margen er tilføjet til første sektions bund*/
 
         .stor_visning_podcast {
-            margin-bottom: 220px;
+            margin-bottom: 5rem;
         }
 
         .overskrift {
             padding-top: 7.2rem;
+            padding-bottom: 1.2rem;
+        }
+        /*Fjerner WP-autogenerede overskrifter*/
+
+        .custom-header-content-wrapper {
+            display: none;
+        }
+
+        .epi-overskrift .epi_dato .epi_resume {
+            padding-bottom: 1rem;
         }
         /*grid til venstre side af top sektionen */
 
@@ -51,6 +61,7 @@ get_header(); ?>
             color: white;
             margin: 0;
             padding-bottom: 10px;
+            text-align: justify;
         }
 
         .aboner_knapper {
@@ -67,6 +78,7 @@ get_header(); ?>
 
         .episode_grid .podcast_baggrund p {
             color: black;
+            height: 2rem;
         }
         /*  mobil Grid opsætningen og styling af; måske du også ville kunne lide */
 
@@ -268,9 +280,9 @@ get_header(); ?>
 
                         let klon = episodeTemplate.cloneNode(true).content;
                         klon.querySelector(".epi_billede").src = episode.billede.guid;
-                        klon.querySelector(".epi_overskrift").textContent = episode.title.rendered;
+                        klon.querySelector(".epi_overskrift").innerHTML = episode.title.rendered;
                         klon.querySelector(".epi_dato").innerHTML = episode.dato;
-                        klon.querySelector(".epi_resume").textContent = episode.episode_resume;
+                        klon.querySelector(".epi_resume").innerHTML = episode.episode_resume;
                         klon.querySelector("article").addEventListener("click", () => {
                             location.href = episode.link;
                         })
