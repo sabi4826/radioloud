@@ -36,6 +36,7 @@ get_header(); ?>
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         max-width: 100vw;
         grid-gap: 2rem;
+        grid-auto-flow: dense;
     }
 
 
@@ -44,9 +45,14 @@ get_header(); ?>
 
     .play_knap {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        place-self: center center;
 
+    }
+
+
+    .play_knap,
+    .billede {
+        grid-area: 1/1;
     }
 
 
