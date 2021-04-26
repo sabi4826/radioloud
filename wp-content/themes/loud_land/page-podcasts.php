@@ -34,7 +34,7 @@ get_header(); ?>
         grid-gap: 2rem;
     }
 
-    #filtrering button {
+    .filter_knapper {
         width: none;
         text-align: center;
     }
