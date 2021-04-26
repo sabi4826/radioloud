@@ -18,14 +18,6 @@ get_header(); ?>
             width: 70%;
         }
 
-        .entry-title .section-title {
-            display: none;
-        }
-
-        .entry-date .published {
-            display: none;
-        }
-
         .stor_visning_podcast {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -92,7 +84,7 @@ get_header(); ?>
                             <a href="javascript:history.back()" class="tilbage_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Tilbage-knap.png" alt="tilbage knap"></a>
                         </div>
                     </div>
-                    <div><img src="" alt="" class="epi_billede"></div>
+                    <div><img src="" alt="" class="billede"></div>
                 </div>
             </article>
 
