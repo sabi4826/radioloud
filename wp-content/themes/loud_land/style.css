@@ -104,6 +104,12 @@ p {
 
 /*styling af podcast article på hele sitet*/
 
+.podcast_baggrund_wrapper {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 10%);
+
+}
+
 .podcast_baggrund {
     background-color: white;
     padding: 2.2rem;
