@@ -189,7 +189,7 @@ get_header(); ?>
     <template id="forside_det_hitter">
         <article>
             <div>
-                <button class="play_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Group-340.png" alt="play knap"></button>
+                <img class="play_knap" src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Group-340.png" alt="play knap">
             </div>
 
             <img src="" alt="" class="billede">
