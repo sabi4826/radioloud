@@ -34,7 +34,7 @@ get_header(); ?>
         grid-gap: 2rem;
     }
 
-    .filter_knapper {
+    .filter {
         width: none;
         text-align: center;
     }
