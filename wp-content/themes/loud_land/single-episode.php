@@ -65,15 +65,10 @@ get_header(); ?>
         }
 
         .aboner_knapper {
-            display: inline-flex;
+            display: block;
             padding-right: 30px;
             margin-bottom: 10%;
             cursor: pointer;
-            width: 100%;
-        }
-
-        .aboner_knapper img {
-            width: 35%;
         }
     }
 
