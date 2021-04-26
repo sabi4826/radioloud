@@ -122,9 +122,10 @@ get_header(); ?>
                 margin: 40px 20px;
                 padding-left: 5vw;
                 padding-right: 5vw;
+                height: 50vw;
             }
-            .max_hojde {
-                max-height: 25vh;
+            .billede-mobil {
+                display: none;
             }
         }
 
