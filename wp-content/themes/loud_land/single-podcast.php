@@ -99,6 +99,10 @@ get_header(); ?>
             color: black;
         }
 
+        .podcast_background {
+            max-height: 70vh;
+        }
+
         @media (min-width: 950px) {
             /* Grid og styling til første sektion af siden, hvor den pågældende podcast er vist med uddybend text*/
             .stor_visning_podcast {
@@ -122,7 +126,6 @@ get_header(); ?>
                 margin: 40px 20px;
                 padding-left: 5vw;
                 padding-right: 5vw;
-                height: 50vw;
             }
             .billede-mobil {
                 display: none;
