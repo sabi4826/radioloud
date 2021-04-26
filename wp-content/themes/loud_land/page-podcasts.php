@@ -34,10 +34,11 @@ get_header(); ?>
         grid-gap: 2rem;
     }
 
-    .filter {
-        width: none;
+    #filtrering {
         text-align: center;
+        margin-top: 30px;
     }
+
 
 
     /*    destop grid udgaven på alle podcast oversigten*/
@@ -49,6 +50,13 @@ get_header(); ?>
             padding-left: 5vw;
             padding-right: 5vw;
         }
+
+        .filter,
+        filter_knapper {
+            width: auto;
+            margin: 2px;
+        }
+
 
     }
 
