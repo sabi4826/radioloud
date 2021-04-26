@@ -64,6 +64,15 @@ get_header(); ?>
     /*    destop grid udgaven på alle podcast oversigten*/
     @media (min-width: 950px) {
 
+
+        /* splachbilelde */
+        .spalch_billede {
+            max-width: none;
+            width: auto;
+            height: 100vh;
+            background-size: cover;
+        }
+
         /*tilføjelser til grid på destop */
         .new_podcast,
         .det_hitter {
@@ -88,6 +97,11 @@ get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <div class="singular-content-wrap"></div> <!-- .singular-content-wrap -->
+
+        <section>
+            <div class="spalch_billede"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Forside_splash.png" alt="splachbillede"></div>
+        </section>
+
         <section>
             <h1 id="overskrift">Nye podcast episoder fra LOUD</h1>
             <div class="new_podcast"></div>
