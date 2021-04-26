@@ -130,7 +130,7 @@ get_header(); ?>
             .billede-mobil {
                 display: none;
             }
-            .podcast_background {
+            .podcast_background_fix {
                 max-height: 70vh;
             }
         }
@@ -192,7 +192,7 @@ get_header(); ?>
             <article>
                 <div class="episode_grid">
                     <div><img src="" alt="" class="epi_billede"></div>
-                    <div class="podcast_baggrund">
+                    <div class="podcast_baggrund podcast_baggrund_fix">
                         <h3 class="epi_overskrift"></h3>
                         <h4 class="epi_dato"></h4>
                         <p class="epi_resume"></p>
@@ -205,7 +205,7 @@ get_header(); ?>
         <template id="single_podcast_kan_lide">
             <article class="max_hojde">
                 <img src="" alt="" class="billede">
-                <div class="podcast_baggrund">
+                <div class="podcast_baggrund podcast_baggrund_fix">
                     <h3></h3>
                     <p></p>
                 </div>
