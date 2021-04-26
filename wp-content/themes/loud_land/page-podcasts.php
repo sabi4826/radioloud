@@ -171,12 +171,12 @@ get_header(); ?>
             randomPodcast.forEach(podcast => {
                 //Definerer konstanter til senere brug i kloningen af template
                 const template = document.querySelector("template");
-                const container = document.querySelector(".podcast_oversigt");
+                const container = document.querySelector("#podcast_oversigt");
 
 
                 const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
-                klon.querySelector("img").src = podcasts.billede.guid;
-                klon.querySelector("figcaption").textContent = podcasts.title.rendered;
+                klon.querySelector("img").src = podcast.billede.guid;
+                klon.querySelector("figcaption").textContent = podcast.title.rendered;
                 container.appendChild(klon);
             })
 
