@@ -18,11 +18,11 @@ get_header(); ?>
             width: 70%;
         }
 
-        .entry-title section-title {
+        .entry-title .section-title {
             display: none;
         }
 
-        .entry-date published {
+        .entry-date .published {
             display: none;
         }
 
@@ -39,8 +39,6 @@ get_header(); ?>
         .text_signle {
             display: grid;
             grid-auto-rows: 1fr 0.1fr;
-            background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/splach_single.png);
-            background-size: cover;
         }
         /*    texten på venstre siden af top sektionen bliver rykket ind */
 
@@ -94,7 +92,7 @@ get_header(); ?>
                             <a href="javascript:history.back()" class="tilbage_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Tilbage-knap.png" alt="tilbage knap"></a>
                         </div>
                     </div>
-
+                    <div><img src="" alt="" class="epi_billede"></div>
                 </div>
             </article>
 
@@ -156,8 +154,8 @@ get_header(); ?>
                 console.log("visEpi bliver kaldt", episode);
 
                 document.querySelector(".billede").src = episode.billede.guid;
-                document.querySelector(".overskrift").textContent = episode.title.rendered;
-                document.querySelector(".episode_resume").textContent = episode.episode_resume;
+                document.querySelector(".overskrift").innerHTML = episode.title.rendered;
+                document.querySelector(".episode_resume").innerHTML = episode.episode_resume;
                 document.querySelector(".dato").textContent = `${"Udgivelsesdato: "}` + episode.dato;
 
                 document.querySelector("a").addEventListener("click", tilbageKnap);
