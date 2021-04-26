@@ -130,6 +130,9 @@ get_header(); ?>
             .billede-mobil {
                 display: none;
             }
+            .podcast_background {
+                max-height: 70vh;
+            }
         }
 
         @media (max-width: 950px) {
