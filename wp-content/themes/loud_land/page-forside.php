@@ -45,23 +45,42 @@ get_header(); ?>
     }
 
     .loud_live_forside .left {
-        padding: 10px;
+        margin: 9% 10%;
+        padding-bottom: 10%;
     }
 
-    .loud_live_forside .left h1,
-    h2 {
+    .loud_live_forside .left h2 {
         text-transform: uppercase;
-        color: white
+        color: white;
+        margin-top: 4%;
     }
+
+
 
     .loud_live_forside .left h1 {
         text-decoration: underline;
+        text-transform: uppercase;
+        color: white;
     }
 
 
     #overskrift {
         text-align: center;
         text-decoration: uppercase;
+        margin-top: 30%;
+        margin-bottom: 5%;
+    }
+
+    #det_hitter_overskrift {
+        text-align: center;
+        text-decoration: uppercase;
+        margin-top: 30%;
+    }
+
+    #uder_overskrift {
+        text-align: center;
+        margin: 0px;
+        color: white;
     }
 
     .podcast_baggrund h2 {
@@ -97,9 +116,13 @@ get_header(); ?>
         /*    styling af loud live sektionen*/
         .loud_live_forside {
             display: grid;
-            grid-template-columns: 1.4fr 1fr;
+            grid-template-columns: 1fr 1fr;
         }
 
+        /*        h1 overskrifter og deres margen*/
+        #overskrift {
+            margin-top: 15%;
+        }
 
     }
 
@@ -136,8 +159,8 @@ get_header(); ?>
 
 
         <section>
-            <h1 id="overskrift">DET HITTER</h1>
-            <h2>Se de mest populære podcasts</h2>
+            <h1 id="det_hitter_overskrift">DET HITTER</h1>
+            <h2 id="uder_overskrift">Se de mest populære podcasts</h2>
             <div class="det_hitter"></div>
         </section>
 
