@@ -118,6 +118,15 @@ p {
     overflow: hidden;
 }
 
+.podcast_baggrund1 {
+    background-color: white;
+    padding: 2.2rem;
+    box-shadow: inset 0 -40px 20px -10px white;
+    max-height: 220px;
+    overflow: hidden;
+    position: absolute;
+}
+
 /*styling af knapper på hele sitet*/
 
 button {

@@ -190,6 +190,7 @@ get_header(); ?>
                 <h4></h4>
                 <p class="podcast_resume"></p>
             </div>
+            <div class="podcast_baggrund1"></div>
             <button class="gea_til_podcast_knap">Gå til podcast</button>
         </article>
     </template>
