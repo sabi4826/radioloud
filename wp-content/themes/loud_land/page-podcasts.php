@@ -70,9 +70,24 @@ get_header(); ?>
         <nav id="filtrering">
             <button class="filter_knapper" data-podcast="alle">Alle</button>
         </nav>
+
+
+        <section id="lyt_vidre"></section>
+
         <section id="podcast_oversigt"></section>
 
     </main><!-- #main -->
+
+    <template>
+        <article>
+            <figure>
+                <img src="" alt="billede af episode">
+                <figcaption></figcaption>
+            </figure>
+        </article>
+    </template>
+
+
 
     <template>
         <article>
@@ -109,6 +124,7 @@ get_header(); ?>
             console.log("loadJson");
             visPodcasts();
             opretKnapper();
+            visLytVidre();
         }
 
         function opretKnapper() {
@@ -130,6 +146,41 @@ get_header(); ?>
             filterPodcast = this.dataset.podcast;
             console.log("filterPodcast");
             visPodcasts();
+        }
+
+
+
+        //funktion der viser lyt vidre listen view
+
+        function visLytVidre() {
+            console.log("visLytVidre");
+
+            //Genererer et nyt array af tilfældige objekter fra det komplette array
+            const other1 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const other2 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const other3 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const other4 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const other5 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const other6 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const other7 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const other8 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const other9 = podcasts[Math.floor(Math.random() * podcasts.length)];
+            const randomPodcast = [other1, other2, other3, other4, other5, other6, other7, other8, other9];
+            console.log(randomPodcast);
+
+            randomPodcast.forEach(podcast => {
+                //Definerer konstanter til senere brug i kloningen af template
+                const template = document.querySelector("template");
+                const container = document.querySelector(".podcast_oversigt");
+
+
+                const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
+                klon.querySelector("img").src = podcast.billede.guid;
+                klon.querySelector("figcaption").textContent = podcast.title.rendered;
+                container.appendChild(klon);
+            })
+
+
         }
 
         //funktion, der viser podcasts i liste view
