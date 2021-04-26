@@ -39,6 +39,17 @@ get_header(); ?>
     }
 
 
+
+    /* styling af play kanppen */
+
+    .play_knap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+    }
+
+
     /* styling af loud live sektionen*/
     .loud_live_forside {
         background-color: #53A27D;
