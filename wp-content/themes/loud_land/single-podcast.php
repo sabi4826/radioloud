@@ -141,7 +141,7 @@ get_header(); ?>
 
         @media (max-width: 950px) {
             /*Fjerner store podcastbillede fra mobil*/
-            .billede {
+            .billede .moske-lide {
                 display: none;
             }
         }
@@ -175,7 +175,7 @@ get_header(); ?>
                             <a href="javascript:history.back()" class="tilbage_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Tilbage-knap.png" alt="tilbage knap"></a>
                         </div>
                     </div>
-                    <div><img src="" alt="" class="billede"></div>
+                    <div><img src="" alt="" class="billede moske-lide"></div>
                 </div>
             </article>
 
