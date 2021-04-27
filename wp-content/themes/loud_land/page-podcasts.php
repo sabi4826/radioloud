@@ -29,7 +29,7 @@ get_header(); ?>
     /*    styling og placering af h1 i første sektion*/
     .podcast_splashbillede h1 {
         margin-top: 0;
-        padding: 40px 20px;
+        text-align: center;
     }
 
     /*    mobil grid udgaven på alle podcast oversigten*/
@@ -62,22 +62,19 @@ get_header(); ?>
             width: auto;
             margin: 2px;
         }
+
+        /*    styling og placering af h1 i første sektion*/
+        .podcast_splashbillede h1 {
+            padding: 2% 9%;
+            text-align: start;
+        }
     }
 
 </style>
 
 <div id="primary" class="content-area">
 
-    <header>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Wire+One&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
-    </header>
+
 
     <main id="main" class="site-main">
         <div class="podcast_splashbillede">
