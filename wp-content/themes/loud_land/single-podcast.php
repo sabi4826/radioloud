@@ -180,6 +180,7 @@ get_header(); ?>
             </article>
 
             <!-- episode-liste -->
+            <h1 class="h1-episode"></h1>
             <section id="episoder_section">
             </section>
 
@@ -193,7 +194,6 @@ get_header(); ?>
         </main>
 
         <template id="temEpi">
-            <h1 class="h1-episode"></h1>
             <article>
                 <div class="episode_grid">
                     <div><img src="" alt="" class="epi_billede"></div>
