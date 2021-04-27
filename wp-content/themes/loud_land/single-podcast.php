@@ -99,6 +99,10 @@ get_header(); ?>
             color: black;
         }
 
+        .podcast_background {
+            max-height: 70vh;
+        }
+
         @media (min-width: 950px) {
             /* Grid og styling til første sektion af siden, hvor den pågældende podcast er vist med uddybend text*/
             .stor_visning_podcast {
@@ -123,8 +127,11 @@ get_header(); ?>
                 padding-left: 5vw;
                 padding-right: 5vw;
             }
-            .max_hojde {
-                max-height: 25vh;
+            .billede-mobil {
+                display: none;
+            }
+            .podcast_background_fix {
+                max-height: 70vh;
             }
         }
 
@@ -169,8 +176,8 @@ get_header(); ?>
             </article>
 
             <!-- episode-liste -->
-            <h1>Episoder</h1>
-            <section id="episoder_section"></section>
+            <section id="episoder_section">
+            </section>
 
             <section>
                 <h1>Måske vil du også kunne lide</h1>
@@ -182,10 +189,11 @@ get_header(); ?>
         </main>
 
         <template id="temEpi">
+            <h1 class="h1-episode"></h1>
             <article>
                 <div class="episode_grid">
                     <div><img src="" alt="" class="epi_billede"></div>
-                    <div class="podcast_baggrund">
+                    <div class="podcast_baggrund podcast_baggrund_fix">
                         <h3 class="epi_overskrift"></h3>
                         <h4 class="epi_dato"></h4>
                         <p class="epi_resume"></p>
@@ -198,7 +206,7 @@ get_header(); ?>
         <template id="single_podcast_kan_lide">
             <article class="max_hojde">
                 <img src="" alt="" class="billede">
-                <div class="podcast_baggrund">
+                <div class="podcast_baggrund podcast_baggrund_fix">
                     <h3></h3>
                     <p></p>
                 </div>
@@ -278,6 +286,8 @@ get_header(); ?>
             function visEpisoder() {
                 console.log("visEpisoder bliver kaldt", episoder);
 
+                document.querySelector(".h1-episode").innerHTML = `${"Episoder"}`;
+
                 let episodeTemplate = document.querySelector("#temEpi");
                 episoder.forEach(episode => {
                     console.log("Loop ID:", aktuelPodcast);
@@ -288,10 +298,14 @@ get_header(); ?>
 
                     console.log("podcastId", podcastId);
 
+
                     if (podcastId == aktuelPodcast) {
                         console.log("Loop kører ID:", aktuelPodcast);
 
+
                         let klon = episodeTemplate.cloneNode(true).content;
+
+
                         klon.querySelector(".epi_billede").src = episode.billede.guid;
                         klon.querySelector(".epi_overskrift").innerHTML = episode.title.rendered;
                         klon.querySelector(".epi_dato").innerHTML = episode.dato;
