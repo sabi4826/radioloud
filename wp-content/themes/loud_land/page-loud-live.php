@@ -21,8 +21,7 @@ get_header(); ?>
         #top_tekst {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            margin-right: 5vw;
-            margin-left: 5vw;
+            margin: 50px 5vw 50px 5vw;
         }
     }
 
