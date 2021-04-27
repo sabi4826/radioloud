@@ -11,7 +11,7 @@
 get_header(); ?>
 
 <style>
-   /* h2.page-title.first-title {
+    /* h2.page-title.first-title {
  color: white;
  }*/
     .entry-title a {
@@ -20,11 +20,19 @@ get_header(); ?>
 
     .archive-post-wrap .hentry {
         margin-bottom: 100px;
-
+        background-color: #FA5E5E;
     }
 
     .archive-post-wrap .hentry:nth-child(2n) {
         background-color: #FA5E5E;
+    }
+
+    .archive-post-wrap .hentry .entry-container {
+        padding: 2vw;
+    }
+
+    article {
+        border: solid white 2px;
     }
 
 </style>
