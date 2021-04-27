@@ -286,7 +286,7 @@ get_header(); ?>
             function visEpisoder() {
                 console.log("visEpisoder bliver kaldt", episoder);
 
-                document.querySelector(".h1-episode").innerHTML = `${"Episoder"}`;
+                document.querySelector(".h1-episode").innerHTML = "Episoder";
 
                 let episodeTemplate = document.querySelector("#temEpi");
                 episoder.forEach(episode => {
