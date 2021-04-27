@@ -76,6 +76,26 @@ get_header(); ?>
     }
 
 
+    #lyt_vidre_section img {
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .image-container {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .image-container .figure_lyt {
+        flex-grow: 1;
+    }
+
+    .image-container figcaption {
+        padding: 20px;
+    }
+
+
 
     /*    destop grid udgaven på alle podcast oversigten*/
 
@@ -99,30 +119,6 @@ get_header(); ?>
             padding: 4% 5%;
             text-align: start;
         }
-
-
-
-
-/*
-           #lyt_vidre_section img {
-           width: 100%;
-           vertical-align: middle;
-           }
-
-           .image-container {
-           display: flex;
-           gap: 20px;
-           padding: 20px;
-           }
-
-           .image-container .figure_lyt {
-           flex-grow: 1;
-           }
-
-           .image-container figcaption {
-           padding: 20px;
-           }
-*/
 
 
 
