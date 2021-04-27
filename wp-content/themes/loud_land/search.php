@@ -11,9 +11,10 @@
 get_header(); ?>
 
 <style>
-    /* h2.page-title.first-title {
- color: white;
- }*/
+    h2.page-title.section-title {
+        color: white;
+    }
+
     .entry-title a {
         color: white;
     }
