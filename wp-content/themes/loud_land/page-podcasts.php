@@ -21,7 +21,7 @@ get_header(); ?>
         background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Podcasts_splash.png);
         background-size: cover;
         max-width: none;
-        height: 30vh;
+        height: 50vh;
         width: auto;
         margin: 0px -100px 0px -100px;
     }
@@ -74,8 +74,10 @@ get_header(); ?>
     </header>
 
     <main id="main" class="site-main">
-        <div class="podcast_splashbillede"></div>
-        <h1 id="overskrift">Podcasts</h1>
+        <div class="podcast_splashbillede">
+            <h1 id="overskrift">Podcasts</h1>
+        </div>
+
         <nav id="filtrering">
             <button class="filter_knapper" data-podcast="alle">Alle</button>
         </nav>
