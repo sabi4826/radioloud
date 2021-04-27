@@ -52,12 +52,6 @@ get_header(); ?>
 
 
     /* styling af loud live sektionen*/
-    .loud_live_forside {
-        background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/baggrunds_streger.png);
-        width: auto;
-        height: 46vh;
-        background-size: cover;
-    }
 
     .loud_live_forside .left {
         margin: 9% 10%;
@@ -134,6 +128,13 @@ get_header(); ?>
             grid-template-columns: 1fr 1fr;
         }
 
+        #live_live_sektion {
+            background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/baggrunds_streger.png);
+            width: auto;
+            height: 46vh;
+            background-size: cover;
+        }
+
         /*        h1 overskrifter og deres margen*/
         #overskrift,
         #det_hitter_overskrift {
@@ -158,7 +159,7 @@ get_header(); ?>
         </section>
 
 
-        <section>
+        <section id="live_live_sektion">
             <h1 id="overskrift">VIL DU LYTTE MED?</h1>
             <div class="loud_live_forside">
                 <div>
@@ -171,11 +172,6 @@ get_header(); ?>
                 </div>
             </div>
         </section>
-
-
-
-
-
 
 
 
