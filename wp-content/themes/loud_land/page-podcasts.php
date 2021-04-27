@@ -85,13 +85,14 @@ get_header(); ?>
             <button class="filter_knapper" data-podcast="alle">Alle</button>
         </nav>
 
+        <section id="podcast_cat_overskrift">
+            <h1>Alle podcast</h1>
+        </section>
+
         <section id="podcast_oversigt"></section>
 
     </main>
     <!-- #main -->
-
-
-
 
 
     <template>
@@ -109,10 +110,17 @@ get_header(); ?>
         </article>
     </template>
 
+
+
     <script>
         let podcasts;
         let categories;
         let filterPodcast = "alle";
+
+        // kalder overskriften som skal skifte alt efter katagori
+        const header = document.querySelector("#podcast_cat_overskrift h1");
+
+
         // container/destination til articles med en podcast
         const dest = document.querySelector("#podcast_oversigt");
         // select indhold af html skabelon (article)
@@ -146,10 +154,16 @@ get_header(); ?>
             })
         };
 
+
+
         function filtrering() {
             filterPodcast = this.dataset.podcast;
+
             console.log("filterPodcast");
             visPodcasts();
+
+            //skriften skifter alt efter valgte catagi
+            header.textContent = this.textContent;
         }
 
 
