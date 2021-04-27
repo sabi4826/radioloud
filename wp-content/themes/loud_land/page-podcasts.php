@@ -27,7 +27,7 @@ get_header(); ?>
     }
 
     /*    styling og placering af h1 i første sektion*/
-    h1:first-child {
+    .podcast_splashbillede h1 {
         margin-top: 0;
         padding: 40px 20px;
     }
