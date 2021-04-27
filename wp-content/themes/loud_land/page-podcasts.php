@@ -21,7 +21,7 @@ get_header(); ?>
         background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Podcasts_splash.png);
         background-size: cover;
         max-width: none;
-        height: 50vh;
+        height: 30vh;
         width: auto;
         margin: 0px -100px 0px -100px;
     }
