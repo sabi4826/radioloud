@@ -123,6 +123,12 @@ get_header(); ?>
         }
 
         /*    styling af loud live sektionen*/
+
+        #live_live_sektion {
+            display: grid;
+            grid-template-rows: 1fr 2fr;
+        }
+
         .loud_live_forside {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -132,19 +138,8 @@ get_header(); ?>
             padding-right: 5vw;
         }
 
-        #live_live_sektion .top {
-            grid-column-start: 1;
-            grid-column-end: span 2;
-            grid-row-start: 1;
-            grid-row-end: span 1;
-        }
 
-        #live_live_sektion .loud_live_forside {
-            grid-column-start: 1;
-            grid-column-end: span 1;
-            grid-row-start: 2;
-            grid-row-end: span 1;
-        }
+
 
 
         #live_live_sektion {
