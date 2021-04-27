@@ -177,7 +177,6 @@ get_header(); ?>
 
             <!-- episode-liste -->
             <section id="episoder_section">
-                <h1>Episoder</h1>
             </section>
 
             <section>
@@ -190,6 +189,7 @@ get_header(); ?>
         </main>
 
         <template id="temEpi">
+            <h1 class="h1-episode"></h1>
             <article>
                 <div class="episode_grid">
                     <div><img src="" alt="" class="epi_billede"></div>
@@ -301,6 +301,7 @@ get_header(); ?>
 
                         let klon = episodeTemplate.cloneNode(true).content;
 
+                        klon.querySelector(".h1-episode").innerHTML = `${"Episoder"}`;
                         klon.querySelector(".epi_billede").src = episode.billede.guid;
                         klon.querySelector(".epi_overskrift").innerHTML = episode.title.rendered;
                         klon.querySelector(".epi_dato").innerHTML = episode.dato;
