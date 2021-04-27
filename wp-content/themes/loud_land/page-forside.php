@@ -52,16 +52,13 @@ get_header(); ?>
 
 
     /* styling af loud live sektionen*/
-    .loud_live_forside {
-        background-color: #53A27D;
-    }
 
     .loud_live_forside .left {
         margin: 9% 10%;
         padding-bottom: 10%;
     }
 
-    .loud_live_forside .left h2 {
+    .loud_live_forside .left h3 {
         text-transform: uppercase;
         color: white;
         margin-top: 4%;
@@ -69,7 +66,7 @@ get_header(); ?>
 
 
 
-    .loud_live_forside .left h1 {
+    .loud_live_forside .left h2 {
         text-decoration: underline;
         text-transform: uppercase;
         color: white;
@@ -131,6 +128,13 @@ get_header(); ?>
             grid-template-columns: 1fr 1fr;
         }
 
+        #live_live_sektion {
+            background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/baggrunds_streger.png);
+            width: auto;
+            height: 46vh;
+            background-size: cover;
+        }
+
         /*        h1 overskrifter og deres margen*/
         #overskrift,
         #det_hitter_overskrift {
@@ -155,24 +159,19 @@ get_header(); ?>
         </section>
 
 
-        <section>
+        <section id="live_live_sektion">
             <h1 id="overskrift">VIL DU LYTTE MED?</h1>
             <div class="loud_live_forside">
                 <div>
                     <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Image-95.jpg" alt="live billede">
                 </div>
                 <div class="left">
-                    <h1>lige nu:</h1>
-                    <h2>Nu: Bare sex</h2>
-                    <h2>Næste: Flodhesten oprindelse </h2>
+                    <h2>lige nu:</h2>
+                    <h3>Nu: Bare sex</h3>
+                    <h3>Næste: Flodhesten oprindelse </h3>
                 </div>
             </div>
         </section>
-
-
-
-
-
 
 
 
