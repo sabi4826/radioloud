@@ -77,6 +77,15 @@ p {
     background-color: #04161F;
 }
 
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    background-color: #04161F;
+}
+
 /*Header emnu tekst farve*/
 
 #site-header-menu .site-header-menu {
