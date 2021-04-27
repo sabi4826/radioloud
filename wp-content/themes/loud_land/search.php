@@ -11,11 +11,20 @@
 get_header(); ?>
 
 <style>
+    h2.page-title.first-title {
+        color: white;
+    }
+
     h2.page-title.section-title {
         color: white;
     }
 
-    .archive-post-wrap .hentry .hentry-inner {
+    .archive-post-wrap .hentry {
+        margin-bottom: 100px;
+
+    }
+
+    .archive-post-wrap .hentry:nth-child(2n) {
         background-color: #FA5E5E;
     }
 
