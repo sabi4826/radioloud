@@ -20,7 +20,7 @@ get_header(); ?>
     }
 
     .archive-post-wrap .hentry {
-        padding-bottom: 100px;
+        margin-bottom: 100px;
 
     }
 
