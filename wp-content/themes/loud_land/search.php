@@ -42,6 +42,10 @@ get_header(); ?>
         padding: 4vw;
     }
 
+    .custom-header-content.content-align-left .custom-header-content-wrapper {
+        display: none;
+    }
+
 </style>
 
 <section id="primary" class="content-area">
