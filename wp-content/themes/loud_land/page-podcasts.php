@@ -32,7 +32,8 @@ get_header(); ?>
         text-align: center;
     }
 
-    #podcast_cat_overskrift h1 {
+    #podcast_cat_overskrift h1,
+    #lyt_vidre_section h1 {
         margin: 100px 20px 40px 20px;
         padding-left: 5vw;
         padding-right: 5vw;
@@ -53,39 +54,25 @@ get_header(); ?>
     }
 
 
+
+
     /*    lyt vidre styling */
-
-    #lyt_vidre_section img {
-        width: 100%;
-        vertical-align: middle;
-    }
-
     .image-container {
-        display: flex;
-        gap: 20px;
-        padding: 20px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px;
     }
 
     .image-container figure {
-        flex-grow: 1;
+        flex-basis: 90%;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+
     }
 
-    .image-container figcaption {
-        padding: 20px;
-        background: #fff;
-        font-family: 'Dosis', sans-serif;
+    .image-container img {
+        margin-right: 20px;
     }
-
-    .image-container figure {
-        flex-grow: 1;
-    }
-
-    .image-container figcaption {
-        padding: 20px;
-        background: #fff;
-        font-family: 'Dosis', sans-serif;
-    }
-
 
     /*    destop grid udgaven på alle podcast oversigten*/
 
@@ -110,24 +97,40 @@ get_header(); ?>
             text-align: start;
         }
 
-
         /*    lyt vidre styling */
+
+        #lyt_vidre_section img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
         .image-container {
-            overflow-x: scroll;
-            scroll-snap-type: x mandatory;
-            padding-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
         }
 
         .image-container figure {
-            flex-basis: 90%;
-            flex-shrink: 0;
-            scroll-snap-align: center;
-
+            flex-grow: 1;
         }
 
-        .image-container img {
-            margin-right: 20px;
+        .image-container figcaption {
+            padding: 20px;
+            background: #fff;
+            font-family: 'Dosis', sans-serif;
         }
+
+        .image-container figure {
+            flex-grow: 1;
+        }
+
+        .image-container figcaption {
+            padding: 20px;
+            background: #fff;
+            font-family: 'Dosis', sans-serif;
+        }
+
+
     }
 
 </style>
@@ -146,6 +149,7 @@ get_header(); ?>
         </nav>
 
         <section id="lyt_vidre_section">
+            <h1>lyt vidre</h1>
             <div class="image-container">
                 <figure>
                     <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/bare_sex-1.jpg" alt="bare sex">
