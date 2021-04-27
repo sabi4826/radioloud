@@ -135,15 +135,15 @@ get_header(); ?>
             .billede-mobil {
                 display: none;
             }
-            .podcast_background_fix {
-                max-height: 70vh;
+            podcast_background .podcast_background_fix {
+                max-height: auto;
                 margin-bottom: 0;
             }
         }
 
         @media (max-width: 950px) {
             /*Fjerner store podcastbillede fra mobil*/
-            img .billede .moske-lide {
+            .billede .podcast_billede {
                 display: none;
             }
         }
@@ -177,7 +177,7 @@ get_header(); ?>
                             <a href="javascript:history.back()" class="tilbage_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Tilbage-knap.png" alt="tilbage knap"></a>
                         </div>
                     </div>
-                    <div><img src="" alt="" class="billede moske-lide"></div>
+                    <div><img src="" alt="" class="billede podcast_billede"></div>
                 </div>
             </article>
 
@@ -277,9 +277,9 @@ get_header(); ?>
 
                 document.querySelector(".billede").src = podcast.billede.guid;
                 document.querySelector(".billede-mobil").src = podcast.billede.guid;
-                document.querySelector(".overskrift").textContent = podcast.title.rendered;
-                document.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
-                document.querySelector(".vaerter").textContent = `${"Værter: "}` + podcast.vaerter;
+                document.querySelector(".overskrift").innerHTML = podcast.title.rendered;
+                document.querySelector(".podcast_resume").innerHTML = podcast.podcast_resume;
+                document.querySelector(".vaerter").innerHTML = `${"Værter: "}` + podcast.vaerter;
 
                 document.querySelector("a").addEventListener("click", tilbageKnap);
             }
