@@ -55,6 +55,10 @@ p {
 
 /*---------------HEADER STYLE--------------*/
 
+/*menuens padding sættes*/
+@media only screen and (min-width: 64em) body:not(.home) .custom-header-content {
+    padding: 0px 50px;
+}
 
 /*Forside header*/
 
@@ -202,5 +206,9 @@ a {
 .blog.two-columns-layout .site-content > .wrapper,
 .two-columns-layout .site-content > .wrapper,
 .site-content > .wrapper {
-    padding: 0px 30px;
+    padding: 6px 30px;
+}
+
+@media only screen and (min-width: 64em) .custom-header-content {
+    padding: 0px 0px;
 }
