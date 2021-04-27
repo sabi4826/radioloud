@@ -42,6 +42,14 @@ get_header(); ?>
         padding: 4vw;
     }
 
+    .custom-header-content.content-align-left .custom-header-content-wrapper {
+        display: none;
+    }
+
+    .archive-posts-wrapper {
+        padding-top: 100px;
+    }
+
 </style>
 
 <section id="primary" class="content-area">
