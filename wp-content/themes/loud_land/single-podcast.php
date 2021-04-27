@@ -176,8 +176,9 @@ get_header(); ?>
             </article>
 
             <!-- episode-liste -->
-            <h1>Episoder</h1>
-            <section id="episoder_section"></section>
+            <section id="episoder_section">
+                <h1>Episoder</h1>
+            </section>
 
             <section>
                 <h1>Måske vil du også kunne lide</h1>
@@ -299,6 +300,7 @@ get_header(); ?>
                         console.log("Loop kører ID:", aktuelPodcast);
 
                         let klon = episodeTemplate.cloneNode(true).content;
+
                         klon.querySelector(".epi_billede").src = episode.billede.guid;
                         klon.querySelector(".epi_overskrift").innerHTML = episode.title.rendered;
                         klon.querySelector(".epi_dato").innerHTML = episode.dato;
