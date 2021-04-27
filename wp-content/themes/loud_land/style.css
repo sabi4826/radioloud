@@ -55,10 +55,7 @@ p {
 
 /*---------------HEADER STYLE--------------*/
 
-/*fjern mellemrum på mellem nav og første setion*/
-.custom-header-content sections header-media-section content-align-left text-align-left {
-    padding: 0px;
-}
+
 
 /*Forside header*/
 
@@ -194,25 +191,4 @@ a {
 
 .textwidget p {
     color: white;
-}
-
-
-
-
-
-/*her sættes hele (sektionens) sidens padding */
-@media only screen and (min-width: 64em) .home.two-columns-layout .site-content > .wrapper,
-.archive:not(.woocommerce).two-columns-layout .site-content > .wrapper,
-.blog.two-columns-layout .site-content > .wrapper,
-.two-columns-layout .site-content > .wrapper,
-.site-content > .wrapper {
-    padding: 56px 30px 160px 30px;
-}
-
-@media only screen and (min-width: 64em) .custom-header-content {
-    padding: 0px 0px;
-}
-
-.custom-header-content {
-    padding: 0px 0px;
 }
