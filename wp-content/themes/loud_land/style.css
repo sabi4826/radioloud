@@ -56,8 +56,8 @@ p {
 /*---------------HEADER STYLE--------------*/
 
 /*menuens padding sættes*/
-@media only screen and (min-width: 64em) body:not(.home) .custom-header-content {
-    padding: 0px 50px;
+.custom-header-content {
+    padding: 0px 0px;
 }
 
 /*Forside header*/
