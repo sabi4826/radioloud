@@ -26,6 +26,12 @@ get_header(); ?>
         margin: 0px -100px 0px -100px;
     }
 
+    /*    styling og placering af h1 i første sektion*/
+    h1:first-child {
+        margin-top: 0;
+        padding: 40px 20px;
+    }
+
     /*    mobil grid udgaven på alle podcast oversigten*/
 
     #podcast_oversigt {
