@@ -127,6 +127,9 @@ get_header(); ?>
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 2fr;
+            margin: 40px 20px;
+            padding-left: 5vw;
+            padding-right: 5vw;
         }
 
         #live_live_sektion .top {
@@ -143,12 +146,6 @@ get_header(); ?>
             grid-row-end: span 1;
         }
 
-        #live_live_sektion .left {
-            grid-column-start: 2;
-            grid-column-end: span 1;
-            grid-row-start: 2;
-            grid-row-end: span 1;
-        }
 
         #live_live_sektion {
             background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/baggrunds_streger.png);
