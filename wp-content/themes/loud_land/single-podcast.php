@@ -44,7 +44,7 @@ get_header(); ?>
             background-size: cover;
         }
 
-        .podcast_resume {
+        .text_signle p {
             color: white;
         }
 
@@ -139,7 +139,7 @@ get_header(); ?>
             .billede-mobil {
                 display: none;
             }
-            podcast_background .podcast_background_fix {
+            .podcast_background .podcast_background_fix {
                 max-height: none;
                 margin-bottom: 0;
             }
