@@ -21,7 +21,7 @@ get_header(); ?>
         #top_tekst {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            margin: 50px 5vw 50px 5vw;
+            margin: 50px 5vw 100px 5vw;
         }
     }
 
@@ -67,6 +67,17 @@ get_header(); ?>
         margin-top: 0;
     }
 
+    .sende_knapper img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sende_knapper {
+        width: 100vw;
+        padding: 0;
+        margin: 20px 0px 0 -30px;
+    }
+
 </style>
 
 <div id="primary" class="content-area">
@@ -84,9 +95,17 @@ get_header(); ?>
             </div>
         </section>
 
-        <nav id="filtrering"></nav>
+        <nav id="filtrering">
+        </nav>
 
-        <section id="sende_oversigt"></section>
+        <section id="sende_oversigt">
+            <div class="sende_knapper">
+                <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Group-476.png" alt="Sende knapper">
+            </div>
+            <div class="sendeplan">
+                <h2>Sendeplan</h2>
+            </div>
+        </section>
     </main><!-- #main -->
 
     <template>
@@ -102,84 +121,82 @@ get_header(); ?>
 
 
 
-    <script>
-        let episoder;
-        //let podcasts;
-        let categories;
-        let filterEpisoder = "alle";
+    <!-- <script>
+     let episoder;
+     //let podcasts;
+     let categories;
+     let filterEpisoder = "alle";
 
 
-        // container/destination til articles med en episode
-        const dest = document.querySelector("#sende_oversigt");
+     // container/destination til articles med en episode
+     const dest = document.querySelector("#sende_oversigt");
 
-        // select indhold af html skabelon (article)
-        const skabelon = document.querySelector("template");
+     // select indhold af html skabelon (article)
+     const skabelon = document.querySelector("template");
 
-        // url til wp rest api/database
-        const url = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode?per_page=100";
-        const cat_url = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/ugedag";
+     // url til wp rest api/database
+     const url = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/episode?per_page=100";
+     const cat_url = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/ugedag";
 
-        async function loadJson() {
-            const JsonData = await fetch(url);
-            const catData = await fetch(cat_url);
-            episoder = await JsonData.json();
-            categories = await catData.json();
-            console.log("loadJson");
-            visEpisoder();
-            opretKnapper();
-        }
+     async function loadJson() {
+         const JsonData = await fetch(url);
+         const catData = await fetch(cat_url);
+         episoder = await JsonData.json();
+         categories = await catData.json();
+         console.log("loadJson");
+         visEpisoder();
+         opretKnapper();
+     }
 
-        function opretKnapper() {
-            console.log("opretKnapper virker");
-            categories.forEach(cat => {
-                document.querySelector("#filtrering").innerHTML += `<button class="filter" data-podcast="${cat.id}">${cat.name}</button>`
-            })
-            addEventListenersToButtons();
-        }
+     function opretKnapper() {
+         console.log("opretKnapper virker");
+         categories.forEach(cat => {
+             document.querySelector("#filtrering").innerHTML += `<button class="filter" data-podcast="${cat.id}">${cat.name}</button>`
+         })
+         addEventListenersToButtons();
+     }
 
-        function addEventListenersToButtons() {
-            console.log("lytTilKnapper virker");
-            document.querySelectorAll("#filtrering button").forEach(elm => {
-                elm.addEventListener("click", filtrering);
-            })
-            filtrering();
-        };
+     function addEventListenersToButtons() {
+         console.log("lytTilKnapper virker");
+         document.querySelectorAll("#filtrering button").forEach(elm => {
+             elm.addEventListener("click", filtrering);
+         })
+         filtrering();
+     };
 
-        function filtrering() {
-            filterEpisoder = this.dataset.episode;
-            console.log("filterEpisoder");
-            visEpisoder();
-        }
+     function filtrering() {
+         filterEpisoder = this.dataset.episode;
+         console.log("filterEpisoder");
+         visEpisoder();
+     }
 
-        //funktion, der viser episoder i liste view
-        function visEpisoder() {
-            console.log("visEpisoder-funktion");
-            // ryd ekst. indhold:
-            dest.innerHTML = "";
+     //funktion, der viser episoder i liste view
+     function visEpisoder() {
+         console.log("visEpisoder-funktion");
+         // ryd ekst. indhold:
+         dest.innerHTML = "";
 
-            // loop igennem json (lande)
-            episoder.forEach(episode => {
+         // loop igennem json (lande)
+         episoder.forEach(episode => {
 
-                if (filter == podcast.kategori || filter == "alle")
-                    //HVAD GØR DET FILTER OVENOVER???
+             if (filter == podcast.kategori || filter == "alle")
+                 //HVAD GØR DET FILTER OVENOVER???
 
-                    if (filterEpisoder == "alle" || episode.categories.includes(parseInt(filterEpisoder))) {
-                        const klon = skabelon.cloneNode(true).content;
-                        klon.querySelector(".billede").src = episode.billede.guid;
-                        klon.querySelector("h3").textContent = episode.title.rendered;
-                        klon.querySelector(".episode_resume").textContent = episode.episode_resume;
-                        klon.querySelector(".vaerter").textContent = `${"Værter: "}` + episode.vaerter;
-                        console.log("klon i visEpisoder kører");
+                 if (filterEpisoder == "alle" || episode.categories.includes(parseInt(filterEpisoder))) {
+                     const klon = skabelon.cloneNode(true).content;
+                     klon.querySelector(".billede").src = episode.billede.guid;
+                     klon.querySelector("h3").textContent = episode.title.rendered;
+                     klon.querySelector(".episode_resume").textContent = episode.episode_resume;
+                     klon.querySelector(".vaerter").textContent = `${"Værter: "}` + episode.vaerter;
+                     console.log("klon i visEpisoder kører");
 
-                        dest.appendChild(klon);
-                    }
-            })
-        }
+                     dest.appendChild(klon);
+                 }
+         })
+     }
 
-        loadJson();
-
-    </script>
-
+     loadJson();
+ </script>-->
 </div><!-- #primary -->
 
 <?php get_sidebar();
