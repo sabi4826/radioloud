@@ -55,9 +55,9 @@ p {
 
 /*---------------HEADER STYLE--------------*/
 
-/*menuens padding sættes*/
-.custom-header-content {
-    padding: 0px 0px;
+/*fjern mellemrum på mellem nav og første setion*/
+.custom-header-content sections header-media-section content-align-left text-align-left {
+    padding: 0px;
 }
 
 /*Forside header*/
