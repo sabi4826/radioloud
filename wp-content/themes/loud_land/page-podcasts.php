@@ -52,6 +52,41 @@ get_header(); ?>
         margin-top: 30px;
     }
 
+
+    /*    lyt vidre styling */
+
+    #lyt_vidre_section img {
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .image-container {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .image-container figure {
+        flex-grow: 1;
+    }
+
+    .image-container figcaption {
+        padding: 20px;
+        background: #fff;
+        font-family: 'Dosis', sans-serif;
+    }
+
+    .image-container figure {
+        flex-grow: 1;
+    }
+
+    .image-container figcaption {
+        padding: 20px;
+        background: #fff;
+        font-family: 'Dosis', sans-serif;
+    }
+
+
     /*    destop grid udgaven på alle podcast oversigten*/
 
     @media (min-width: 950px) {
@@ -74,6 +109,25 @@ get_header(); ?>
             padding: 4% 5%;
             text-align: start;
         }
+
+
+        /*    lyt vidre styling */
+        .image-container {
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 20px;
+        }
+
+        .image-container figure {
+            flex-basis: 90%;
+            flex-shrink: 0;
+            scroll-snap-align: center;
+
+        }
+
+        .image-container img {
+            margin-right: 20px;
+        }
     }
 
 </style>
@@ -90,6 +144,29 @@ get_header(); ?>
         <nav id="filtrering">
             <button class="filter_knapper" data-podcast="alle">Alle</button>
         </nav>
+
+        <section id="lyt_vidre_section">
+            <div class="image-container">
+                <figure>
+                    <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/bare_sex-1.jpg" alt="bare sex">
+                    <figcaption>Bare sex</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/kontur.jpg" alt="kontur">
+                    <figcaption>Kontur</figcaption>
+                </figure>
+                <figure>
+                    <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/frekvens.jpg" alt="frekvens">
+                    <figcaption>Frekvens</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/live_fortiden.jpg" alt="live fra fortiden">
+                    <figcaption>Live fra fortiden</figcaption>
+                </figure>
+            </div>
+        </section>
 
         <section id="podcast_cat_overskrift">
             <h1>Alle podcast</h1>
