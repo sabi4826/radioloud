@@ -23,6 +23,16 @@ get_header(); ?>
             grid-template-columns: 1fr 1fr 1fr;
             margin: 50px 5vw 100px 5vw;
         }
+
+        .col_2 {
+            margin-left: 50px;
+        }
+
+        #overskrift {
+            margin-left: 5vw;
+        }
+
+
     }
 
     /*#podcast_oversigt {
@@ -45,6 +55,7 @@ get_header(); ?>
 
     .col_1 {
         grid-column: 1/2;
+        margin-bottom: 5vw;
     }
 
     .col_1 h2,
@@ -64,7 +75,7 @@ get_header(); ?>
 
     #overskrift {
         margin-bottom: 5vw;
-        margin-top: 0;
+        margin-top: 4vw;
     }
 
     .sende_knapper img {
@@ -82,8 +93,8 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
+        <h1 id="overskrift">LOUD LIVE - vil du lytte med?</h1>
         <section id="top_tekst">
-            <h1 id="overskrift">LOUD LIVE</h1>
             <div class="col_1">
                 <h2>Lige Nu:</h2>
                 <h3>KONTUR</h3>
