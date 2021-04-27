@@ -10,8 +10,16 @@
 
 get_header(); ?>
 
+<style>
+    h2.page-title.section-title {
+        color: white;
+    }
 
-test
+    .archive-post-wrap .hentry .hentry-inner {
+        background-color: #FA5E5E;
+    }
+
+</style>
 
 <section id="primary" class="content-area">
     <main id="main" class="site-main">
