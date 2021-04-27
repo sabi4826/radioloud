@@ -48,6 +48,11 @@ get_header(); ?>
         grid-column: 1/2;
     }
 
+    .col_1 h2,
+    h3 {
+        color: white;
+    }
+
     .col_1 img {}
 
     .col_2 {
