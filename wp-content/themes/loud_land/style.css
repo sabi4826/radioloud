@@ -208,3 +208,7 @@ a {
 .site-content > .wrapper {
     padding: 6px 30px;
 }
+
+@media only screen and (min-width: 64em) .custom-header-content {
+    padding: 0px 0px;
+}
