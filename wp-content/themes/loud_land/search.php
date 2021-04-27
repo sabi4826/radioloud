@@ -19,12 +19,13 @@ get_header(); ?>
         color: white;
     }
 
-    .archive-post-wrap .hentry:nth-child(2n) {
-        background-color: #FA5E5E;
+    .archive-post-wrap .hentry {
+        padding-bottom: 100px;
+
     }
 
-    article {
-        padding-bottom: 100px;
+    .archive-post-wrap .hentry:nth-child(2n) {
+        background-color: #FA5E5E;
     }
 
 </style>
