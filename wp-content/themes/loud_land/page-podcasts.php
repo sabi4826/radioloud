@@ -23,7 +23,7 @@ get_header(); ?>
         max-width: none;
         height: 30vh;
         width: auto;
-        margin: 0px -100px 0px -100px;
+        margin: 0px -0px 0px 0px;
     }
 
     /*    styling og placering af h1 i første sektion*/
@@ -65,7 +65,7 @@ get_header(); ?>
 
         /*    styling og placering af h1 i første sektion*/
         .podcast_splashbillede h1 {
-            padding: 2% 9%;
+            padding: 4% 5%;
             text-align: start;
         }
     }
