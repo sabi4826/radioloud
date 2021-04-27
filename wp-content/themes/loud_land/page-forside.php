@@ -143,7 +143,7 @@ get_header(); ?>
 
 
         #live_live_sektion {
-            background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/baggrunds_streger.png);
+            background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/baggrunds_streger-1.png);
             width: auto;
             height: 120vh;
             background-size: cover;
@@ -160,6 +160,17 @@ get_header(); ?>
 </style>
 
 <div id="primary" class="content-area">
+    <header>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Wire+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    </header>
+
     <main id="main" class="site-main">
         <div class="singular-content-wrap"></div> <!-- .singular-content-wrap -->
 

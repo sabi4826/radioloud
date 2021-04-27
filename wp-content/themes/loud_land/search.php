@@ -11,25 +11,50 @@
 get_header(); ?>
 
 <style>
-   /* h2.page-title.first-title {
- color: white;
- }*/
+    h2.page-title.section-title {
+        color: white;
+    }
+
     .entry-title a {
         color: white;
     }
 
     .archive-post-wrap .hentry {
         margin-bottom: 100px;
-
+        background-color: #FA5E5E;
     }
 
     .archive-post-wrap .hentry:nth-child(2n) {
         background-color: #FA5E5E;
     }
 
+    .archive-post-wrap .hentry .entry-container {
+        padding: 2vw;
+    }
+
+    article {
+        border: solid white 2px;
+    }
+
+    .archive-post-wrap .hentry .entry-container,
+    .two-columns-layout .archive-post-wrap .hentry .entry-container,
+    .no-sidebar .archive-post-wrap .hentry .entry-container {
+        padding: 4vw;
+    }
+
 </style>
 
 <section id="primary" class="content-area">
+    <header>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Wire+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    </header>
     <main id="main" class="site-main">
         <div class="archive-posts-wrapper">
             <?php
