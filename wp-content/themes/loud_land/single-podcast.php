@@ -103,8 +103,9 @@ get_header(); ?>
             color: black;
         }
 
-        .podcast_background {
+        .podcast_background .podcast_baggrund_fix {
             max-height: 70vh;
+            margin-bottom: 1rem;
         }
 
         @media (min-width: 950px) {
@@ -136,12 +137,13 @@ get_header(); ?>
             }
             .podcast_background_fix {
                 max-height: 70vh;
+                margin-bottom: 0;
             }
         }
 
         @media (max-width: 950px) {
             /*Fjerner store podcastbillede fra mobil*/
-            .billede .moske-lide {
+            img .billede .moske-lide {
                 display: none;
             }
         }
@@ -208,9 +210,9 @@ get_header(); ?>
 
 
         <template id="single_podcast_kan_lide">
-            <article class="max_hojde">
+            <article>
                 <img src="" alt="" class="billede">
-                <div class="podcast_baggrund podcast_baggrund_fix">
+                <div class="podcast_baggrund">
                     <h3></h3>
                     <p></p>
                 </div>
@@ -290,7 +292,6 @@ get_header(); ?>
             function visEpisoder() {
                 console.log("visEpisoder bliver kaldt", episoder);
 
-                document.querySelector(".h1-episode").innerHTML = "Episoder";
 
                 let episodeTemplate = document.querySelector("#temEpi");
                 episoder.forEach(episode => {
@@ -305,6 +306,8 @@ get_header(); ?>
 
                     if (podcastId == aktuelPodcast) {
                         console.log("Loop kører ID:", aktuelPodcast);
+
+                        document.querySelector(".h1-episode").innerHTML = "Episoder";
 
 
                         let klon = episodeTemplate.cloneNode(true).content;
