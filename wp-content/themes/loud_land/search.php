@@ -15,7 +15,7 @@ get_header(); ?>
         color: white;
     }
 
-    h2.page-title.section-title {
+    h2 .entry-title a {
         color: white;
     }
 
