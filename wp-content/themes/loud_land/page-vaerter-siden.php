@@ -67,6 +67,12 @@ get_header(); ?>
         background-color: #53A27D;
         margin: 1vw auto;
         width: auto;
+        transition: 0.5s;
+    }
+
+    .col_tekst button:hover {
+        transform: scale(1.1);
+        background-color: white;
     }
 
     .col_tekst h1 {
@@ -76,6 +82,12 @@ get_header(); ?>
     .col_img {
         background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Rectangle-31.jpg);
         background-size: cover;
+    }
+
+    @media (max-width: 1000px) {
+        .job_container {
+            grid-template-columns: 1fr;
+        }
     }
 
 </style>
