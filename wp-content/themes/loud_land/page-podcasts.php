@@ -74,6 +74,7 @@ get_header(); ?>
         margin-right: 20px;
     }
 
+
     /*    destop grid udgaven på alle podcast oversigten*/
 
     @media (min-width: 950px) {
@@ -100,7 +101,7 @@ get_header(); ?>
         /*    lyt vidre styling */
 
         #lyt_vidre_section img {
-            width: 100%;
+            width: 40%;
             vertical-align: middle;
         }
 
@@ -117,18 +118,9 @@ get_header(); ?>
         .image-container figcaption {
             padding: 20px;
             background: #fff;
-            font-family: 'Dosis', sans-serif;
         }
 
-        .image-container figure {
-            flex-grow: 1;
-        }
 
-        .image-container figcaption {
-            padding: 20px;
-            background: #fff;
-            font-family: 'Dosis', sans-serif;
-        }
 
 
     }
