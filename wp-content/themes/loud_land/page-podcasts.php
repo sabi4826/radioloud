@@ -57,28 +57,25 @@ get_header(); ?>
 
 
 
-
-
     /*    lyt vidre styling */
-
-    #lyt_vidre_section img {
-        width: 100%;
-        vertical-align: middle;
-    }
-
     .image-container {
-        display: flex;
-        gap: 20px;
-        padding: 20px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px;
     }
 
-    .image-container figure {
-        flex-grow: 1;
+    .image-container .figure_lyt {
+        flex-basis: 90%;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+
     }
 
-    .image-container figcaption {
-        padding: 20px;
+    .image-container img {
+        margin-right: 20px;
     }
+
+
 
     /*    destop grid udgaven på alle podcast oversigten*/
 
@@ -104,27 +101,31 @@ get_header(); ?>
         }
 
 
+
+
         /*    lyt vidre styling */
+
+        #lyt_vidre_section img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
         .image-container {
-            overflow-x: scroll;
-            scroll-snap-type: x mandatory;
-            padding-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
         }
 
-        .image-container figure {
-            flex-basis: 90%;
-            flex-shrink: 0;
-            scroll-snap-align: center;
-
+        .image-container .figure_lyt {
+            flex-grow: 1;
         }
 
-        .image-container img {
-            margin-right: 20px;
+        .image-container figcaption {
+            padding: 20px;
         }
 
 
-
-
+        s
     }
 
 </style>
@@ -145,21 +146,21 @@ get_header(); ?>
         <section id="lyt_vidre_section">
             <h1>lyt vidre</h1>
             <div class="image-container">
-                <figure>
+                <figure class="figure_lyt">
                     <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/bare_sex-1.jpg" alt="bare sex">
                     <figcaption>Bare sex</figcaption>
                 </figure>
 
-                <figure>
+                <figure class="figure_lyt">
                     <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/kontur.jpg" alt="kontur">
                     <figcaption>Kontur</figcaption>
                 </figure>
-                <figure>
+                <figure class="figure_lyt">
                     <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/frekvens.jpg" alt="frekvens">
                     <figcaption>Frekvens</figcaption>
                 </figure>
 
-                <figure>
+                <figure class="figure_lyt">
                     <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/live_fortiden.jpg" alt="live fra fortiden">
                     <figcaption>Live fra fortiden</figcaption>
                 </figure>
