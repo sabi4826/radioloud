@@ -35,6 +35,12 @@ get_header(); ?>
         border: solid white 2px;
     }
 
+    .archive-post-wrap .hentry .entry-container,
+    .two-columns-layout .archive-post-wrap .hentry .entry-container,
+    .no-sidebar .archive-post-wrap .hentry .entry-container {
+        padding: 4vw;
+    }
+
 </style>
 
 <section id="primary" class="content-area">
