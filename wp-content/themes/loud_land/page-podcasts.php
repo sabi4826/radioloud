@@ -61,14 +61,15 @@ get_header(); ?>
     .image-container {
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        padding-bottom: 20px;
+        margin: 40px 20px;
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
 
     .image-container .figure_lyt {
-        flex-basis: 20%;
+        flex-basis: 90%;
         flex-shrink: 0;
         scroll-snap-align: center;
-
     }
 
     .image-container img {
@@ -87,12 +88,10 @@ get_header(); ?>
         padding: 20px;
     }
 
-    .image-container .figure_lyt {
-        flex-grow: 1;
-    }
 
     .image-container figcaption {
-        padding: 20px;
+        margin-top: 15px;
+        color: white;
     }
 
 
@@ -119,6 +118,7 @@ get_header(); ?>
             padding: 4% 5%;
             text-align: start;
         }
+
 
 
 
