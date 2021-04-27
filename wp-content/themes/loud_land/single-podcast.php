@@ -84,7 +84,7 @@ get_header(); ?>
 
         .maske_kan_du_lide {
             max-width: 1000px;
-            margin: 40px 20px;
+            margin: 0 auto;
         }
 
         .maske_kan_du_lide {
@@ -126,6 +126,11 @@ get_header(); ?>
             margin-bottom: 1rem;
         }
 
+        .epi_billede {
+            cursor: pointer;
+            width: 100%;
+        }
+
         @media (min-width: 950px) {
             /* Grid og styling til første sektion af siden, hvor den pågældende podcast er vist med uddybend text*/
             .stor_visning_podcast {
@@ -140,7 +145,8 @@ get_header(); ?>
                 display: grid;
                 grid-gap: 1.2rem;
                 grid-template-columns: 0.5fr 1fr;
-                margin: 20px 100px;
+                margin: 0 auto;
+                width: 80vw;
             }
             /*  destop Grid opsætningen og styling af; måske du også ville kunne lide */
             .maske_kan_du_lide {
