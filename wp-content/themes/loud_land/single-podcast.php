@@ -286,6 +286,8 @@ get_header(); ?>
             function visEpisoder() {
                 console.log("visEpisoder bliver kaldt", episoder);
 
+                document.querySelector(".h1-episode").innerHTML = `${"Episoder"}`;
+
                 let episodeTemplate = document.querySelector("#temEpi");
                 episoder.forEach(episode => {
                     console.log("Loop ID:", aktuelPodcast);
@@ -296,12 +298,14 @@ get_header(); ?>
 
                     console.log("podcastId", podcastId);
 
+
                     if (podcastId == aktuelPodcast) {
                         console.log("Loop kører ID:", aktuelPodcast);
 
+
                         let klon = episodeTemplate.cloneNode(true).content;
 
-                        klon.querySelector(".h1-episode").innerHTML = `${"Episoder"}`;
+
                         klon.querySelector(".epi_billede").src = episode.billede.guid;
                         klon.querySelector(".epi_overskrift").innerHTML = episode.title.rendered;
                         klon.querySelector(".epi_dato").innerHTML = episode.dato;
