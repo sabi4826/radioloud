@@ -46,6 +46,10 @@ get_header(); ?>
         display: none;
     }
 
+    .archive-posts-wrapper {
+        padding-top: 100px;
+    }
+
 </style>
 
 <section id="primary" class="content-area">
