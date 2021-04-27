@@ -61,9 +61,6 @@ get_header(); ?>
     .image-container {
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        margin: 40px 20px;
-        padding-left: 5vw;
-        padding-right: 5vw;
     }
 
     .image-container .figure_lyt {
@@ -120,6 +117,16 @@ get_header(); ?>
         }
 
 
+        .image-container {
+            margin: 40px 20px;
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
+        .image-container .figure_lyt {
+            flex-basis: 30%;
+
+        }
 
 
     }
