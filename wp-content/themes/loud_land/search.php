@@ -11,11 +11,10 @@
 get_header(); ?>
 
 <style>
-    h2.page-title.first-title {
-        color: white;
-    }
-
-    h2 .entry-title a {
+   /* h2.page-title.first-title {
+ color: white;
+ }*/
+    .entry-title a {
         color: white;
     }
 
