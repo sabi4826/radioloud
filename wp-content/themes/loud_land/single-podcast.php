@@ -43,6 +43,10 @@ get_header(); ?>
             background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/splach_single.png);
             background-size: cover;
         }
+
+        p {
+            text-align: justify;
+        }
         /*    texten på venstre siden af top sektionen bliver rykket ind */
 
         .top,
