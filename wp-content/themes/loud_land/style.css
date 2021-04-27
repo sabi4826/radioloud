@@ -77,12 +77,41 @@ p {
     background-color: #04161F;
 }
 
+/*
 *,
 *:before,
 *:after {
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
     box-sizing: inherit;
+    background-color: #04161F;
+}
+*/
+
+
+.section:nth-child(even),
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.mejs-controls .mejs-time-rail .mejs-time-total,
+.abletone-mejs-container.mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded,
+.abletone-mejs-container.mejs-container .mejs-controls .mejs-time-rail .mejs-time-float,
+ins,
+table thead,
+.sidebar .widget-wrap,
+#primary-search-wrapper .menu-inside-wrapper,
+.menu-inside-wrapper,
+.mobile-social-search,
+#footer-newsletter,
+mark,
+ins,
+.custom-header,
+ul.tabs.wc-tabs li.active a,
+.woocommerce-Tabs-panel,
+.shop_table thead th,
+ul.wc_payment_methods.payment_methods.methods li,
+.comment-respond,
+.widget_shopping_cart,
+pre,
+.widget .ui-tabs .ui-tabs-panel {
     background-color: #04161F;
 }
 
