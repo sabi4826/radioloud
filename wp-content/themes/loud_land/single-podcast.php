@@ -118,6 +118,13 @@ get_header(); ?>
             text-align: justify;
         }
 
+        .podcast_baggrund_fix {
+            background-color: white;
+            padding: 2.2rem;
+            height: auto;
+            overflow: hidden;
+        }
+
         @media (min-width: 950px) {
             /* Grid og styling til første sektion af siden, hvor den pågældende podcast er vist med uddybend text*/
             .stor_visning_podcast {
@@ -144,10 +151,6 @@ get_header(); ?>
             }
             .billede-mobil {
                 display: none;
-            }
-            .podcast_background .podcast_background_fix {
-                max-height: none;
-                margin-bottom: 0;
             }
         }
 
@@ -209,7 +212,7 @@ get_header(); ?>
             <article>
                 <div class="episode_grid">
                     <div><img src="" alt="" class="epi_billede"></div>
-                    <div class="podcast_baggrund podcast_baggrund_fix">
+                    <div class="podcast_baggrund_fix">
                         <h3 class="epi_overskrift"></h3>
                         <h4 class="epi_dato"></h4>
                         <p class="epi_resume"></p>
