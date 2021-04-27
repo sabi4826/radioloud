@@ -121,8 +121,9 @@ get_header(); ?>
         .podcast_baggrund_fix {
             background-color: white;
             padding: 2.2rem;
-            height: auto;
+            max-height: ;
             overflow: hidden;
+            margin-bottom: 1rem;
         }
 
         @media (min-width: 950px) {
@@ -152,10 +153,13 @@ get_header(); ?>
             .billede-mobil {
                 display: none;
             }
+            .podcast_baggrund_fix {
+                margin-bottom: 0;
+            }
         }
 
         @media (max-width: 950px) {
-            /*Fjerner store podcastbillede fra mobil*/
+            /*Fjerner store podcastbillede fra mobil - virker ikke?*/
             .billede .podcast_billede {
                 display: none;
             }
