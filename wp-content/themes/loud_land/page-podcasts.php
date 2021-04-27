@@ -56,24 +56,29 @@ get_header(); ?>
 
 
 
+
+
+
     /*    lyt vidre styling */
+
+    #lyt_vidre_section img {
+        width: 100%;
+        vertical-align: middle;
+    }
+
     .image-container {
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        padding-bottom: 20px;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
     }
 
     .image-container figure {
-        flex-basis: 90%;
-        flex-shrink: 0;
-        scroll-snap-align: center;
-
+        flex-grow: 1;
     }
 
-    .image-container img {
-        margin-right: 20px;
+    .image-container figcaption {
+        padding: 20px;
     }
-
 
     /*    destop grid udgaven på alle podcast oversigten*/
 
@@ -98,26 +103,23 @@ get_header(); ?>
             text-align: start;
         }
 
+
         /*    lyt vidre styling */
-
-        #lyt_vidre_section img {
-            width: 40%;
-            vertical-align: middle;
-        }
-
         .image-container {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 20px;
         }
 
         .image-container figure {
-            flex-grow: 1;
+            flex-basis: 90%;
+            flex-shrink: 0;
+            scroll-snap-align: center;
+
         }
 
-        .image-container figcaption {
-            padding: 20px;
-            background: #fff;
+        .image-container img {
+            margin-right: 20px;
         }
 
 
