@@ -77,18 +77,7 @@ p {
     background-color: #04161F;
 }
 
-/*
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-    background-color: #04161F;
-}
-*/
-
-
+/*baggrundsfarven på naven*/
 .section:nth-child(even),
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
 .mejs-controls .mejs-time-rail .mejs-time-total,
@@ -201,4 +190,17 @@ a {
 
 .textwidget p {
     color: white;
+}
+
+
+
+
+
+/*her sættes hele (sektionens) sidens padding */
+@media only screen and (min-width: 64em) .home.two-columns-layout .site-content > .wrapper,
+.archive:not(.woocommerce).two-columns-layout .site-content > .wrapper,
+.blog.two-columns-layout .site-content > .wrapper,
+.two-columns-layout .site-content > .wrapper,
+.site-content > .wrapper {
+    padding: 0px 30px;
 }
