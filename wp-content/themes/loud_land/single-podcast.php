@@ -43,14 +43,6 @@ get_header(); ?>
             background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/splach_single.png);
             background-size: cover;
         }
-
-        .text_signle p {
-            color: white;
-        }
-
-        p {
-            text-align: justify;
-        }
         /*    texten på venstre siden af top sektionen bliver rykket ind */
 
         .top,
@@ -106,10 +98,24 @@ get_header(); ?>
         .single_podcast_kan_lide .podcast_baggrund p {
             color: black;
         }
+        /*Størrelse på hvide bokse + margin mellem sektioner i mobiludgave*/
 
         .podcast_background .podcast_baggrund_fix {
             max-height: 70vh;
             margin-bottom: 1rem;
+        }
+        /*hvid tekst*/
+
+        .vaerter p {
+            color: white;
+        }
+
+        .podcast_resume p {
+            color: white;
+        }
+
+        p {
+            text-align: justify;
         }
 
         @media (min-width: 950px) {
