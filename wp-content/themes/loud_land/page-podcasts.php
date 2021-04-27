@@ -32,6 +32,12 @@ get_header(); ?>
         text-align: center;
     }
 
+    #podcast_cat_overskrift h1 {
+        margin: 100px 20px 40px 20px;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
     /*    mobil grid udgaven på alle podcast oversigten*/
 
     #podcast_oversigt {
