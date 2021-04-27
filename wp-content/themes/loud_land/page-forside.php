@@ -143,7 +143,7 @@ get_header(); ?>
 
 
         #live_live_sektion {
-            background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/baggrunds_streger.png);
+            background-image: url(http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/baggrunds_streger-1.png);
             width: auto;
             height: 120vh;
             background-size: cover;
