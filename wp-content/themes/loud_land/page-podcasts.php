@@ -65,7 +65,7 @@ get_header(); ?>
     }
 
     .image-container .figure_lyt {
-        flex-basis: 90%;
+        flex-basis: 20%;
         flex-shrink: 0;
         scroll-snap-align: center;
 
@@ -103,29 +103,29 @@ get_header(); ?>
 
 
 
-        /*    lyt vidre styling */
+/*
+           #lyt_vidre_section img {
+           width: 100%;
+           vertical-align: middle;
+           }
 
-        #lyt_vidre_section img {
-            width: 100%;
-            vertical-align: middle;
-        }
+           .image-container {
+           display: flex;
+           gap: 20px;
+           padding: 20px;
+           }
 
-        .image-container {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-        }
+           .image-container .figure_lyt {
+           flex-grow: 1;
+           }
 
-        .image-container .figure_lyt {
-            flex-grow: 1;
-        }
-
-        .image-container figcaption {
-            padding: 20px;
-        }
+           .image-container figcaption {
+           padding: 20px;
+           }
+*/
 
 
-        s
+
     }
 
 </style>
