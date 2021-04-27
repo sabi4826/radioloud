@@ -44,6 +44,10 @@ get_header(); ?>
             background-size: cover;
         }
 
+        .podcast_resume {
+            color: white;
+        }
+
         p {
             text-align: justify;
         }
@@ -136,7 +140,7 @@ get_header(); ?>
                 display: none;
             }
             podcast_background .podcast_background_fix {
-                max-height: auto;
+                max-height: none;
                 margin-bottom: 0;
             }
         }
