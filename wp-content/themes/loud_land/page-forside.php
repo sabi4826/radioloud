@@ -54,8 +54,8 @@ get_header(); ?>
     /* styling af loud live sektionen*/
 
     .loud_live_forside .left {
-        margin: 9% 10%;
-        padding-bottom: 10%;
+        padding: 9% 10%;
+        background-color: rgba(4, 22, 31, 0.68);
     }
 
     .loud_live_forside .left h3 {
@@ -77,7 +77,6 @@ get_header(); ?>
         text-align: center;
         text-decoration: uppercase;
         margin-top: 30%;
-        margin-bottom: 5%;
     }
 
     #det_hitter_overskrift {
@@ -133,7 +132,7 @@ get_header(); ?>
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 2fr;
-            margin: 40px 20px;
+            margin: 0px 20px;
             padding-left: 5vw;
             padding-right: 5vw;
         }
