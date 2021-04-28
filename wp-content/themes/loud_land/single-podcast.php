@@ -86,7 +86,7 @@ get_header(); ?>
         height: 2rem;
     }
 
-    h1.h1-episode {
+    .h1-episode {
         margin-bottom: 90px 0px 30px 0px;
     }
 
@@ -126,7 +126,7 @@ get_header(); ?>
         cursor: pointer;
     }
 
-    .vaerter: hover {
+    .vaerter:hover {
         color: #DB083A;
     }
 
