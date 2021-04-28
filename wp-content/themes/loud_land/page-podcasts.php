@@ -89,6 +89,7 @@ get_header(); ?>
     .image-container figcaption {
         margin-top: 15px;
         color: white;
+        font-family: 'Assistant', sans-serif;
     }
 
 
