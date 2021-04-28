@@ -63,7 +63,7 @@ p {
 .home.admin-bar .custom-header {
     min-height: 120px;
     background-color: #04161F;
-    color: white;
+    color: #DB083A;
 }
 
 /*Farve på forside header*/
@@ -137,12 +137,9 @@ pre,
     border: none;
 }
 
-.main-navigation a:hover {
-    color: #DB083A;
-}
 
 .menu-toggle {
-    color: white;
+    color: #DB083A;
     z-index: 200;
 }
 
