@@ -34,7 +34,7 @@ get_header(); ?>
 
     #podcast_cat_overskrift h1,
     #lyt_vidre_section h1 {
-        margin: 100px 20px 40px 20px;
+        margin: 80px 20px 0px 20px;
         padding-left: 5vw;
         padding-right: 5vw;
     }
@@ -125,7 +125,7 @@ get_header(); ?>
         }
 
         .image-container .figure_lyt {
-            flex-basis: 25%;
+            flex-basis: 20%;
 
         }
 
