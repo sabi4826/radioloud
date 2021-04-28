@@ -169,11 +169,12 @@ button {
     color: white;
     width: 100%;
     margin: 2px 0px;
+    padding: 20px 0px;
 }
 
 button:hover {
     background-color: #ffffff;
-    color: white;
+    color: #DB083A;
 }
 
 nav #filtrering {

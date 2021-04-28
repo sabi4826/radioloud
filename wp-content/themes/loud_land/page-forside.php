@@ -183,7 +183,7 @@ get_header(); ?>
             </div>
             <div class="loud_live_forside">
                 <div>
-                    <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Image-95.jpg" alt="live billede">
+                    <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/lytLive-1.png" alt="live billede">
                 </div>
                 <div class="left">
                     <h2>lige nu:</h2>
