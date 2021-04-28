@@ -16,31 +16,30 @@ get_header(); ?>
 
     h1 {
         color: white;
+        margin-bottom: 10px;
     }
 
     article {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        margin-top: 30px;
     }
 
     element.style {
         padding: 0;
     }
 
+    @media (min-width: 950px) {
+        article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2rem;
+        }
+    }
+
 </style>
 
 
 <div id="primary" class="content-area">
-    <header>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Wire+One&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
-    </header>
+
     <main id="main" class="site-main">
         <a href="javascript:history.back()" class="tilbage_knap"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Tilbage-knap.png" alt="tilbage knap"></a>
         <section id="enkelt_vært"></section>
