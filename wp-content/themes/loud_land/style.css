@@ -137,10 +137,25 @@ pre,
     border: none;
 }
 
+/*Burger font size up..*/
+div#primary-menu-wrapper .menu-toggle {
+    width: 150px;
+    font-size: 1.5rem;
+}
+
+.dropdown-toggle:after {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.menu-label {
+    font-size: 1.5rem;
+}
 
 .menu-toggle {
     color: #DB083A;
     z-index: 200;
+
 }
 
 /*styling af podcast article på hele sitet*/
