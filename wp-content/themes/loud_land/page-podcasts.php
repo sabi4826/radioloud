@@ -170,11 +170,11 @@ get_header(); ?>
 
                 <figure class="figure_lyt">
                     <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/s_p_k-1.jpg" alt="sp.k">
-                    <figcaption>Live fra fortiden</figcaption>
+                    <figcaption>S, P eller K</figcaption>
                 </figure>
                 <figure class="figure_lyt">
                     <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/i-faar-boern-jeg-faar-kemo.jpg" alt="i faa vores jeg faar kemo">
-                    <figcaption>Live fra fortiden</figcaption>
+                    <figcaption>I får børn - jeg får kemo</figcaption>
                 </figure>
             </div>
         </section>
