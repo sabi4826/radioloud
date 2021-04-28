@@ -148,7 +148,7 @@ get_header(); ?>
                 <button class="filter_knapper" data-podcast="alle">Alle</button>
             </nav>
 
-            <section id="lyt_vidre_section">
+            <section id="lyt_vidre_section" onclick="displayNone_section()">
                 <h1>lyt videre</h1>
                 <div class="image-container">
                     <figure class="figure_lyt">
@@ -241,6 +241,10 @@ get_header(); ?>
                 }
             }
 
+            function displayNone_section() {
+                document.querySelector("#lyt_vidre_section").classList.add("remove_object");
+            }
+
 
             /*Filtrering af podcast-funktion begynder*/
             async function loadJson() {
@@ -270,18 +274,16 @@ get_header(); ?>
             };
 
 
-
             function filtrering() {
                 filterPodcast = this.dataset.podcast;
 
                 console.log("filterPodcast");
                 visPodcasts();
 
+
                 //skriften skifter alt efter valgte catagi
                 header.textContent = this.textContent;
             }
-
-
 
 
 
