@@ -79,6 +79,10 @@ get_header(); ?>
         margin-top: 30%;
     }
 
+    .veart_nyeste {
+        font-weight: bold;
+    }
+
     #det_hitter_overskrift {
         text-align: center;
         text-decoration: uppercase;
@@ -207,7 +211,7 @@ get_header(); ?>
 
             <div class="podcast_baggrund">
                 <h3></h3>
-                <h3 class="veart_nyeste"></h3>
+                <p class="veart_nyeste"></p>
                 <p class="podcast_resume"></p>
             </div>
             <button class="gea_til_podcast_knap">Gå til podcast</button>
