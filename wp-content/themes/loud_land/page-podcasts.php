@@ -55,10 +55,6 @@ get_header(); ?>
         .figure_lyt {
             cursor: pointer;
         }
-
-        .remove_object {
-            display: none;
-        }
         /*    lyt vidre styling */
 
         .image-container {
@@ -148,7 +144,7 @@ get_header(); ?>
                 <button class="filter_knapper" data-podcast="alle">Alle</button>
             </nav>
 
-            <section id="lyt_vidre_section" onclick="displayNone_section()">
+            <section id="lyt_vidre_section">
                 <h1>lyt videre</h1>
                 <div class="image-container">
                     <figure class="figure_lyt">
@@ -241,9 +237,6 @@ get_header(); ?>
                 }
             }
 
-            function displayNone_section() {
-                document.querySelector("#lyt_vidre_section").classList.add("remove_object");
-            }
 
 
             /*Filtrering af podcast-funktion begynder*/
