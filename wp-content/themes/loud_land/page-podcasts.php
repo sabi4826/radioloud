@@ -118,13 +118,13 @@ get_header(); ?>
 
 
         .image-container {
-            margin: 40px 20px;
+            margin: 0px 20px;
             padding-left: 5vw;
             padding-right: 5vw;
         }
 
         .image-container .figure_lyt {
-            flex-basis: 30%;
+            flex-basis: 25%;
 
         }
 
@@ -165,6 +165,15 @@ get_header(); ?>
 
                 <figure class="figure_lyt">
                     <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/live_fortiden.jpg" alt="live fra fortiden">
+                    <figcaption>Live fra fortiden</figcaption>
+                </figure>
+
+                <figure class="figure_lyt">
+                    <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/s_p_k-1.jpg" alt="sp.k">
+                    <figcaption>Live fra fortiden</figcaption>
+                </figure>
+                <figure class="figure_lyt">
+                    <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/i-faar-boern-jeg-faar-kemo.jpg" alt="i faa vores jeg faar kemo">
                     <figcaption>Live fra fortiden</figcaption>
                 </figure>
             </div>
