@@ -147,7 +147,7 @@ get_header(); ?>
         </nav>
 
         <section id="lyt_vidre_section">
-            <h1>lyt vidre</h1>
+            <h1>lyt videre</h1>
             <div class="image-container">
                 <figure class="figure_lyt">
                     <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/bare_sex-1.jpg" alt="bare sex">
