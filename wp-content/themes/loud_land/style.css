@@ -204,3 +204,8 @@ a {
 .textwidget p {
     color: white;
 }
+
+.footer-widget-area {
+    padding: 21px 0 0;
+    margin-top: 160px;
+}
