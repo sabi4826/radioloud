@@ -76,17 +76,18 @@ p {
 
 .custom-header .wrapper {
     background-color: #04161F;
-    position: fixed;
 }
 
 .home .custom-header {
     min-height: 0vh;
 }
 
+
 /*headeren gøres fixed*/
 .site-header .wrapper {
     max-width: 1808px;
     position: fixed;
+    background-color: #04161F;
 }
 
 /*baggrundsfarven på naven*/
