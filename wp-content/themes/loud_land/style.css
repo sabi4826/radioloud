@@ -133,8 +133,12 @@ pre,
 /* Om os drop down*/
 
 #primary-menu-wrapper .menu-inside-wrapper {
-    background-color: #FA5E5E;
+    background-color: #DB083A;
     border: none;
+}
+
+.main-navigation a:hover {
+    color: #DB083A;
 }
 
 .menu-toggle {
