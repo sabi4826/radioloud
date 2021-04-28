@@ -162,18 +162,18 @@ pre,
 /*styling af knapper på hele sitet*/
 
 button {
-    background-color: #FA5E5E;
+    background-color: #DB083A;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     border: none;
-    color: black;
+    color: white;
     width: 100%;
     margin: 2px 0px;
 }
 
 button:hover {
     background-color: #ffffff;
-    color: black;
+    color: white;
 }
 
 nav #filtrering {

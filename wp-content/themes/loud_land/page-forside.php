@@ -207,7 +207,7 @@ get_header(); ?>
 
             <div class="podcast_baggrund">
                 <h3></h3>
-                <h4></h4>
+                <h3></h3>
                 <p class="podcast_resume"></p>
             </div>
             <button class="gea_til_podcast_knap">Gå til podcast</button>
@@ -278,7 +278,7 @@ get_header(); ?>
                 const klon = template.cloneNode(true).content; //Her klones template og udfyldes med data fra de tilfældige objekter
                 klon.querySelector(".billede").src = podcast.billede.guid;
                 klon.querySelector("h3").textContent = podcast.title.rendered;
-                klon.querySelector("h4").textContent = podcast.date_gmt;
+                klon.querySelector("h3").innerHTML = podcast.vaerter;
                 klon.querySelector(".podcast_resume").textContent = podcast.podcast_resume;
                 // eventlisteners på hver enkelt artikel
                 klon.querySelector(".gea_til_podcast_knap").addEventListener("click", () => {
