@@ -86,6 +86,10 @@ get_header(); ?>
         height: 2rem;
     }
 
+    h1.h1-episode {
+        margin-bottom: 90px 0px 30px 0px;
+    }
+
     /*  mobil Grid opsætningen og styling af; måske du også ville kunne lide */
 
     .maske_kan_du_lide {
@@ -120,6 +124,10 @@ get_header(); ?>
 
     .vaerter {
         cursor: pointer;
+    }
+
+    .vaerter: hover {
+        color: #DB083A;
     }
 
     .podcast_resume p {
@@ -165,10 +173,11 @@ get_header(); ?>
         /*styling af grid til episoderne og deres opsætning*/
         .episode_grid {
             display: grid;
-            grid-gap: 1.2rem;
+            grid-gap: 0.5rem;
             grid-template-columns: 0.5fr 1fr;
             margin: 0 auto;
             width: 80vw;
+            margin-bottom: 20px;
         }
 
         /*  destop Grid opsætningen og styling af; måske du også ville kunne lide */
