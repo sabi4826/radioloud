@@ -78,6 +78,16 @@ p {
     background-color: #04161F;
 }
 
+.home .custom-header {
+    min-height: 0vh;
+}
+
+/*headeren gøres fixed*/
+.site-header .wrapper {
+    max-width: 1808px;
+    position: fixed;
+}
+
 /*baggrundsfarven på naven*/
 .section:nth-child(even),
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
