@@ -118,6 +118,10 @@ get_header(); ?>
         color: white;
     }
 
+    .vaerter {
+        cursor: pointer;
+    }
+
     .podcast_resume p {
         color: white;
     }
