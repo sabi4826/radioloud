@@ -252,7 +252,8 @@ get_header(); ?>
 
         function addEventListenersToButtons() {
             console.log("lytTilKnapper virker");
-            document.querySelector("#lyt_vidre_section").classList.add("remove_object");
+            /*
+                        document.querySelector("#lyt_vidre_section").classList.add("remove_object");*/
             document.querySelectorAll("#filtrering button").forEach(elm => {
                 elm.addEventListener("click", filtrering);
             })
@@ -265,6 +266,7 @@ get_header(); ?>
             console.log("filterPodcast");
             visPodcasts();
 
+            document.querySelector("#lyt_vidre_section").classList.add("remove_object");
 
             //skriften skifter alt efter valgte catagi
             header.textContent = this.textContent;
