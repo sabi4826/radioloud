@@ -46,7 +46,7 @@ get_header(); ?>
     .play_knap {
         position: absolute;
         place-self: center center;
-
+        cursor: pointer;
     }
 
 
