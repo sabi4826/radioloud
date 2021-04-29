@@ -118,15 +118,8 @@ get_header(); ?>
                 padding-right: 5vw;
             }
             .image-container .figure_lyt {
-                flex-basis: 20%;
+                flex-basis: 19%;
             }
-        }
-        /*FORSØG PÅ AT FÅ FILTRERING STICKY*/
-
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
         }
 
     </style>
@@ -139,10 +132,6 @@ get_header(); ?>
             <div class="podcast_splashbillede">
                 <h1 id="overskrift">Podcasts</h1>
             </div>
-
-            <nav id="filtrering">
-                <button class="filter_knapper" data-podcast="alle">Alle</button>
-            </nav>
 
             <section id="lyt_vidre_section">
                 <h1>lyt videre</h1>
@@ -176,6 +165,10 @@ get_header(); ?>
                     </figure>
                 </div>
             </section>
+
+            <nav id="filtrering">
+                <button class="filter_knapper" data-podcast="alle">Alle</button>
+            </nav>
 
             <section id="podcast_cat_overskrift">
                 <h1>Alle podcast</h1>
@@ -220,23 +213,6 @@ get_header(); ?>
             // url til wp rest api/database
             const url = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/podcast?per_page=100";
             const cat_url = "http://sabineovesen.dk/radioloud/wp-json/wp/v2/categories";
-
-            /*FORSØG PÅ AT FÅ FILTRERING STICKY*/
-            window.onscroll = function() {
-                stickyNav()
-            };
-
-            let navbar = document.querySelector("#filtrering");
-            let sticky = navbar.offsetTop;
-
-            function stickyNav() {
-                if (window.pageYOffset >= sticky) {
-                    navbar.classList.add("sticky")
-                } else {
-                    navbar.classList.remove("sticky");
-                }
-            }
-
 
 
             /*Filtrering af podcast-funktion begynder*/
