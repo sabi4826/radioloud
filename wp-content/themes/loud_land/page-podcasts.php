@@ -133,6 +133,10 @@ get_header(); ?>
                 <h1 id="overskrift">Podcasts</h1>
             </div>
 
+            <nav id="filtrering">
+                <button class="filter_knapper" data-podcast="alle">Alle</button>
+            </nav>
+
             <section id="lyt_vidre_section">
                 <h1>lyt videre</h1>
                 <div class="image-container">
@@ -166,9 +170,6 @@ get_header(); ?>
                 </div>
             </section>
 
-            <nav id="filtrering">
-                <button class="filter_knapper" data-podcast="alle">Alle</button>
-            </nav>
 
             <section id="podcast_cat_overskrift">
                 <h1>Alle podcast</h1>
