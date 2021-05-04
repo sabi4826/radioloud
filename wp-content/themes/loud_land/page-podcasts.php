@@ -88,6 +88,10 @@ get_header(); ?>
             color: white;
             font-family: 'Assistant', sans-serif;
         }
+
+        .remove_object {
+            display: none;
+        }
         /*    destop grid udgaven på alle podcast oversigten*/
 
         @media (min-width: 950px) {
@@ -141,30 +145,30 @@ get_header(); ?>
                 <h1>lyt videre</h1>
                 <div class="image-container">
                     <figure class="figure_lyt">
-                        <a href="http://sabineovesen.dk/radioloud/index.php/podcast/bare-sex-2/"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/bare_sex-1.jpg" alt="bare sex"></a>
+                        <a href="http://sabineovesen.dk/radioloud/index.php/podcast/bare-sex-2/"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/05/lyt_videre_img2.png" alt="bare sex"></a>
                         <figcaption>Bare sex</figcaption>
                     </figure>
 
                     <figure class="figure_lyt">
-                        <a href="http://sabineovesen.dk/radioloud/index.php/podcast/kontur/"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/kontur.jpg" alt="kontur"></a>
+                        <a href="http://sabineovesen.dk/radioloud/index.php/podcast/kontur/"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/05/lyt_videre_img4.png" alt="kontur"></a>
                         <figcaption>Kontur</figcaption>
                     </figure>
                     <figure class="figure_lyt">
-                        <a href="http://sabineovesen.dk/radioloud/index.php/podcast/frekvens/"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/frekvens.jpg" alt="frekvens"></a>
+                        <a href="http://sabineovesen.dk/radioloud/index.php/podcast/frekvens/"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/05/lyt_videre_img3.png"></a>
                         <figcaption>Frekvens</figcaption>
                     </figure>
 
                     <figure class="figure_lyt">
-                        <a href="http://sabineovesen.dk/radioloud/index.php/podcast/live-fra-fortiden/"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/live_fortiden.jpg" alt="live fra fortiden"></a>
+                        <a href="http://sabineovesen.dk/radioloud/index.php/podcast/live-fra-fortiden/"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/05/lyt_videre_img1.png" alt="live fra fortiden"></a>
                         <figcaption>Live fra fortiden</figcaption>
                     </figure>
 
                     <figure class="figure_lyt">
-                        <a href="http://sabineovesen.dk/radioloud/index.php/podcast/s-p-eller-k/"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/s_p_k-1.jpg" alt="sp.k"></a>
+                        <a href="http://sabineovesen.dk/radioloud/index.php/podcast/s-p-eller-k/"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/05/lyt_videre_img5.png" alt="sp.k"></a>
                         <figcaption>S, P eller K</figcaption>
                     </figure>
                     <figure class="figure_lyt">
-                        <a href="http://sabineovesen.dk/radioloud/index.php/podcast/i-far-born-jeg-far-kemo/"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/i-faar-boern-jeg-faar-kemo.jpg" alt="i faa vores jeg faar kemo"></a>
+                        <a href="http://sabineovesen.dk/radioloud/index.php/podcast/i-far-born-jeg-far-kemo/"><img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/05/jegfaarkemo.png" alt="i faa vores jeg faar kemo"></a>
                         <figcaption>I får børn - jeg får kemo</figcaption>
                     </figure>
                 </div>
@@ -176,6 +180,8 @@ get_header(); ?>
             </section>
 
             <section id="podcast_oversigt"></section>
+
+            <button class="button">Hent flere</button>
 
         </main>
         <!-- #main -->
@@ -237,7 +243,8 @@ get_header(); ?>
 
             function addEventListenersToButtons() {
                 console.log("lytTilKnapper virker");
-                document.querySelector("#lyt_vidre_section").classList.add("remove_object");
+                /*
+                            document.querySelector("#lyt_vidre_section").classList.add("remove_object");*/
                 document.querySelectorAll("#filtrering button").forEach(elm => {
                     elm.addEventListener("click", filtrering);
                 })
@@ -250,6 +257,7 @@ get_header(); ?>
                 console.log("filterPodcast");
                 visPodcasts();
 
+                document.querySelector("#lyt_vidre_section").classList.add("remove_object");
 
                 //skriften skifter alt efter valgte catagi
                 header.textContent = this.textContent;
