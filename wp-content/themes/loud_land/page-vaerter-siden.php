@@ -20,7 +20,6 @@ get_header(); ?>
         grid-template-columns: repeat(auto-fill, minmax(300px, 10fr));
         max-width: 100vw;
         grid-gap: 3rem;
-        overflow: hidden;
         position: relative;
     }
 

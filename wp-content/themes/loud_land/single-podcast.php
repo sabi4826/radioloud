@@ -198,7 +198,7 @@ get_header(); ?>
         }
 
         section h1 {
-            margin-left: 7vw;
+            margin-left: 6.5vw;
         }
     }
 
