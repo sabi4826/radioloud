@@ -15,27 +15,27 @@
 get_header(); ?>
 
 <style>
-	@media (min-width: 1000px) {
+    @media (min-width: 1000px) {
 
-		/*GRID TIL TOP BANNER*/
-		#top_tekst {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			margin: 50px 5vw 100px 5vw;
-		}
+        /*GRID TIL TOP BANNER*/
+        #top_tekst {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 50px 5vw 100px 5vw;
+        }
 
-		.col_2 {
-			margin-left: 50px;
-		}
+        .col_2 {
+            margin-left: 50px;
+        }
 
-		#overskrift {
-			margin-left: 5vw;
-		}
+        #overskrift {
+            margin-left: 5vw;
+        }
 
 
-	}
+    }
 
-	/*#podcast_oversigt {
+    /*#podcast_oversigt {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		max-width: 100vw;
@@ -47,100 +47,101 @@ get_header(); ?>
 		margin: 40px 20px;
 	}*/
 
-	/*HVID TEKST*/
-	#top_tekst p {
-		color: white;
-	}
+    /*HVID TEKST*/
+    #top_tekst p {
+        color: white;
+    }
 
-	.sendeplan h2 {
-		color: white;
-	}
+    .sendeplan h2 {
+        color: white;
+    }
 
-	.col_1 {
-		grid-column: 1/2;
-		margin-bottom: 5vw;
-	}
+    .col_1 {
+        grid-column: 1/2;
+        margin-bottom: 5vw;
+    }
 
-	.col_1 h2,
-	h3 {
-		color: white;
-	}
+    .col_1 h2,
+    h3 {
+        color: white;
+    }
 
-	.col_1 img {}
+    .col_1 img {}
 
-	.col_2 {
-		grid-column: 2/4;
-	}
+    .col_2 {
+        grid-column: 2/4;
+    }
 
-	.col_2 img {
-		width: 100%;
-	}
+    .col_2 img {
+        width: 100%;
+    }
 
-	#overskrift {
-		margin-bottom: 5vw;
-		margin-top: 4vw;
-	}
+    #overskrift {
+        margin-bottom: 5vw;
+        margin-top: 4vw;
+    }
 
-	.sende_knapper img {
-		width: 100%;
-		height: auto;
-	}
+    .sende_knapper img {
+        width: 100%;
+        height: auto;
+    }
 
-	.sende_knapper {
-		width: 100vw;
-		padding: 0;
-		margin: 20px 0px 0 -30px;
-	}
+    .sende_knapper {
+        width: 100vw;
+        padding: 0;
+        margin: 20px 0px 0 -30px;
+    }
 
-	#sende_oversigt .sendeplan {
-		margin: 0 auto;
-	}
+    #sende_oversigt .sendeplan {
+        margin: 0 auto;
+        text-align: center;
+    }
 
 </style>
 
 <div id="primary" class="content-area">
-	<main id="main" class="site-main">
-		<h1 id="overskrift">LOUD LIVE - vil du lytte med?</h1>
-		<section id="top_tekst">
-			<div class="col_1">
-				<h2>Lige Nu:</h2>
-				<h3>BARE SEX</h3>
-				<p>Lige nu kan du høre programmet "BARE SEX", der handler om sex, krop og dating. Værten Alma har været på date med en gammel ven, og det kom der noget akavet sex ud af.</p>
-			</div>
-			<div class="col_2">
-				<img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/lytLive-1.png" alt="Live podcasten">
-			</div>
-		</section>
+    <main id="main" class="site-main">
+        <h1 id="overskrift">LOUD LIVE - vil du lytte med?</h1>
+        <section id="top_tekst">
+            <div class="col_1">
+                <h2>Lige Nu:</h2>
+                <h3>BARE SEX</h3>
+                <p>Lige nu kan du høre programmet "BARE SEX", der handler om sex, krop og dating. Værten Alma har været på date med en gammel ven, og det kom der noget akavet sex ud af.</p>
+            </div>
+            <div class="col_2">
+                <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/lytLive-1.png" alt="Live podcasten">
+            </div>
+        </section>
 
-		<nav id="filtrering">
-		</nav>
+        <nav id="filtrering">
+        </nav>
 
-		<section id="sende_oversigt">
-			<div class="sende_knapper">
-				<img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Image-110.png" alt="Sende knapper">
-			</div>
-			<div class="sendeplan">
-				<h2>Sendeplan</h2>
-				<img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/sendeplan_tirsdag.png" class="tirsdag" alt="sendeplan tirsdag">
-			</div>
+        <section id="sende_oversigt">
+            <div class="sende_knapper">
+                <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/Image-110.png" alt="Sende knapper">
+            </div>
+            <div class="sendeplan">
+                <h2>Sendeplan</h2>
+                <img src="http://sabineovesen.dk/radioloud/wp-content/uploads/2021/04/sendeplan_tirsdag.png" class="tirsdag" alt="sendeplan tirsdag">
+            </div>
 
-		</section>
-	</main><!-- #main -->
+        </section>
+    </main><!-- #main -->
 
-	<template>
-		<article>
-			<div><img src="" alt="" class="billede"></div>
-			<div>
-				<h3></h3>
-				<h4></h4>
-				<p class="episode_resume"></p>
-			</div>
-		</article>
-	</template>
+    <template>
+        <article>
+            <div><img src="" alt="" class="billede"></div>
+            <div>
+                <h3></h3>
+                <h4></h4>
+                <p class="episode_resume"></p>
+            </div>
+        </article>
+    </template>
 
 
 
-	<!-- <script>
+    <!-- <script>
      let episoder;
      //let podcasts;
      let categories;
