@@ -96,6 +96,11 @@ get_header(); ?>
         display: none;
     }
 
+    #hent_flere {
+        text-align: center;
+        margin-top: 10vw;
+    }
+
     .hent_flere {
         width: 200px;
     }
@@ -195,7 +200,7 @@ get_header(); ?>
 
         <section id="podcast_oversigt"></section>
 
-        <div>
+        <div id="hent_flere">
             <button class="afspil_knap hent_flere">Hent flere</button>
         </div>
 
