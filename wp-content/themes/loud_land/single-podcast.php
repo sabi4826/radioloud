@@ -196,6 +196,10 @@ get_header(); ?>
         .podcast_baggrund_fix {
             margin-bottom: 0;
         }
+
+        section h1 {
+            margin-left: 7vw;
+        }
     }
 
 </style>
