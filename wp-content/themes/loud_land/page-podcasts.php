@@ -195,7 +195,9 @@ get_header(); ?>
 
         <section id="podcast_oversigt"></section>
 
-        <button class="afspil_knap hent_flere">Hent flere</button>
+        <div>
+            <button class="afspil_knap hent_flere">Hent flere</button>
+        </div>
 
     </main>
     <!-- #main -->
